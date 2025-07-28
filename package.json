@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-multimd-table": "^4.2.3",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "glightbox": "^3.3.1",
+    "markdown-it-container": "^4.0.0",
+    "medium-zoom": "^1.1.0"
+  }
+}

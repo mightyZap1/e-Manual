@@ -1,0 +1,116 @@
+/* 예시: VitePress의 기본 스타일을 덮어씁니다. */
+:root {
+    --vp-c-brand-1: #646cff;
+    --vp-c-brand-2: #747bff;
+  .mainLinkBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.mainLinkBox :hover{
+  /* box-shadow: 3px 3px 10px rgb(1, 74, 134); */
+  background-color:rgb(235, 246, 253);
+  /* border : 2px solid rgb(1, 120, 218); */
+}
+.mainLinkBtn{
+  margin : 20px 20px;;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  /* width: 300px; */
+  align-items: center;
+  /* display: inline-block; */
+  padding: 10px 20px;
+  color : rgb(17, 114, 206)!important;
+  font-size: 26px!important;
+  background-color:rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none!important;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+
+  box-shadow: 3px 3px 10px gray;
+}
+.mainLinkTilte{
+  margin-bottom: 10px;
+  color : gray;
+}
+
+.mainLinkBtn img {
+  width :200px;
+  padding : 10px;
+  /* height :250px; */
+}
+.mainLinkDescription {
+  font-size: 16px;
+  color: rgb(84, 141, 173);
+}
+
+.vp-doc table {
+  margin : 1px 0 20px 0;
+}
+
+#table-modal-overlay {
+  width: 80vw;;
+}
+.medium-zoom-overlay{
+  background-color: rgba(255, 255, 255, 0.473)!important;
+  
+}
+.medium-zoom-image--opened{
+  background-color: white;
+z-index: 35;
+  /* 예시: 확대된 이미지의 너비를 최대 800px로 제한 */
+  max-width: 800px !important;
+
+  /* 화면 높이보다 이미지가 커지는 것을 방지 */
+  max-height: 90vh !important;
+}
+
+.vp-doc h2 {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 24px; /* 라인이 사라지면서 생긴 빈 공간을 줄여줍니다. */
+}
+/* --- 로직 추가: 화면 크기가 작아질 때 폰트 크기 조절 --- */
+/* 태블릿 사이즈 (예: 768px 이하) */
+@media (max-width: 768px) {
+  p {
+    font-size: 13px !important;
+  }.vp-doc ul {
+    line-height: 18px;
+    font-size: 13px;
+  }
+  th td {
+    padding : 2px;
+  }
+  .vp-doc table th,
+  .vp-doc table td,
+  .table-modal-body th,
+  .table-modal-body td {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+/* 모바일 사이즈 (예: 480px 이하) */
+@media (max-width: 480px) {
+  p {
+    font-size: 13px !important;
+  }.vp-doc ul {
+    line-height: 18px;
+    font-size: 13px;
+  }
+  .vp-doc table th,
+  .vp-doc table td,
+  .table-modal-body th,
+  .table-modal-body td {
+    font-size: 12px;
+    padding: 5px 6px;
+  }
+}
