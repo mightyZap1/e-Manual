@@ -606,8 +606,8 @@ Repeat Setting parameter sets the number of repetitions for the content set in A
 **Repeat type**  
  - **Interval** : Action is to be performed at every time interval set by Repeat Time.  Use when repeated actions are required at regular intervals.  
  - **dWellTime** : Set the time to stop after the position movement is completed by the Action command. Use in order to maintain the position for a certain period of time after completing the movement. 
-   ![action_interval](action_interval.png)
-   ![action_dwell](action_dwell.png)
+   ![action_interval](./img/action_interval.png)
+   ![action_dwell](./img/action_dwell.png)
 **Repeat time**  
 Time value setting for Interval or dWell Time. 
 

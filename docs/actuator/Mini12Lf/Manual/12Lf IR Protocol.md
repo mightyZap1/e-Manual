@@ -8,7 +8,7 @@ IR Protocol 을 지원하는 모델은 아래와 같습니다.
 ### 1.2.1 Command Packet
 mightyZAP에 동작을 수행할 수 있는 명령 Packet으로 다음과 같은 구조와 요소로 이루어져 있습니다.
 **Structure**
-![commandPacket](CommandPacket.png)
+![commandPacket](./img/CommandPacket.png)
 **Element**
 
 | Index | Data | 설명 |

@@ -607,8 +607,8 @@ Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작
 **Repeat type**  
  - **Interval** : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
  - **dWellTime** : Action 명령에 의해 위치 이동이 완료되어 정지하는 시간을 설정합니다. 동작 완료 후 일정한 시간 동안 위치를 유지해야  할 때 사용합니다.  
-   ![action_interval](action_interval.png)  
-   ![action_dwell](action_dwell.png)  
+   ![action_interval](./img/action_interval.png)  
+   ![action_dwell](./img/action_dwell.png)  
 **Repeat time**  
 Interval 또는 dWell Time으로 설정할 시간 값을 입력합니다.  
 

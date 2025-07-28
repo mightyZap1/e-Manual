@@ -1,0 +1,1 @@
+const s="/assets/loadVSCurrent_90.CihIWHAN.png",t="/assets/speedVSLoad_90.ui9IfnR_.png",o="/assets/voltageVSstallforce_90.DS7l2fJ9.png",a="/assets/voltageVsSpeed_90.B0dpby1W.png",e="/assets/motorOperatingVSspeed_90.2Eg7EioX.png";export{s as _,t as a,o as b,a as c,e as d};

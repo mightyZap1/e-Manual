@@ -162,7 +162,7 @@ Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 
 >
 ### 3.5 Goal Current vs Speed at Rated Load
 정격 부하 시 Goal Current  값에 대한 mightyZAP의  속도 변화를 나타냅니다.  
-![27_goalcurrentVSspeed](27_goalcurrentVSspeed.png)
+![27_goalcurrentVSspeed](./img/27_goalcurrentVSspeed.png)
 >[!tip] TIP
 >Goal Current Vs Speed Data는 정격 부하 상태에서 측정한 Data입니다.
 
