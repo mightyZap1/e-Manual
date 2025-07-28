@@ -6,23 +6,25 @@ media_folder: public/image
 public_folder: /image
 
 collections:
-
-  - name: "17Lf"
-    label: "17Lf 시리즈"
-    files:
-      - name: "manual_17lf"
-        label: "mightyZAP 17Lf 사용자 매뉴얼"
-        file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-      - name: "17Lf Modbus RTU_kor"
-        label: "17Lf Modbus RTU_kor"
-        file: "docs/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
+  - name: "actuator"
+    label: "액추에이터"
+    folder: "docs/actuator"
+    # ⬇️ 중첩 컬렉션을 활성화하는 핵심 설정입니다.
+    nested:
+      deep: 3 # 탐색할 하위 폴더의 최대 깊이
+    # ⬇️ CMS에서 항목을 클릭했을 때의 경로 규칙
+    path: "{{slug}}/index.md" 
+    fields: # 모든 문서에 공통으로 적용될 필드
+      - { label: "제목", name: "title", widget: "string" }
+      - { label: "본문", name: "body", widget: "markdown" }
+  - name: "software"
+    label: "software"
+    folder: "docs/software"
+    # ⬇️ 중첩 컬렉션을 활성화하는 핵심 설정입니다.
+    nested:
+      deep: 3 # 탐색할 하위 폴더의 최대 깊이
+    # ⬇️ CMS에서 항목을 클릭했을 때의 경로 규칙
+    path: "{{slug}}/index.md" 
+    fields: # 모든 문서에 공통으로 적용될 필드
+      - { label: "제목", name: "title", widget: "string" }
+      - { label: "본문", name: "body", widget: "markdown" }
