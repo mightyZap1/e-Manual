@@ -1,36 +1,28 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 
 media_folder: public/image
 public_folder: /image
 
 collections:
-  - name: "actuator" # 컬렉션의 고유 ID (영문)
-    label: "액추에이터 제품" # CMS 관리자 화면에 표시될 이름
-    folder: "actuator" # 관리할 콘텐츠가 있는 폴더
-    create: true # 새 제품 페이지 생성을 허용합니다.
-    
-    # 새 페이지 생성 시, 입력한 제목(title)을 기반으로 '제품폴더명/index.md' 형태의 파일을 생성합니다.
-    # 예: 제목이 'My New Product'이면 -> /actuator/my-new-product/index.md 파일 생성
-    path: "{{slug}}/index.md" 
-    
-    # 페이지를 구성하는 데이터 필드를 정의합니다. (Markdown 파일의 Frontmatter에 해당)
-    fields:
-      - { label: "제품명 (페이지 제목)", name: "title", widget: "string" }
-      - { label: "작성일", name: "date", widget: "datetime", required: false }
-      - { label: "제품 요약", name: "summary", widget: "text", required: false }
-      - { label: "대표 이미지", name: "featured_image", widget: "image", required: false }
-      - { label: "본문 (상세 설명)", name: "body", widget: "markdown" }
-      
-      - name: "manuals" # 파일 컬렉션의 고유 ID
-        label: "사용자 매뉴얼" # CMS 관리자 화면에 표시될 이름
-        files: # 관리할 개별 파일 목록
-        - name: "manual_17lf" # 이 파일의 고유 ID
-          label: "mightyZAP 17Lf 사용자 매뉴얼" # CMS에 표시될 파일 이름
-          file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual.md" # 'docs'부터 시작하는 전체 파일 경로
-          fields: # 이 파일에서 사용할 필드 (frontmatter 및 본문)
-            - { label: "매뉴얼 제목", name: "title", widget: "string" }
-            - { label: "버전", name: "version", widget: "string", required: false }
-            - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-            - { label: "본문", name: "body", widget: "markdown" }
+
+  - name: "17Lf"
+    label: "17Lf 시리즈"
+    files:
+      - name: "manual_17lf"
+        label: "mightyZAP 17Lf 사용자 매뉴얼"
+        file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual.md"
+        fields:
+          - { label: "매뉴얼 제목", name: "title", widget: "string" }
+          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }
+      - name: "17Lf Modbus RTU_kor"
+        label: "17Lf Modbus RTU_kor"
+        file: "docs/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor.md"
+        fields:
+          - { label: "매뉴얼 제목", name: "title", widget: "string" }
+          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }
