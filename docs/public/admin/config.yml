@@ -22,3 +22,15 @@ collections:
       - { label: "제품 요약", name: "summary", widget: "text", required: false }
       - { label: "대표 이미지", name: "featured_image", widget: "image", required: false }
       - { label: "본문 (상세 설명)", name: "body", widget: "markdown" }
+      
+      - name: "manuals" # 파일 컬렉션의 고유 ID
+        label: "사용자 매뉴얼" # CMS 관리자 화면에 표시될 이름
+        files: # 관리할 개별 파일 목록
+        - name: "manual_17lf" # 이 파일의 고유 ID
+          label: "mightyZAP 17Lf 사용자 매뉴얼" # CMS에 표시될 파일 이름
+          file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual.md" # 'docs'부터 시작하는 전체 파일 경로
+          fields: # 이 파일에서 사용할 필드 (frontmatter 및 본문)
+            - { label: "매뉴얼 제목", name: "title", widget: "string" }
+            - { label: "버전", name: "version", widget: "string", required: false }
+            - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+            - { label: "본문", name: "body", widget: "markdown" }
