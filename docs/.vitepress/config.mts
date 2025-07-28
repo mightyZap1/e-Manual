@@ -212,6 +212,11 @@ function obsidianPdfEmbedWithViewer(md) {
 }
 
 export default defineConfig({
+  head:[[
+    'script',
+      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+    ]
+  ],
   title: "e-Manual",
   description: "migntyZAP e-Manual",
   markdown: {
