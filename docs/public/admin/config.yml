@@ -13,8 +13,8 @@ collections:
         label: "mightyZAP 17Lf 27mm datasheet"
         file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-27.md"
         fields: # 각 파일에 개별적으로 fields 추가
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
           - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
           - { label: "본문", name: "body", widget: "markdown" }
 
@@ -22,8 +22,8 @@ collections:
         label: "mightyZAP 17Lf 37mm datasheet"
         file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-37.md"
         fields:
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
           - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
           - { label: "본문", name: "body", widget: "markdown" }
 
@@ -31,8 +31,8 @@ collections:
         label: "mightyZAP 17Lf 50mm datasheet"
         file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-50.md"
         fields:
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
           - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
           - { label: "본문", name: "body", widget: "markdown" }
 
@@ -40,8 +40,8 @@ collections:
         label: "mightyZAP 17Lf 87mm datasheet"
         file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-87.md"
         fields:
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
           - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
           - { label: "본문", name: "body", widget: "markdown" }
           
@@ -49,8 +49,8 @@ collections:
         label: "mightyZAP 17Lf 사용자 매뉴얼"
         file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
         fields:
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
           - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
           - { label: "본문", name: "body", widget: "markdown" }
           
@@ -58,7 +58,7 @@ collections:
         label: "17Lf Modbus RTU_kor"
         file: "docs/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor.md"
         fields:
-          - { label: "매뉴얼 제목", name: "title", widget: "string" }
-          - { label: "버전", name: "version", widget: "string", required: false }
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
           - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
           - { label: "본문", name: "body", widget: "markdown" }
