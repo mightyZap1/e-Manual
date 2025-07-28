@@ -144,7 +144,7 @@ The Stall Force is measured by minimizing the speed value to measure only the fo
 
 ## 3.5 Goal Current vs Speed <font size="4">at Rated Load</font>
 The speed change of mightyZAP for the Goal Current setting value at rated load.
-![27_goalcurrentVSspeed](./img/27_goalcurrentVSspeed.png)
+![27_goalcurrentVSspeed](./img/27_goalcurrentVsspeed.png)
 For rated load speed, it shows about 80 to 90% of the no-load maximum speed depending on the model.
 >[!Note] Note
 >Measured under rated load.
