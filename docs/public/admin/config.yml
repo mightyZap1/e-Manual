@@ -11,7 +11,7 @@ collections:
     folder: "docs/actuator"
     # ⬇️ 중첩 컬렉션을 활성화하는 핵심 설정입니다.
     nested:
-      deep: 3 # 탐색할 하위 폴더의 최대 깊이
+      depth: 3 # 탐색할 하위 폴더의 최대 깊이
     # ⬇️ CMS에서 항목을 클릭했을 때의 경로 규칙
     path: "{{slug}}/index.md" 
     fields: # 모든 문서에 공통으로 적용될 필드
@@ -22,7 +22,7 @@ collections:
     folder: "docs/software"
     # ⬇️ 중첩 컬렉션을 활성화하는 핵심 설정입니다.
     nested:
-      deep: 3 # 탐색할 하위 폴더의 최대 깊이
+      depth: 3 # 탐색할 하위 폴더의 최대 깊이
     # ⬇️ CMS에서 항목을 클릭했을 때의 경로 규칙
     path: "{{slug}}/index.md" 
     fields: # 모든 문서에 공통으로 적용될 필드
