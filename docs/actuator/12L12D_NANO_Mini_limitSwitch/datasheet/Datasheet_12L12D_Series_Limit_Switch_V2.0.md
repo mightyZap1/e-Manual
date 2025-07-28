@@ -38,13 +38,13 @@
 
 ### 12L / 12D Series Limit Switch mightyZAP Actuator 결선도
 #### 1. DPDT Switch 연결
-![dpdt_Switch](./img/dpdt_Switch.png)
+![dpdt_Switch](./img/dpdt_switch.png)
 - DPDT 스위치는 SPDT 스위치 2개가 내장되어 동일한 동작을 수행합니다. 
 - 위 결선도에 따른 스위치 동작은 다음과 같습니다. 
 - 오배선이 되어 단락이 나지 않도록 배선에 주의하시기 바랍니다. (DPDT스위치 핀간 상호 접촉이 되면 안됩니다)
-- ![dpdt_Switch_table](./img/dpdt_Switch_table.png)
+- ![dpdt_Switch_table](./img/dpdt_switch_table.png)
 #### 2. External Limit Switch 연결
-![limit_Switch](./img/limit_Switch.png) 
+![limit_Switch](./img/limit_switch.png) 
 
 - 표준 21.8mm 스트로크가 아닌, 더 짧은 스트로크 구현을 위해서는, 외부에 추가로 마이크로 Limit 스위치를 설치 한 후, 위 DPDT 스위치 결선도에 위와 같이 Limit Switch를 추가 결선하시어 사용하면 됩니다. 
 - 액츄에이터의 Rod가 추가한 Limit Switch를 누르게 되면 동작이 멈추게 됩니다. 
