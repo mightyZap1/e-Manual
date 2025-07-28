@@ -8,6 +8,18 @@ public_folder: /image
 collections:
   - name: "17Lf"
     label: "17Lf 시리즈"
+    widget: "rich_text"
+    # ⬇️ 표시할 버튼 목록을 직접 추가합니다.
+    buttons:
+      - "bold"
+      - "italic"
+      - "link"
+      - "heading-one"
+      - "heading-two"
+      - "bulleted-list"
+      - "numbered-list"
+      - "quote"
+      - "table" # <-- 테이블 버튼을 명시적으로 추가
     files:
       - name: "datasheet_27"
         label: "mightyZAP 17Lf 27mm datasheet"
