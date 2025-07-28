@@ -408,6 +408,50 @@ export default defineConfig({
                 }
                 
               ]
+            },
+            {
+              text: '12L12D_NANO_Mini_limitSwitch',
+              collapsed: true,              
+              items: [
+                {
+                  text: 'Datasheet',
+                  collapsed: true,
+                  items: [
+                    { text: '12L12D_NANO_Mini_limitSwitch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/datasheet/Datasheet_12L12D_Series_Limit_Switch_V2.0' }
+                  ]
+                },
+                {
+                  text: 'Drawings',
+                  collapsed: true,
+                  items: [
+                    { text: '12D Limit Switch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Drawings/12D Limit Switch' },
+                    { text: '12D Nano Limit Switch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Drawings/12D Nano Limit Switch' },
+                    { text: '12L Limit Switch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Drawings/12L Limit Switch' }
+                  ]
+                },
+                // {
+                //   text: 'Catalogue',
+                //   collapsed: true,
+                //   items: [
+                //     { text: 'Catalogue', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Catalogue/catalogue' }
+                //   ]
+                // },
+                // {
+                //   text: 'Manual',
+                //   collapsed: true,
+                //   items: [                    
+                //     { text: 'User Manual', link: '/actuator/D7D12L12/Manual/Usermanual' },
+                //     { text: 'Life cycle', link: '/actuator/D7D12L12/Manual/lifecycle' },
+                //   ]
+                // },
+                // {
+                //   text: 'firmware',
+                //   collapsed: true,
+                //   items: [
+                //     { text: '펌웨어 업데이트', link: '/actuator/D7D12L12/firmware/firmware' },                    
+                //   ]
+                // }                
+              ]
             }
           ],          
           '/software/': [
