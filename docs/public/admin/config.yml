@@ -6,25 +6,33 @@ media_folder: public/image
 public_folder: /image
 
 collections:
-  - name: "actuator"
-    label: "액추에이터"
-    folder: "docs/actuator"
-    # ⬇️ 중첩 컬렉션을 활성화하는 핵심 설정입니다.
-    nested:
-      depth: 2 # 탐색할 하위 폴더의 최대 깊이
-    # ⬇️ CMS에서 항목을 클릭했을 때의 경로 규칙
-    path: "{{slug}}/index.md" 
-    fields: # 모든 문서에 공통으로 적용될 필드
-      - { label: "제목", name: "title", widget: "string" }
+  - name: "17Lf"
+    label: "17Lf 시리즈"
+    
+    fields:
+      - { label: "매뉴얼 제목", name: "title", widget: "string" }
+      - { label: "버전", name: "version", widget: "string", required: false }
+      - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
       - { label: "본문", name: "body", widget: "markdown" }
-  - name: "software"
-    label: "software"
-    folder: "docs/software"
-    # ⬇️ 중첩 컬렉션을 활성화하는 핵심 설정입니다.
-    nested:
-      depth: 2 # 탐색할 하위 폴더의 최대 깊이
-    # ⬇️ CMS에서 항목을 클릭했을 때의 경로 규칙
-    path: "{{slug}}/index.md" 
-    fields: # 모든 문서에 공통으로 적용될 필드
-      - { label: "제목", name: "title", widget: "string" }
-      - { label: "본문", name: "body", widget: "markdown" }
+
+    files:
+      - name: "datasheet_27"
+        label: "mightyZAP 17Lf 27mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-27.md"
+      - name: "datasheet_37"
+        label: "mightyZAP 17Lf 37mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-37.md"
+      - name: "datasheet_50"
+        label: "mightyZAP 17Lf 50mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-50.md"
+      - name: "datasheet_87"
+        label: "mightyZAP 17Lf 87mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-87.md"
+        
+      - name: "manual_17lf"
+        label: "mightyZAP 17Lf 사용자 매뉴얼"
+        file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+        
+      - name: "17Lf Modbus RTU_kor"
+        label: "17Lf Modbus RTU_kor"
+        file: "docs/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor.md"
