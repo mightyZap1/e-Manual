@@ -14,7 +14,7 @@ collections:
     depth: 100
   media_folder: ''
   public_folder: ''
-  fields:
+  fields: &manual_fields
   - label: 파일명 (URL, 영문)
     name: slug
     widget: string
