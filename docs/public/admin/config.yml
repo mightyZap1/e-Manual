@@ -2,48 +2,42 @@ backend:
   name: git-gateway
   branch: main
 
+# 이미지 등 미디어 파일을 저장하고 불러올 경로 설정
 media_folder: public/image
 public_folder: /image
 
+# collections는 여러 개의 독립된 컬렉션 목록입니다.
 collections:
-  - name: "17Lf"
-    label: "17Lf 시리즈"
-    widget: "rich_text"
-    # ⬇️ 표시할 버튼 목록을 직접 추가합니다.
-    buttons:
-      - "bold"
-      - "italic"
-      - "link"
-      - "heading-one"
-      - "heading-two"
-      - "bulleted-list"
-      - "numbered-list"
-      - "quote"
-      - "table" # <-- 테이블 버튼을 명시적으로 추가
-    files:
-      - name: "17Lf Series"
-        label: "mightyZAP 17Lf Series"
-        folder: "docs/actuator/Mini17Lf/"
-        create: true # 관리자 페이지에서 새 문서 생성 기능 활성화
-        slug: "{{slug}}" # 파일명을 문서의 'slug' 필드 값으로 자동 생성
-        extension: "md" # 파일 확장자
-        fields: &manual_fields # 각 파일에 개별적으로 fields 추가
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
+  # 첫 번째 폴더 컬렉션: 17Lf 시리즈
+  - name: "17Lf_Series" # 컬렉션 고유 ID (공백 없이)
+    label: "mightyZAP 17Lf 시리즈" # 관리자 페이지에 표시될 이름
+    folder: "docs/actuator/Mini17Lf/" # 이 폴더 안의 모든 마크다운 파일을 관리
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    # ⬇️ 재사용할 필드 구조를 앵커(&)로 정의합니다.
+    fields: &manual_fields
+      - { label: "파일명 (URL에 사용, 영문)", name: "slug", widget: "string" }
+      - { label: "매뉴얼 제목", name: "title", widget: "string" }
+      - { label: "버전", name: "version", widget: "string", required: false }
+      - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+      - { label: "본문", name: "body", widget: "markdown" }
 
-      - name: "12Lf Series"
-        label: "mightyZAP 12Lf Series"
-        folder: "docs/actuator/Mini12Lf"
-        create: true # 관리자 페이지에서 새 문서 생성 기능 활성화
-        slug: "{{slug}}" # 파일명을 문서의 'slug' 필드 값으로 자동 생성
-        extension: "md" # 파일 확장자
-        fields: *manual_fields
-      - name: "D7D12L12 Series"
-        label: "mightyZAP 17Lf 50mm datasheet"
-        folder: "docs/actuator/D7D12L12"
-        create: true # 관리자 페이지에서 새 문서 생성 기능 활성화
-        slug: "{{slug}}" # 파일명을 문서의 'slug' 필드 값으로 자동 생성
-        extension: "md" # 파일 확장자
-        fields: *manual_fields
+  # 두 번째 폴더 컬렉션: 12Lf 시리즈
+  - name: "12Lf_Series"
+    label: "mightyZAP 12Lf 시리즈"
+    folder: "docs/actuator/Mini12Lf/"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    # ⬇️ 위에서 정의한 필드 구조를 별칭(*)으로 재사용합니다.
+    fields: *manual_fields
+
+  # 세 번째 폴더 컬렉션: D7D12L12 시리즈
+  - name: "D7D12L12_Series"
+    label: "mightyZAP D7D12L12 시리즈"
+    folder: "docs/actuator/D7D12L12/"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields: *manual_fields
