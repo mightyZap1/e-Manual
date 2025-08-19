@@ -90,7 +90,8 @@ mightyZAP 마이크로 선형 서보 액추에이터는 다양한 산업 분야�
 ## 2. Control Table
 Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재 상태를 나타내는 Parameter로 이루어져 있습니다.   
 사용자는 통신 Packet을 이용하여 특정 Parameter의 Data를  읽어 mightyZAP의 상태를 확인하거나, Data를 변경하여 mightyZAP을 제어할 수 있습니다.  
->\[!note] Note 
+
+>[!note] Note 
 >17Lf 시리즈는 MODBUS-RTU 프로토콜 만을 제공합니다.  (IR Open프로토콜 미지원)
 >통신 Packet에 대한 자세한 내용은 \[[17Lf Modbus RTU_kor|MODBUS RTU]]를 참고하여 주시기 바랍니다.
 
@@ -274,12 +275,12 @@ mightyZAP Model을 식별하기 위한 생산로트 번호입니다.
 | 0     | Broadcast ID (Feedback  없이 쓰기만 가능하고 읽기는 불가능 합니다.) |
 | 1~247 | mightyZAP ID (default ID 1)                       |
 
-> \[!NOTE] Daisy-cahin Connection\
+> [!NOTE] Daisy-cahin Connection\
 > ID 번호가 N번인 mightyZAP 서보에 Command Packet 을 전송할 경우 여러 개의 mightyZAP 중 ID가 N번에 해당하는 서보만이 Feedback Packet을 return하고, 그 Command를 수행합니다.  
 >
 > ![Daisy-chain](./img/Daisy-chain.png)
 >
-> \[!warning]  Unique ID  
+> [!warning]  Unique ID  
 >
 > * 연결된 mightyZAP의 ID가 중복되지 않도록 주의해야 합니다. 중복된 ID가 있을 경우 통신 오류가 발생하여 정상적인 통신이 이루어지지 않습니다.   
 > * 최대 247개의 ID 설정이 가능하지만 표준 규정상 하나의 노드에 연결 가능한 mightyZAP은 이론적으로 최대 32개입니다.
