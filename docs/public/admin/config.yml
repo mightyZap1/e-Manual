@@ -15,6 +15,8 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "md"
+    nested:
+      depth: 100 # 검사할 하위 폴더의 깊이. 100 정도면 사실상 '전체'를 의미합니다.
     # ⬇️ 재사용할 필드 구조를 앵커(&)로 정의합니다.
     fields: &manual_fields
       - { label: "파일명 (URL에 사용, 영문)", name: "slug", widget: "string" }
@@ -30,6 +32,8 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "md"
+    nested:
+      depth: 100 # 검사할 하위 폴더의 깊이. 100 정도면 사실상 '전체'를 의미합니다.
     # ⬇️ 위에서 정의한 필드 구조를 별칭(*)으로 재사용합니다.
     fields: *manual_fields
 
@@ -40,4 +44,6 @@ collections:
     create: true
     slug: "{{slug}}"
     extension: "md"
+    nested:
+      depth: 100 # 검사할 하위 폴더의 깊이. 100 정도면 사실상 '전체'를 의미합니다.
     fields: *manual_fields
