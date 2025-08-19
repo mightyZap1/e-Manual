@@ -1,3 +1,9 @@
+---
+slug: D7D12L12_Lifecycle.md
+title: D7D12L12_Lifecycle
+modified: 
+version:
+---
 # Lifecycle guideline for mightyZAP (L12/D12/D7 Series)
 ### Test Condition
 - Full Stroke / 50% Duty Cycle / Pull spring Load (Rated full load)

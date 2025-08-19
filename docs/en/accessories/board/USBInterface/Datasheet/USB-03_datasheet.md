@@ -1,9 +1,7 @@
 ---
-slug: index.md
-title: UART01 Index
+slug: USB-03_datasheet.md
+title: USB-03_datasheet
 modified: 
 version:
 ---
-UART to Half Duplex TTL / RS485 Converter
-# IR-UART01
 # USB-03 USB Interface Board_(update)

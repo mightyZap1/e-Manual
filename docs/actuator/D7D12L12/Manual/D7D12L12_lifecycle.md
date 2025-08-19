@@ -1,3 +1,10 @@
+---
+slug: D7D12L12_lifecycle.md
+title: D7D12L12_lifecycle
+modified: 
+version:
+---
+# D7D12L12 lifecycle
 ## mightyZAP 내구수명 가이드라인 (FORCE Control Lineup)
 ### 테스트 조건
 - Full Stroke / 50% Duty Cycle / Pull spring Load (정격 full부하 조건)
