@@ -22,10 +22,18 @@
   }
 }
 .tip {
-  background-color: #d6fafa!important;
+  background-color: #e2fcfc!important;
 }
 .tip .custom-block-title {
   color:#64d8d6!important;
+  font-size: 1.1rem;
+}
+
+.info {
+  background-color: #e7e7e7!important;
+}
+.info .custom-block-title {
+  color:#383838!important;
   font-size: 1.1rem;
 }
 

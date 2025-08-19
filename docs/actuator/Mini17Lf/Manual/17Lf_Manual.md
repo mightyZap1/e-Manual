@@ -364,7 +364,7 @@ Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 �
 1. 현재 위치에서 다른 위치로 이동하기 위해 Goal Position 값을 변경하는 경우
    mightyZAP이 위치 이동을 시작하기 위한 최소 마진 값으로 현재 위치 값과 Goal Position 값의 차이가 +Margin 값보다 크거나 -Marign 값보다  작을 경우에만 액츄에이터는 구동을 시작합니다.
 
-> [!example] 예시 1
+> [!info] 예시 1
 > **Start Compliance Margin 보다 작게  Goal Position을 변경한 경우**
 >
 > * Start Compliance Margin : 20
@@ -372,7 +372,7 @@ Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 �
 > * Goal Position : 1000 -> 1010으로 변경할 경우
 > * <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font>  
 
-> [!example] 예시 2 
+> [!info] 예시 2 
 > **Start Compliance Margin 보다 크게  Goal Position을 변경한 경우** 
 >
 > * Start Compliance Margin : 20
@@ -384,7 +384,7 @@ Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 �
    물리적인 외압이나 노이즈 등에 의해서 최종 명령받은 Goal Position 값과 현재 위치 값의 차이가(절대값) Margin 값보다 크게 위치 변화가 일어나면 위치 보정을 위해 mightyZAP이 동작합니다.
    그러므로 Start Compliance Margin 값이 클수록 외압이나 노이즈의 발생 혹은 유격이 늘어나는 환경에서도 안정적인 동작을 하게 되지만, 원하는 위치로 정확한 구동을 하기 위한 민감도는 떨어집니다.
 
-> [!example] 예시 1
+> [!info] 예시 1
 > **외부 힘에 의해 위치 편차가 발생한 경우**
 >
 > * Start Compliance Margin : 20
@@ -392,7 +392,7 @@ Start Compliance Margin은 mightyZAP이 Goal Position 위치 값으로 이동 �
 > * Present Positon  : 1000 -> 1010으로 변경된 경우
 > * <font color="#4f81bd">결과 : 위치 편차가 Margin 값 보다 작아 위치 변동이 발생하지 않는다</font> 
 
-> [!example] 예시 2 
+> [!info] 예시 2 
 > **외부 힘에 의해 위치 값이 크게 변경된 경우** 
 >
 > * Start Compliance Margin : 20
@@ -425,7 +425,7 @@ mightyZAP이 위치 편차를 줄이기 위해 동작 중일 때 적용이 되�
 
 예를 들어 mightyZAP에 위치 값 1000 위치로 이동 명령을 내렸을 경우, 기구적인 오차나 회로적인 오차, 가속도 등으로 인해서 물리적으로 정확히 1000 이라는 위치 값에 멈출 수가 없다고 가정할 때, 어느 정도의 오차 범위 내에서 명령 수행이 되었다고 인정을 하는 값이 End Compliance Margin입니다.  
 
-> [!example] 예시 1
+> [!info] 예시 1
 > **Goal Position이 1000일 경우**
 >
 > * End Compliance Margin : 8
