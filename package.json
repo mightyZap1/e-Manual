@@ -9,7 +9,7 @@
     "markdown-it": "^14.1.0",
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-multimd-table": "^4.2.3",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.4"
   },
   "dependencies": {
     "decap-cms-app": "^3.8.2",
