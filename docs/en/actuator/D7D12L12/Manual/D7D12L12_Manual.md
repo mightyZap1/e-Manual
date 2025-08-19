@@ -8,6 +8,7 @@ version:
 >[!note] NOTE
 >- This manual is for Position Control Lineup mightyZAP actuators with firmware version 20 or higher whose model names start with L12, D12, or D7. After checking the firmware of your actuator, if the firmware version is lower than V20, please update the actuator firmware first and refer to this manual.
 >- For the Users who use Force Control lineup actuators whose model name starts with 12Lf, please refer to the separate force control lineup manual.
+
 ## 1. Before Use
 ### 1.1. Introduction
 
@@ -110,6 +111,7 @@ Refer to below example for <u>"Store Data"</u> command.
 
 > [!warning] <font size="5">CAUTION</font> - Use within Rated Load
 > For proper performance and better lifespan of mightZAP, it is stronlgy requested to use it within the rated load range.
+
 ### 1.4. Force Off 
 #### Force Off Function
 - After the servo actuator moves to the designated position, the operation stops unless there is an external force that causes the position value change. If the position value of the actuator is continuously changed due to vibration or external force, the actuator is operated continuously without rest to stick to the designated position value, which affects the lifespan of the motor.
@@ -326,7 +328,7 @@ mightyZAP and your main controller will communicate by exchanging data packet. T
 |**Parity**|non-parity|
 |**Stop Bit**|One bit|
 
-> [!warning] <font size="5">CAUTION</font>
+> [!warning] CAUTION
 > - mightyZAP uses half duplex communication, and need to put proper delay time to prevent communication error. 
 > - <font color="#ff0000">**Recommendable delay time is 5msec for data write, 10msec for data read.**</font>
 > - Otherwise, there can be communication collision and motor failure.
@@ -339,8 +341,8 @@ mightyZAP and your main controller will communicate by exchanging data packet. T
 ※ Short stroke : Retract stroke / Long stroke : Extend stroke
 
 > [!note] NOTE  
->※ In case of using PWM communication, position control is possible, but feedback data such as the current position value cannot be received, and serial daisy chain connection is not supported since data communication is not supported. 
->※ Feedback data reception and Daisy chain connection are possible by TTL or RS-485 communication. 
+>- In case of using PWM communication, position control is possible, but feedback data such as the current position value cannot be received, and serial daisy chain connection is not supported since data communication is not supported. 
+>- Feedback data reception and Daisy chain connection are possible by TTL or RS-485 communication. 
 
 ##### ② Data specification   
 Data range is basically determined as below in both Data and Pulse modes.
@@ -354,6 +356,7 @@ Data range is basically determined as below in both Data and Pulse modes.
 > [!note] NOTE   
 > The long stroke limit for 30mm stroke products are set to 27mm from the factory and user is able to extend it to 30mm if necessary. The data value of 27mm is 3686. 
 > (It is recommended to use 27mm for better mechanical stability related to lateral load)  
+
 ##### ③ Daisy-Chain Connection    
 After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID is N will be operated only. (Only N ID servo will send Feedback packet and execute Command.)
 ![DaisyChainConnection](./img/DaisyChainConnection_ENG.png)
@@ -362,10 +365,11 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 > - The PWM mode does not support a daisy chain connection nor Feedback data. 
 
 
-> [!warning] <font size="5">CAUTION</font> - Unique ID 
+> [!warning]CAUTION- Unique ID 
 > - Each mightZAP servo must have an individual ID to prevent interference between same IDs. Therefore, you need to set individual IDs for each servo in the network node. 
 > - User may assign 253 different IDs and connect 253pcs servos in serial via TTL protocol. For RS485 protocol, 253 IDs can be assigned, but available serial connection is upto 32pcs servo motors due to RS-485 node regulation. 
 > - As factory default ID is 0, so please assign different, individual IDs for each actuator from ID1~253 for daisy chain connection.
+
 #### 2. Packet Description
 ##### ① Command Packet
 It is command packets for servo operation. Its structure and elements are as below.
@@ -539,8 +543,10 @@ Check if current firmware is the latest version.
 ID to discriminate each servo. Different IDs should be assigned in Daisy-Chain system.   
  - In case of ID = 0 ~253, ID "N" which is stored in the servo will be operated.
  - In case of ID = 254 (0xFE), it is operated under "Broadcasting Mode (move all servos)" and Feedback Packet does not work.
+
 > [!warning] WARNING  
 >ID is a non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
+
 #### 4) Baudrate
 - Determining communication speed. Default value is 57600bps
 - Servo system should be rebooted to apply changed baud rate to the servo.
@@ -564,7 +570,8 @@ ID to discriminate each servo. Different IDs should be assigned in Daisy-Chain s
 Stroke limit between Short Stroke (A) and Long Stroke (C) which is the max/min. value of Goal Position. If the Goal Position value is smaller than the Short Stroke Limit value or greater than the Long Stroke Limit value, Goal Position value is replaced with the Stroke Limit value.  
    ![StrokeLimit](./img/StrokeLimit.png)
 > [!warning] WARNING  
-> non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.     
+> non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
+
 #### 6) The Highest / Lowest Limit Voltage
 Max/Min value of input voltage (unit : 0.1V)
 According to input voltage, speed and force of actuator can be varied.
@@ -591,6 +598,7 @@ Feedback packet return mode after receipt of Command Packet
 
 > [!tip] TIP 
 > Under Broadcast ID(0xFE) mode, feedback packet will NOT be sent regardless values of Feedback Return Mode.    
+
 #### 9) Alarm LED 
 If concerned bit is set as "1" when error occurs, error LED indication will be activated.   
 (1 : activate, 0: deactivate) 
@@ -694,6 +702,7 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of L12-
 > [!tip] TIP  
 >  migtyZAP keeps its position due to mechanical design even after motor power is off. For instance, mightyZAP having more than 31N/40N force, rod sticks to its position firmly when motor power is off. 
 >  So, in case servo motor needs to keep certain position (if mechanical frictional force is able to keep its position under)
+
 #### 17)LED
 - Control LED when there is no Error indication.
 
@@ -1014,7 +1023,7 @@ Store data after sending Address and Data to set ID, goal position, Force limit,
 - Length: The number of byte to read from Address (present position value consists of 2byte.) 
 - feedback Packet : No Feedback.
 
-> [!warning] <font size="5">CAUTION</font> - Motion Synchronization of multiple actuators 
+> [!warning] Motion Synchronization of multiple actuators 
 > <u>It is strictly banned to use multiple qty actuators for single objective.</u> Due to DC motor characteristic, each actuator’s speed can be slightly varied even if they are same model and goal position is same. (may cause overload to one of actuator)
 
 ![CautionMotionSync|400](./img/CautionMotionSync_ENG.png)

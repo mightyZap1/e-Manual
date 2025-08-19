@@ -6,6 +6,7 @@ import { useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom' // 이미지 확대 라이브러리 import
 
 // 사용자 정의 전역 컴포넌트 import (경로는 실제 위치에 맞게 조정하세요)
+import KatexRenderer from './KatexRenderer.vue' // 1. 만든 컴포넌트 import
 import FirmwareSelectorDL12 from './components/FirmwareSelectorDL12.vue'
 import FirmwareSelector12Lf from './components/FirmwareSelector.vue'
 import FirmwareSelector17Lf from './components/FirmwareSelector17Lf.vue'
@@ -21,6 +22,7 @@ export default {
       // 'doc-before'는 문서 내용이 시작되기 전의 공간을 의미합니다.
       // 이 슬롯에 PageMetadata 컴포넌트를 렌더링합니다.
       'doc-before': () => h(PageMetadata),
+      'layout-bottom': () => h(KatexRenderer),
     })
   },
   // enhanceApp은 전역 컴포넌트 등록 전용으로 사용합니다.

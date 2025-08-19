@@ -119,6 +119,7 @@ version:
 
 >[!tip] Tip
 >Self-Lock means the actuator can hold position by mechanical friction without motor power.
+
 ## 3. Reference Data
 ### 3.1 Voltage Vs Speed
 Graph of speed change at no load according to input voltage. Data includes error, for reference only.
@@ -126,6 +127,7 @@ Graph of speed change at no load according to input voltage. Data includes error
 >[!note] Note
 >Voltage Vs Speed data tested at Goal Current 800.
 >Data includes approx +/-15% error.
+
 ### 3.2 Voltage Vs Stall Force
 Stall Force measured at 800mA according to input voltage. Data includes error, for reference only.
 ![voltageVSstallforce.png](./img/00_voltageVSstallforce.png)
@@ -136,12 +138,14 @@ Stall Force measured at 800mA according to input voltage. Data includes error, f
 
 >[!warning] Caution
 >Stall force is for reference only. To prevent product damage, use at rated load in actual application.
+
 ### 3.3 Goal Speed Vs Speed
 Shows no load speed change according to Goal Speed Parameter value at Goal Current 800.
 At less than rated load, time to reach max speed varies by load.
 ![goalspeedVSspeed](./img/00_goalspeedVSspeed.png)
 >[!note] Note
 >Goal Speed Vs Speed data tested at Goal Current 800.
+
 ### 3.4 Goal Current vs Stall Force
 Shows mightyZAP Stall Force for each Goal Current value.
 Stall Force measured at minimum speed to show pure current force.
@@ -163,7 +167,7 @@ Stall Force measured at minimum speed to show pure current force.
 >|---|---|---|---|---|---|
 >|20N(Rated)|800|Max. 50%|35N(Rated)|800|Max. 50%|
 >|40N(Max)|1600|Max. 20%|70N(Max)|1600|Max. 20%|
->
+
 ### 3.5 Goal Current vs Speed at Rated Load
 Shows speed change for each Goal Current value at rated load.
 ![goalcurrentVSspeed](./img/00_goalcurrentVSspeed.png)

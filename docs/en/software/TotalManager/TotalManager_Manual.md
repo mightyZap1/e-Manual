@@ -49,6 +49,7 @@ Total Manager is compatible with Windows and Linux.
 >[!Note]
 >Please download proper installation file for each OS at
 >[mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 
+
 ### 2.2 Installation
 #### 2.2.1 Windows
 To install Total Manager software on a Windows PC, please check the OS version of Windows and download the appropriate version.  
@@ -85,7 +86,7 @@ The screen layout is divided into four parts: Header, Side bar, Contents, and Fo
 ### 2.4 USB Interface Board 
 A USB-TTL or RS-485 serial converter is required for Total Manager to communicate with mightyZAP. Below explanation is based on our genuine USB Interface Board - IR-USB02 or 03. First, connect to the PC using a USB cable with IR-USB02 or 03. (IR-USB02 is equipped with a Micro 5 pin USB connector, and IR-USB03 is equipped with a new C type USB connector.)
 
-> [!CAUTION] 
+> [!CAUTION] CAUTION
 > - Make sure to use "data transferable" USB cable between PC and USB converter. Charging only cable does not support data communication
 > - Make sure proper wiring when using 3rd party converter.
 > - Appropriate DC power matching the rated input voltage of each actuator should be supplied to the actuator so as to utilize the Manager software. When using our USB Interface Board (IR-USBXX), just supply the power through the board.
@@ -272,11 +273,12 @@ There are question mark icons( <span style="display:inline-block;background-colo
 
   ![SlideVolatile_active.png](./img/SlideVolatile_active.png)  
   
-> [!tip] 
+> [!tip] TIP
   >After clicking the Goal Position TextBox, user can control the value with keyboard keys as below. 
   > 	'a' : Move to minimum stroke
   > 	's' : Move to the center position of the stroke
   > 	'd' : Move to maximum stroke  
+
 - **Check Control Box** : <font color="#4f81bd">Non-volatile Memory</font>   
   Check Control allows user to change data using the Check box function. Please note that the value in a Textbox is in a "Read Only" state, so only the data value and status can be read.
   ![checkbox-Volatile.png](./img/checkbox-Volatile.png)
@@ -321,13 +323,13 @@ As shown in the image, the Update Page consists of firmware update and actuator 
 **Actuator Connection**  
 Connect the servo actuator to be updated and run SCAN.  
 
-> [!CAUTION] 
+> [!CAUTION] CAUTION
 >For the firmware update, connect only single actuator and only single actuator should remain in the actuator list after scan. If multiple actuators are connected, the update will proceed abnormally and fail eventually so that the concerned actuator will become inoperable.
   
 **Update File Select**  
 As shown in the picture, click the "Select file" button to select the downloaded update file.    
 ![UpdateSelect-Button.png](./img/UpdateSelect-Button.png)
-> [!CAUTION]  
+> [!CAUTION] CAUTION 
 >Make sure not to select the firmware file of another model. Check thoroughly if the model name in the Actuator List and the model name in the update file are the same.
 
 **Update** 
@@ -379,7 +381,7 @@ Can be used to restart mightyZAP's system. Usually, to initialize the servo syst
 Click the Restart button at the top menu, then the screen blinks once and moves to the Parameter window to read the data again.
 #### 3.4.6 Factory Reset   
 Return the actuator to the factory default setting including ID, Baudrate, Protocol, and Calibration Parameters. Calibration process will be made.
->[!CAUTION] 
+>[!CAUTION] CAUTION
 >During Factroy Reset, the actuator moves back and forth to the maximum/minimum position for calibration. For proper calibration, secure a no-load state without connecting the actuator to the user's application, and perform the calibration in a space where the maximum operating stroke can be maintained.
 
 FClick Factory Reset button on the top menu, the pop-up window will appear
@@ -397,5 +399,5 @@ When Factory Reset is completed, the Close button at the bottom is activated and
 
 ![FActoryRest-Complete.png](./img/FActoryRest-Complete.png)
 
-> [!CAUTION] 
+> [!CAUTION] CAUTION
 During Factroy Reset, the actuator moves back and forth to the maximum/minimum position for calibration. For proper calibration, secure a no-load state without 3. Factory Reset connecting the actuator to the user's application, and perform the calibration in a space where the maximum operating stroke can be guaranteed.

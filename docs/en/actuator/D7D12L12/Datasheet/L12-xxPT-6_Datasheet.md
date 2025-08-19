@@ -111,6 +111,7 @@ version:
 
 >[!tip] Tip
 >**Self-lock feature :The force which actuator maintains its position by mechanical friction without motor power.**
+
 ## 3. Reference
 ### 3.1 Load Vs Current
 ![loadVSCurrent_xx](./img/loadVSCurrent_xx.png)

@@ -28,6 +28,7 @@ The mightyZAP micro linear servo actuators have been designed for robust, precis
 > - Keep the product out of reach of children. Even when used by adults, be aware of the risk of personal injury that may occur when the motor operates.
 > 
 > <font color="#ff0000">For detailed info, please refer to </font> [[#3.1 Precautions for use]] <font color="#ff0000">.</font>
+
 ## 1.2 Specifications
 ### 1.2.1 17Lf Series Specifications
 | Rated Load | Stroke | Model       | Max Speed<br>(@no load) | Stall Force  <br>at Current<br>(1.6A/800mA/200mA) | Mechanical <br>Self Lock  <br>(Z axis use)  | Lead Screw <br>/ Gear Ratio <br>/ Gear Type               |
@@ -81,7 +82,7 @@ The Control Table consists of two types of Parameters for driving and controllin
 Using the communication packet, user is able to check the status of mightyZAP by reading feedback data of a specific parameter, or control mightyZAP by changing the data value.
 >[!note] Note 
 > 17Lf series only provides MODBUS RTU protocol. (IR Open protocol is no supported). For detailed infor for the communication packet, please refer to the [[17Lf Modbus RTU_eng|MODBUS RTU]] section.
->
+
 ## 2.1 Description  
 ### 2.1.1 Memory Type
 The Control Table is divided into two areas. The one is Non-Volatile Memory (ROM), which retains the data even if the power is turned off after changing the data, and Volatile Memory (RAM) which initialize the data when the power is turned off/on.
@@ -193,35 +194,35 @@ Default value is the initial setting value from the factory. When the value in t
 | 40110            | 109 (0x6D) | Action 4 Stop             | Action 4 Stop type                        | RW     | 0(0x00)         |
 ## 2.3 Volatile Memory(RAM)
 
-| Register Number | Address    | Name                   | Description                  | Access | Default       |     |
-| :-------------- | :--------- | :--------------------- | :--------------------------- | :----- | :------------ | --- |
-| 40201           | 200 (0xC8) | Force On/Off           | Motor Power On/Off           | RW     | 1(0x01)       |     |
-| 40202           | 201 (0xC9) | Actuator Pause         | Motor Pause                  | RW     | 0(0x00)       |     |
-| 40203           | 202 (0xCA) | Actuator Stop          | Motor Stop                   | RW     | 0(0x00)       |     |
-| 40204           | 203 (0xCB) | LED Color              | LED On/Off                   | RW     | 0(0x00)       |     |
-| 40205           | 204 (0xCC) | Hardware Error         | Hardware Error               | R      | 0(0x00)       |     |
-| 40206           | 205 (0xCD) | Goal Position          | Goal Position Value          | RW     |               |     |
-| 40209           | 208 (0xD0) | Goal Speed             | Goal Speed Value             | RW     | Speed Limit   |     |
-| 40210           | 209 (0xD1) | Goal Current           | Max Current Value            | RW     | Current Limit |     |
-| 40211           | 210 (0xD2) | Present Position       | Present Position Value       | R      |               |     |
-| 40212           | 211 (0xD3) | Present Current        | Present Current Value        | R      |               |     |
-| 40214           | 213 (0xD5) | Present Motor PWM      | Motor Input PWM              | R      |               |     |
-| 40215           | 214 (0xD6) | Present Voltage        | Present Voltage Value        | R      |               |     |
-| 40216           | 215 (0xD7) | Moving                 | Motor Operating Status       | R      |               |     |
-| 40218           | 217 (0xD9) | Present Overload Value | Present Overload Value       | R      |               |     |
-| 40221           | 220 (0xDC) | Action Enable          | Action Feature On/Off        | RW     |               |     |
-| 40231           | 230 (0xE6) | Reset                  | Parameter Reset              | W      |               |     |
-| 40232           | 231 (0xE7) | Restart                | System Restart               | W      |               |     |
-| 40241           | 240 (0xF0) | Indirect Data 0        | Data for Indirect address  0 |        |               |     |
-| 40242           | 241 (0xF1) | Indirect  Data 1       | Data for Indirect address  1 |        |               |     |
-| 40243           | 242 (0xF2) | Indirect Data 2        | Data for Indirect address  2 |        |               |     |
-| 40244           | 243 (0xF3) | Indirect  Data 3       | Data for Indirect address  3 |        |               |     |
-| 40245           | 244 (0xF4) | Indirect Data 4        | Data for Indirect address  4 |        |               |     |
-| 40246           | 245 (0xF5) | Indirect  Data 5       | Data for Indirect address  5 |        |               |     |
-| 40247           | 246 (0xF6) | Indirect  Data 6       | Data for Indirect address  6 |        |               |     |
-| 40248           | 247 (0xF7) | Indirect Data 7        | Data for Indirect address  7 |        |               |     |
-| 40249           | 248 (0xF8) | Indirect Data 8        | Data for Indirect address  8 |        |               |     |
-| 40250           | 249 (0xF9) | Indirect Data 9        | Data for Indirect address  9 |        |               |     |
+| Register Number | Address    | Name                   | Description                  | Access | Default       |
+| :-------------- | :--------- | :--------------------- | :--------------------------- | :----- | :------------ |
+| 40201           | 200 (0xC8) | Force On/Off           | Motor Power On/Off           | RW     | 1(0x01)       |
+| 40202           | 201 (0xC9) | Actuator Pause         | Motor Pause                  | RW     | 0(0x00)       |
+| 40203           | 202 (0xCA) | Actuator Stop          | Motor Stop                   | RW     | 0(0x00)       |
+| 40204           | 203 (0xCB) | LED Color              | LED On/Off                   | RW     | 0(0x00)       |
+| 40205           | 204 (0xCC) | Hardware Error         | Hardware Error               | R      | 0(0x00)       |
+| 40206           | 205 (0xCD) | Goal Position          | Goal Position Value          | RW     |               |
+| 40209           | 208 (0xD0) | Goal Speed             | Goal Speed Value             | RW     | Speed Limit   |
+| 40210           | 209 (0xD1) | Goal Current           | Max Current Value            | RW     | Current Limit |
+| 40211           | 210 (0xD2) | Present Position       | Present Position Value       | R      |               |
+| 40212           | 211 (0xD3) | Present Current        | Present Current Value        | R      |               |
+| 40214           | 213 (0xD5) | Present Motor PWM      | Motor Input PWM              | R      |               |
+| 40215           | 214 (0xD6) | Present Voltage        | Present Voltage Value        | R      |               |
+| 40216           | 215 (0xD7) | Moving                 | Motor Operating Status       | R      |               |
+| 40218           | 217 (0xD9) | Present Overload Value | Present Overload Value       | R      |               |
+| 40221           | 220 (0xDC) | Action Enable          | Action Feature On/Off        | RW     |               |
+| 40231           | 230 (0xE6) | Reset                  | Parameter Reset              | W      |               |
+| 40232           | 231 (0xE7) | Restart                | System Restart               | W      |               |
+| 40241           | 240 (0xF0) | Indirect Data 0        | Data for Indirect address  0 |        |               |
+| 40242           | 241 (0xF1) | Indirect  Data 1       | Data for Indirect address  1 |        |               |
+| 40243           | 242 (0xF2) | Indirect Data 2        | Data for Indirect address  2 |        |               |
+| 40244           | 243 (0xF3) | Indirect  Data 3       | Data for Indirect address  3 |        |               |
+| 40245           | 244 (0xF4) | Indirect Data 4        | Data for Indirect address  4 |        |               |
+| 40246           | 245 (0xF5) | Indirect  Data 5       | Data for Indirect address  5 |        |               |
+| 40247           | 246 (0xF6) | Indirect  Data 6       | Data for Indirect address  6 |        |               |
+| 40248           | 247 (0xF7) | Indirect Data 7        | Data for Indirect address  7 |        |               |
+| 40249           | 248 (0xF8) | Indirect Data 8        | Data for Indirect address  8 |        |               |
+| 40250           | 249 (0xF9) | Indirect Data 9        | Data for Indirect address  9 |        |               |
 ## 2.4 Control Table Discription
 ### 2.4.1  Model Serial Number
 Production lot number to identify the mightyZAP Model.
@@ -270,6 +271,7 @@ When a Hardware Error occurs, the LED is activated if the corresponding Alarm LE
 | ----- | ------------------- | ---------------- | --------------------------------------------------------------------------------- |
 | Bit 6 | Overload Error      | RED Blinking     | When load occurs for more than a certain period of time (more than duty rate 50%) |
 | Bit 0 | Input Voltage Error | RED Light steady | When the applied voltage is outside the operating voltage range (8~13V)           |
+
 All alarms will disappear when system is restarted.
 However, in the case of a low Input Voltage LED Alarm, the LED turns off when the cause is resolved.
 > [!note] NOTE   
@@ -282,7 +284,8 @@ When a Hardware Error occurs, the motor is shut down if the corresponding Alarm 
 | ----- | ------------------- | --------------------------------------------------------------------------------- |
 | Bit 6 | Overload Error      | When load occurs for more than a certain period of time (more than duty rate 50%) |
 | Bit 0 | Input Voltage Error | When the applied voltage is outside the operating voltage range (8~13V)           |
-Shutdown puts the motor in Force-Off state, that is, stops supplying power to the motor, when a hardware error occurs.  The Force Off set by Shutdown can only be canceled by system restart.
+
+Shutdown puts the motor in Force-Off state, that is, stops supplying power to the motor, when a hardware error occurs.  The Force Off set by Shutdown can only be canceled by system restart.  
 However, in case of Shutdown due to the Low input voltage, Force On will occur again when the voltage returns to normal. All mightyZAP actuators are delivered with the enabled Shutdown feature. It can be disabled by the user, however, for safety reasons, disabling is not recommended.
 > [!note] NOTE   
 >
@@ -294,8 +297,9 @@ However, in case of Shutdown due to the Low input voltage, Force On will occur a
 | ------------------ | ---------- | ------------------------- |
 | Short Stroke Limit | 0 ⁓ 10,000 | Goal Position Lower Limit |
 | Long Stroke Limit  | 0 ⁓ 10,000 | Goal Position Upper Limit |
+
 The Short/Long Stroke Limit is to limit the upper (long) and lower (short) limits of the Goal Position range between 0 and 10,000, respectively.  
-Therefore, the Goal Position value cannot be smaller than the Short Stroke Limit(A) value and cannot be larger than the Long Stroke Limit(B) value.
+Therefore, the Goal Position value cannot be smaller than the Short Stroke Limit(A) value and cannot be larger than the Long Stroke Limit(B) value.  
 If the Goal Position value is smaller than the Short Stroke Limit value or larger than the Long Stroke Limit value, it is replaced with each Stroke Limit value.
 Although it is not a parameter that must be used, but users are able to prevent unexpected accident due to user's mistakes by setting the stroke limit. 
 ![StrokeLImit](./img/StrokeLImit.png)
@@ -306,8 +310,8 @@ If actuator operates beyond application's mechanical operable limit, mightyZAP o
 ### 2.4.8 Start Compliance Margin  
   
   >[!TIP] Compliance Margin?
-Compliance Margin is the minimum value required to start or complete the actuation through a Goal Position command. In general, it is common to start or complete a motion using a single Compliance Margin value, but we designed mightyZAP to set both Start and End Compliance Margin respectively at the start and completion of motion, ensuring stable operation while maintaining better positional repeatability. 
-In general, when adjusting the Compliance Margin, it is usually made larger than the default value to ensure stable operation even in unstable environments where external pressure or noise occurs, even if some precision is sacrificed. Conversely, if the Compliance Margin is used with a smaller value than the default value, precision may improve but operation stability may be impaired, so special caution is required.
+> Compliance Margin is the minimum value required to start or complete the actuation through a Goal Position command. In general, it is common to start or complete a motion using a single Compliance Margin value, but we designed mightyZAP to set both Start and End Compliance Margin respectively at the start and completion of motion, ensuring stable operation while maintaining better positional repeatability.   
+> In general, when adjusting the Compliance Margin, it is usually made larger than the default value to ensure stable operation even in unstable environments where external pressure or noise occurs, even if some precision is sacrificed. Conversely, if the Compliance Margin is used with a smaller value than the default value, precision may improve but operation stability may be impaired, so special caution is required.
 
 Start Compliance Margin is the minimum position deviation (margin) value for mightyZAP to move to the Goal Position position value.
 
@@ -411,8 +415,9 @@ When controlling an object with a small load and low inertia with the Start Marg
 | ------------ | ----------------------- | -------- | ---- |
 | Acceleration | Motor acceleration time | 0 ⁓ 1000 | msec |
 | Deceleration | Motor deceleration time | 0 ⁓ 1000 | msec |
+
 Each parameter controls the acceleration and deceleration of mightyZAP. 
-This is to reduce motor vibration by controlling the acceleration and deceleration at the start and end of operation to adjust the smoothness of the movement. The value entered in the parameter refers to the acceleration/deceleration control time. The control time may increase depending on the load and is not an absolute value.
+This is to reduce motor vibration by controlling the acceleration and deceleration at the start and end of operation to adjust the smoothness of the movement. The value entered in the parameter refers to the acceleration/deceleration control time. The control time may increase depending on the load and is not an absolute value.  
 If you accelerate or decelerate for too long, the control value may not be sufficient and it may appear to have stopped. Conversely, if the acceleration time is short, it may shock the motor or control object during initial operation and is not good for motor durability. If the deceleration time is short, actuator stops at maximum speed with almost no deceleration time, which increases the distance traveled due to inertia and may cause overshoot.
 
 ![AccDecGraph](./img/AccDecGraph.png)
@@ -422,16 +427,17 @@ If you accelerate or decelerate for too long, the control value may not be suffi
 | ------------------------ | -------------------------------------------- | -------- |
 | Min Position Calibration | Minimum position adjustment of Goal Position | 0 ⁓ 1000 |
 | Max Position Calibration | Maximum position adjustment of Goal Position | 0 ⁓ 1000 |
+
 Min/Max Position Calibration Parameter is to adjust the position value of the rod at the minimum/maximum value of Goal Position.
 
 Please refer to the below for more info. 
 ![minmaxPostion](./img/minmaxPostion.png)
 - Min Poisition Calibration
-	 Min Position Calibration is a parameter that adjusts the starting position value of the rod. If the Min Position Calibration value is increased, the Min Position at Goal Position value '0' will also increase (extract) and the overall motion stroke will also be shortened.
-	 If the Min Position Calibration value is decreased, the Min Position at Goal Position value '0' will also decrease (retract) and the overall motion stroke will be lengthened. But, in this case, the motion linearity of the extended motion section is not good.
+	 Min Position Calibration is a parameter that adjusts the starting position value of the rod. If the Min Position Calibration value is increased, the Min Position at Goal Position value '0' will also increase (extract) and the overall motion stroke will also be shortened.  
+	 If the Min Position Calibration value is decreased, the Min Position at Goal Position value '0' will also decrease (retract) and the overall motion stroke will be lengthened. But, in this case, the motion linearity of the extended motion section is not good.  
 - Max Position Calibration
-	 Max Position Calibration is a parameter that adjusts the end position value of the rod.  If the Max Position Calibration value is increased, the Max Position at Goal Position value '10000' will decrease (retract) and the overall motion stroke will be shortened.
-	  If the Max Position Calibration value is decreased, the Max Position position at the maximum Goal Position value will increase and the overall motion stroke will also increase. However, the nonlinear section at both ends increases.
+	 Max Position Calibration is a parameter that adjusts the end position value of the rod.  If the Max Position Calibration value is increased, the Max Position at Goal Position value '10000' will decrease (retract) and the overall motion stroke will be shortened.  
+	  If the Max Position Calibration value is decreased, the Max Position position at the maximum Goal Position value will increase and the overall motion stroke will also increase. However, the nonlinear section at both ends increases.  
 
   ![minmaxCalibration](./img/minmaxCalibration.gif)
 >[!tip] TIP  
@@ -444,6 +450,7 @@ This parameter sets the maximum value of the motor PWM (operating rate) used to 
 | value        | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
 | -1000 ⁓ 1000 | Setting the maximum value of motor PWM supplied to the motor |
+
 >[!tip] TIP  
 > The term "Motor PWM" in Motor Operating Rate is a different concept from the PWM for position control signals in our products.
  
@@ -453,8 +460,10 @@ The maximum speed limit value for mightyZAP.  As a non-volatile parameter, it is
 | value    | Description             | Note         |
 | -------- | ----------------------- | ------------ |
 | 0 ⁓ 1000 | Max speed limit setting | Non-volatile |
-Setting the Speed ​​Limit low does not affect the maximum force, but the time to reach the maximum current may vary. The lower the speed value, the longer it takes to reach maximum current.
+
+Setting the Speed ​​Limit low does not affect the maximum force, but the time to reach the maximum current may vary. The lower the speed value, the longer it takes to reach maximum current.  
 If the Speed ​​Limit (non-volatile) is changed, the Goal Speed (volatile) ​​also changes.  Additionally, when power is turned on, the Speed ​​Limit value is applied to Goal Speed.  
+
 >[!tip] TIP -  Speed ​​setting according to the load 
 >Maximum speed may change depending on load. At this time, the control can be more stable if user also changes the Speed ​​Limit/Goal Speed ​​values.
 
@@ -467,9 +476,11 @@ Limits the maximum Current value during motor operation. User is able to use thi
 | value   | Description               | Unit | Note                                   |
 | ------- | ------------------------- | ---- | -------------------------------------- |
 | 0 ⁓1600 | Set maximum current limit | mA   | default : 800  <br>Error range +/- 15% |
-Current Limit is a non-volatile parameter that maintains changed data even when the power is turned off. When the Current Limit value changes, the Goal Current value also changes.
-The higher the Current Limit is set, the higher the maximum force that the motor can produce in an overload situation, but it may also cause a shortening of the motor's lifespan. 
+
+Current Limit is a non-volatile parameter that maintains changed data even when the power is turned off. When the Current Limit value changes, the Goal Current value also changes.  
+The higher the Current Limit is set, the higher the maximum force that the motor can produce in an overload situation, but it may also cause a shortening of the motor's lifespan.   
 <font color="#4f81bd">Depending on the variation in internal mechanical resistance of each actuator, mightyZAP may operate irregularly or may not move at too-low current settings (200 mA or less). Therefore, please set the current after sufficient testing.</font>
+
 >[!tip] TIP - Tremors due to accumulation of speed errors
 >If the Current Limit value is lowered, not only Force but also Speed ​​will also decrease. At this time, if the Speed ​​Limit/Goal Speed ​​values ​​are not lowered at the same time, a tremor or vibration phenomenon may appear at the final position due to the accumulation of speed error values.
 >If this phenomenon occurs, reduce Speed ​​Limit/Goal Speed.
@@ -485,6 +496,7 @@ The higher the Current Limit is set, the higher the maximum force that the motor
 | -------------- | ------------------------------- | ------- |
 | Current P Gain | Current PI Proportional control | 0 ⁓ 255 |
 | Current I Gain | Current PI Integral control     | 0 ⁓ 255 |
+
 This is the PI gain value for motor current control. Please note that PI control is a sensitive control area, so special caution is required.
 If a PI gain value is larger than the default value, rough operation may occur due to Goal Current error.
 If a PI gain value smaller than the specified value is applied, it operates smoothly against the Goal Current error, but the error with the Goal Current value may appear large.
@@ -499,11 +511,14 @@ When modifying the PID value, please test by adding or subtracting a small value
 | Speed P Gain | Speed PID Proportional control | 0 ⁓ 255 |
 | Speed I Gain | Speed PID Integral control     | 0 ⁓ 255 |
 | Speed D Gain | Speed PID Differential Control | 0 ⁓ 255 |
-This is the gain value of speed PID control.  The PID control is a sensitive area, so please study it in advance through other sources. If user enters a value larger than default Gain, it will react quickly to speed and position errors, reducing the time it takes to reach the target position and stop.
-However, if a gain value is too large, the motor may not be able to stop at the goal position due to rough operation against the errors, resulting in overshoot or excessive response, and the motor may vibrate.  Additionally, it reacts sensitively to external disturbances (such as external vibration), resulting in poor feedback response.
 
-Conversely, if the lower gain value than default value is applied, the time to reach the goal position may increase, but the motor operation may become smoother. However, if a gain value is too low, actuator may not be reached to the goal position.
-Therefore, when modifying the PID value, please test by adding or subtracting a small value from the default value.
+This is the gain value of speed PID control.  The PID control is a sensitive area, so please study it in advance through other sources. If user enters a value larger than default Gain, it will react quickly to speed and position errors, reducing the time it takes to reach the target position and stop.  
+
+However, if a gain value is too large, the motor may not be able to stop at the goal position due to rough operation against the errors, resulting in overshoot or excessive response, and the motor may vibrate.  Additionally, it reacts sensitively to external disturbances (such as external vibration), resulting in poor feedback response.  
+
+Conversely, if the lower gain value than default value is applied, the time to reach the goal position may increase, but the motor operation may become smoother. However, if a gain value is too low, actuator may not be reached to the goal position.  
+
+Therefore, when modifying the PID value, please test by adding or subtracting a small value from the default value.  
 
 > [!warning] Warning  
 >Before changing the PID value, please apply and test [[#2.4.10 Acceleration/Deceration]] first.
@@ -521,19 +536,23 @@ Using this function, users can collect and use multiple parameters that are sepa
 | Parameter          | Description              | Range     |
 | ------------------ | ------------------------ | --------- |
 | Indirect Address N | User indirect addressing | 0 ⁓ 65535 |
-Normally, when changing the data of parameters in separated addresses, each parameter must be communicated respectively and  in this case, communication time becomes longer.
+
+Normally, when changing the data of parameters in separated addresses, each parameter must be communicated respectively and  in this case, communication time becomes longer.  
+
 On the other hand, consecutive addresses improves communication efficiency allowing data to be applied in one communication packet. 
 
 Therefore, Indirect Address and Indirect Data can be used to set parameters that are separated from each other as consecutive addresses to improve speed of communication. 
 - Consecutively set the parameters  in the Indirect address to be set to consecutive addresses.
 - Set a specific parameter address in the Indirect address and read or write data from the Indirect data.
 
-[Example]
-- Set the parameter which wants to use in the Indirect address by referring to the data map.  At this time, it is recommended to set the writing and reading parameters separately by grouping them. (See the picture below. Red line: for writing, blue line: for reading)
-- Once the Indirect Address setting is complete, in actual use, if user writes and reads the data in the Indirect Data parameter, user is able to obtain the same results as reading and writing the value of the Original Parameter Data.
+>[!info]Example
+> - Set the parameter which wants to use in the Indirect address by referring to the data map.  At this time, it is recommended to set the writing and reading parameters separately by grouping them. (See the picture below. Red line: for writing, blue line: for reading)
+> - Once the Indirect Address setting is complete, in actual use, if user writes and reads the data in the Indirect Data parameter, user is able to obtain the same results as reading and writing the value of the Original Parameter Data.
+
 >[!tip] TIP  
 >Indirect Address setting can be done easily in Total Manager software. 
->Frequently used parameters are added as options in the Select Box. For unregistered addresses, please write and save them directly in the Test Box next to the Select Box where you selected the 'User Input' Option.
+>Frequently used parameters are added as options in the Select Box. For unregistered addresses, please write and save them directly in the Test Box next to the Select Box where you selected the 'User Input' Option.  
+
 >![indirectAddrss](./img/indirectAddrss.gif)
 
 ### 2.4.18 Extended I/O Control  
@@ -545,16 +564,19 @@ The Extended I/O is the ports that provides additional functions that cannot be 
 | IO Port 2 | Switch, JOG, Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 | IO Port 3 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart              |
 | IO Port 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart              |
-The Extended I/O Control allows users to control it without programming using switches or the internal [[#2.4.19 Action Control|Action control]] function.
-Also, in case of using the output function among the extended I/O functions, the status of mightyZAP can be sent as a digital signal.
-The circuit configuration of Extended I/O is configured differently depending on each function and does not require external power.  To avoid problems with mightyZAP, user must connect wiring properly according to the circuit configuration specified in each function description.
+
+The Extended I/O Control allows users to control it without programming using switches or the internal [[#2.4.19 Action Control|Action conrol]] function.
+Also, in case of using the output function among the extended I/O functions, the status of mightyZAP can be sent as a digital signal.  
+The circuit configuration of Extended I/O is configured differently depending on each function and does not require external power.  
+To avoid problems with mightyZAP, user must connect wiring properly according to the circuit configuration specified in each function description.
 
 >[!note] NOTE  
 > Please use the enclosed Extended Wire for connection.
 
 > [!warning] How to modify Extended I/O  
 > Please use our Manager software to modify/set the value.
-Restart the system for the changes to take effect.
+> Restart the system for the changes to take effect.
+>
 > ![extendio](./img/extendio.gif)
 >
 
@@ -564,14 +586,18 @@ Restart the system for the changes to take effect.
 
 <font size="5"> Function Description</font>
 - **Switch**   
-	IO Ports 1 and 2 can be used as a Switch function.  The IO port#1 is for short stroke (retract) direction and the port#2 is for long stroke (extension) direction. When one port(between port# 1 and 2) is designated in the program, the remaining IO Ports are automatically designated. This function configures the circuit as shown in the picture below, and by pressing each button once, it moves all the way to the Short stroke Limit (IO Port1) / Long Stroke Limit (IO port2) values. If user presses the switch of the opposite direction before reaching the end of one direction, it immediately changes direction and operates until the end.
+	IO Ports 1 and 2 can be used as a Switch function.  
+  The IO port#1 is for short stroke (retract) direction and the port#2 is for long stroke (extension) direction. When one port(between port# 1 and 2) is designated in the program, the remaining IO Ports are automatically designated.   
+  This function configures the circuit as shown in the picture below, and by pressing each button once, it moves all the way to the Short stroke Limit (IO Port1) / Long Stroke Limit (IO port2) values.  
+  If user presses the switch of the opposite direction before reaching the end of one direction, it immediately changes direction and operates until the end.  
 	![extended_io_switch](./img/extended_io_switch.png)
 - **JOG**  
-	IO Ports 1 and 2 can be used as a JOG function.  The IO port#1 is for short stroke (retract) direction and the port#2 is for long stroke (extension) direction. When one port(between port# 1 and 2) is designated in the program, the remaining IO Ports are automatically designated. This function configures the circuit as shown in the picture below and it operates in the direction of Short stroke Limit (IO Port1) or Long Stroke Limit (IO port2) only when each button is pressed, and stops when the button is released.
+	IO Ports 1 and 2 can be used as a JOG function.  The IO port#1 is for short stroke (retract) direction and the port#2 is for long stroke (extension) direction.  
+  When one port(between port# 1 and 2) is designated in the program, the remaining IO Ports are automatically designated. This function configures the circuit as shown in the picture below and it operates in the direction of Short stroke Limit (IO Port1) or Long Stroke Limit (IO port2) only when each button is pressed, and stops when the button is released.
 	![extended_io_switch](./img/extended_io_switch.png)
 - **Action Enable**    
 	Action Enable is for Action function.  The functions indicated by IO port N below can be specified in IO port#1~4.
-	( For detailed info for Action function, refer to  [[#2.4.19 Action Control]]. )  
+	( For detailed info for Action function, refer to  [[####2.4.19 Action Control]]. )  
 	![extended_io_single_sw](./img/extended_io_single_sw.png)
 - **Force Off**  
 	Force Off is an input function that cuts off the power to the motor by applying the Force off function to the corresponding I/O port. Connect the switch circuit to the selected I/O port and press the button to perform the Force On/Off Toggle function. When executing the Force Off function, some mightyZAPs, which does not have a "mechanical self-lock" feature, may not be able to maintain its position depending on the installation direction and applied load.
@@ -648,10 +674,12 @@ Index Action sets the state after completing one Action.
 | ----- | ------------------------------------------- |
 | 0     | Cut off the power to the motor. (Force Off) |
 | 1     | Supply the power to the motor. (Force On)   |
+
 Execute Force ON/OFF. 
-When power is applied to the actuator, it is automatically set to Force ON state.
-When the Force Off command is made, the power to the motor is immediately turned off to stop the motor operation. For products that do not support Mechanical Self Lock, the position value may change due to external forces.
+When power is applied to the actuator, it is automatically set to Force ON state.  
+When the Force Off command is made, the power to the motor is immediately turned off to stop the motor operation. For products that do not support Mechanical Self Lock, the position value may change due to external forces.  
 After Force Off,  when certain Goal Position command is given without a separate Force ON command, actuator will be "Force ON" automatically . 
+
 >[!tip] TIP  
 >For products that support Mechanical Self Lock, it can be considered to use the Force Off command to prevent stress on the motor due to frequent position changes from external factors such as vibration or external force after the position movement is completed. If the motor is forced to operate without rest, it may affect the lifespan of the motor or cause overload.
 
@@ -660,12 +688,14 @@ After Force Off,  when certain Goal Position command is given without a separate
 | ----- | ------------------------------------------------------------------------------------------------ |
 | 0     | Release the temporary stop of the position movement.                                             |
 | 1     | Temporarily stops the position movement. At this time, the power to the motor is still supplied. |
+
 If the Pause command is issued while moving, actuator stops / maintains present position. When the Pause command is released, actuator moves back to the originally designated Goal Position. Under Pause state, motor power is still supplied.  
 
 ### 2.4.22 Actuator Stop
 | value | Description                                                                                |
 | ----- | ------------------------------------------------------------------------------------------ |
 | 1     | Stop moving the position and change the Goal Position value to the present position value. |
+
 Actuator completely stops, and the Goal Position value changes to the current stopped position(Present position).  After actuator stops, the Stop Parameter is automatically reset. Under Stop state, motor power is still supplied. 
 
 ### 2.4.23LED
@@ -676,10 +706,10 @@ The LED display during the time when the error status is not displayed can be co
 |0|RED LED |
 |1|GREEN LED|
 ### 2.4.24 Hardware Error
-Among the dangerous situations that occur during operation, mightyZAP has protection functions that detect the following error status and protect itself in various ways.
-Each bit is set in duplicate, and protection can be made when an error occurs using the Alarm Shutdown, Alarm LED, and Extend IO functions.
-The generally recommended method is to use the [[#2.4.6 Alarm Shutdown|Alarm Shutdown]] function and activate Force Off when the error occurs to protect actuator and the user's system.
-If the ShutDown function is set, the motor will not operate unless the Restart command is made.  For the two errors below, the LED alarm and shutdown functions are set as default from the factory.
+Among the dangerous situations that occur during operation, mightyZAP has protection functions that detect the following error status and protect itself in various ways.  
+Each bit is set in duplicate, and protection can be made when an error occurs using the Alarm Shutdown, Alarm LED, and Extend IO functions.  
+The generally recommended method is to use the [[#2.4.6 Alarm Shutdown|Alarm Shutdown]] function and activate Force Off when the error occurs to protect actuator and the user's system.  
+If the ShutDown function is set, the motor will not operate unless the Restart command is made.  For the two errors below, the LED alarm and shutdown functions are set as default from the factory.  
 
 | Bit   | Name                | Description                                                                           |
 | ----- | ------------------- | ------------------------------------------------------------------------------------- |
@@ -694,8 +724,8 @@ If the ShutDown function is set, the motor will not operate unless the Restart c
         ![overload_time](./img/overload_time.png)
 		
   - **Operating current accumulation**   
-    The cumulative operating current measurement method measures the amount of accumulated current generated during operation, and the accumulated current is calculated according to the equation below. It is related to the current consumption according to the actual load applied to the actuator.
-    $$ i^2t = i^2_{peak}t-i^2_{norm}t=(I^2_{peak}-i^2_{norm})t$$
+    The cumulative operating current measurement method measures the amount of accumulated current generated during operation, and the accumulated current is calculated according to the equation below. It is related to the current consumption according to the actual load applied to the actuator.   
+    $$i^2t = i^2_{peak}t-i^2_{norm}t=(I^2_{peak}-i^2_{norm})t$$
 
       I<sup>2</sup>T protection is a motor overload protection method based on thermal modeling of the motor, and is a kind of sensorless motor overheating protection method.  The image below is an example of current accumulation and overload occurrence.
           ![overload_i2t](./img/overload_i2t.png)  (Actuator's I<sub>norm</sub> is set to a low current amount of 60mA or less.)
@@ -719,6 +749,7 @@ The Goal Position is the command for position movement.  Goal Position can be en
 | value     | Description                                                                                                                        |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | 0 ⁓ 10000 | Set the Goal position value of actuator.<br>(Regardless of the stroke length of each model, the position resolution is all 10000.) |
+
 >[!tip] TIP  
 >To calculate position value, pease refer to the maximum length of the Stoke of your actuator.  
 $$ Position = Full Stroke\times\frac{PresentPosition}{10000}$$
@@ -730,6 +761,7 @@ When the power is initially turned on, the value is retrieved from the non-volat
 | value    | Description            | Remark  |
 | -------- | ---------------------- | ------- |
 | 0 ⁓ 1000 | Max speed of mightyZAP | +/- 10% |
+
 (The mobility is OFF at 0 and maximum speed is achieved at 1000.)
 The actual expected speed calculation value using the Goal Speed ​​value is as follows.
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
@@ -744,6 +776,7 @@ Limits the maximum current of the motor. That is, user can limit mightyZAP's max
 | value    | Description                    | Remark  |
 | -------- | ------------------------------ | ------- |
 | 0 ⁓ 1600 | Max Current value of mightyZap | +/- 15% |
+
 When the initial power is turned on, the value is retrieved from the non-volatile parameter [[#2.4.14 Current Limit]] and stored in the volatile parameter "Goal Current". For frequent current changes during operation, use the volatile parameter "Goal Current.
 > [!note] Note - Force limitation using Goal Current command 
 > By adjusting the Goal Current, user can adjust the maximum stall force that the motor can produce. It can be used when user wants to limit the force from exceeding a certain force level depending on the control object and the user's application.
@@ -771,6 +804,7 @@ Indicates the present Current value of mightyZAP.
 | Range    | Description           | Unit | Remark |
 | -------- | --------------------- | ---- | ------ |
 | 0 ⁓ 1600 | Present current value | mA   | +/-15% |
+
 Present Current contains errors, so please use it for reference.
 
 ### 2.4.30 Present Motor Operating Rate
@@ -780,6 +814,7 @@ Indicates the motor PWM value supplied to the motor. (To prevent confusion with 
 | ------------- | ------------------------------------- |
 | -10000 ⁓ 1000 | Motor PWM value supplied to the Motor |
 | 0             | Motor stop state                      |
+
 Motor Operating Rate varies depending on Goal Speed, Goal Current setting, etc.
 
 ### 2.4.31 Present Voltage  
@@ -803,6 +838,7 @@ The accumulated current amount, which is the basis for overload, is displayed as
 | Range   | Description                                 | Unit |
 | ------- | ------------------------------------------- | ---- |
 | 0 ⁓ 100 | Accumulated current percentage for overload | %    |
+
 When the motor operates, the current value accumulates and increases, and when the motor stops, the value decreases. The accumulated value varies depending on the applied load amount, and the reduced value is reduced by the standard rated current value when the motor stops.
 For more information about overload, please check [[#2.4.24 Hardware Error]].
 The maximum value is displayed as 100, and if the value becomes 100, an Overload Error will occur.
@@ -916,6 +952,7 @@ The Pin Map of the RS-485 connector is as follows.
 | 2(White)          | D+       | RS485 +         |
 | 3(Red)            | VCC      | Power +         |
 | 4(Black)          | GND      | Power -         |
+
 Here is the circuit connection for RS-485 communication between mightyZAP and user's controller.  
 
 ![rs485_Circuit](./img/rs485circuit.png)

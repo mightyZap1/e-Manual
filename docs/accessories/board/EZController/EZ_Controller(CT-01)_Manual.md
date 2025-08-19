@@ -18,7 +18,7 @@ Arduino 기반의 EZ Controller는 mightyZAP 리니어 액츄에이터를 손쉽
     된 핀에 무리한 힘을 가하지 마십시오. 고장의 원인이 됩니다.
 2. 절연이 되어 있지 않은 금속판 위에서 전원 연결 시 단락이 될 수 있습니다.  
    반드시 **동봉된 플라스틱 서포트를 기판에 장착 후 사용하여 주시기 바랍니다**.  
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_b4f9c252.png)  
+   ![support](./img/support.png)
    **단락방지를 위해 사용 전 반드시 동봉된 플라스틱 서포트 장착**
 
 3. 이지 컨트롤러에 인가된 전압이 연결 액츄에이터에 바로 인가 되므로, 액츄에이터의 구동 전압범위를 확인하시고 **전원 연결 시 극성을 확인하십시오**.
@@ -45,7 +45,7 @@ Arduino 기반의 EZ Controller는 mightyZAP 리니어 액츄에이터를 손쉽
 # 2.1제품 기능 설명
   
 - **EZ Controller** **구성 부품 및 설명**
-  ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_377eee1.png)  
+  ![function](./img/function.png) 
 >[!note] 참고
 >청색 가변저항 ③(A포지션), ④(B포지션)를 각각 시계·반시계 방향으로 조절하여 A와 B지점의 위치를 조정합니다.            
 >편의상 아래와 같이 A는 최소위치, B는 최대 위치로 설정하는 것이 편합니다.            
@@ -81,8 +81,11 @@ Arduino 기반의 EZ Controller는 mightyZAP 리니어 액츄에이터를 손쉽
 ## 2.2모드 선택  
 - EZ Controller에 내장되어 있는 기본동작 프로그램을 이용하여 액츄에이터의 동작을 테스트 합니다.    
 - 기본 동작 프로그램은 Manual Mode, Position Select Mode, Position Toggle Mode로 구성되어 있습니다.  (모드스위치는 기본 내장된 프로그램에서만 영향을 미칩니다.)  
-  ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_b69acc1b.jpg)   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_df0d198e.jpg)   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_d48ef3fe.jpg)   
-	    Manual                    Position Select             Position Toggle
+ 
+| Manual                                    | Position Select                           | Position Toggle                           |
+| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![modeSW_manual](./img/modeSW_manual.png) | ![modeSW_select](./img/modeSW_select.png) | ![modeSW_toggle](./img/modeSW_toggle.png) |
+
 - **Manual Mode** : 액츄에이터를 연결하고 Mode 스위치를 하단으로 내려 Manual Mode로 설정하고 중앙부 선형 Potentiometer의 위치를 변화시켜 액츄에이터를 조작할 수 있습니다.    
 - **Position Select Mode :** 액츄에이터를 연결하고 Mode 스위치를 중간단으로 올려 Position Select Mode로 설정하고 파란색 포지션 설정 가변 저항을 조절하여 A, B Position을 각각 설정한 후, 중앙부 흰색 Push Button을 눌러 액츄에이터를 A지점과 B지점으로 동작시킬 수 있습니다.    
 - **Position Toggle Mode :** 액츄에이터를 연결하고 Mode 스위치를 상단으로 올려 Position Toggle Mode로 설정하고 파란색 포지션 설정 가변 저항을 조절하여 A, B Position을 각각 설정한 다음 중앙부 흰색 Push Button 둘중 아무 버튼을 눌러 액츄에이터를 A지점과 B지점으로 반전 동작시킬 수 있습니다.      
@@ -92,10 +95,10 @@ Arduino 기반의 EZ Controller는 mightyZAP 리니어 액츄에이터를 손쉽
 
 1. **External Switch 연결**    
    : 단자의 양단을 스위치를 통해 연결해 신호를 입력해줍니다. (단자 양단 단락)
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_4b965bed.png)  
+   ![external_switch](./img/external_switch.png)
 2. **External Signal 입력**
    : 단자의 두번째 홀에 신호 인식을 위하여 3.3~12V 전압 레벨의 신호를 인가 시킵니다.
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_8cbb9f88.png)
+   ![external_signal](./img/external_signal.png)
 ## 2.4 파트 핀 맵  
 | **Part No** | **Pin Name** | **Purpose**          | **Part No** | **Pin Name** | **Purpose**           |
 | ----------- | ------------ | -------------------- | ----------- | ------------ | --------------------- |
@@ -109,31 +112,31 @@ Arduino 기반의 EZ Controller는 mightyZAP 리니어 액츄에이터를 손쉽
 - Parts No : 구성 부품 표기 번호    
 - Pin Name : Arduino(Leonardo) I/O핀    
 - Purpose : I/O핀 Function
-![[Pasted image 20250717103346.png]]
+![pinmap](./img/pinmap.png)
 # 3 아두이노 개발환경 구축하기
 IRROBOT Ez Controller를 통해 테스트 프로그램을 동작시키기 위해선 PC에 아두이노 개발 환경을 구성해야 합니다.
 ## 3.1 아두이노 IDE 설치
 1. [https://www.arduino.cc/en/main/software](https://www.arduino.cc/en/main/software) 에서 Window Installer를 선택
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_d504b821.png)
+   ![arduino_install1](./img/arduino_install1.png)
 2. JUST DOWNLOAD를 눌러 다운로드를 진행합니다.
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_528dcc08.png)
-   3. 다운로드가 완료 되면 arduino-xxx-windows.exe를 실행 합니다.
-      ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_c5b1a5b9.png)
+   ![arduino_install2](./img/arduino_install2.png)
+3. 다운로드가 완료 되면 arduino-xxx-windows.exe를 실행 합니다.
+      ![arduino_install3](./img/arduino_install3.png)
 4. 다음의 과정을 따라 소프트웨어를 설치를 진행 합니다.
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_8d2a625f.png)
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_e8a7f879.png)
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_7e588720.png)
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_f5d889ce.png)
+   ![arduino_install4](./img/arduino_install4.png)
+   ![arduino_install5](./img/arduino_install5.png)
+   ![arduino_install6](./img/arduino_install6.png)
+   ![arduino_install7](./img/arduino_install7.png)
 5. 설치 과정에서 나오는 추가 드라이버를 설치합니다.
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_68bbb95c.png)
+   ![arduino_install8](./img/arduino_install8.png)
 
 6. 소프트웨어 설치가 완료되면 Close를 누릅니다.
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_6eadcd61.png)
+   ![arduino_install9](./img/arduino_install9.png)
 7. 바탕화면에 생성된 아두이노를 실행 합니다.
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_be49b087.png)  
+   ![arduino_icon](./img/arduino_icon.png)
 ## 3.2. 아두이노 IDE 기본 구성
 아두이노 개발환경 기본 구성은 다음과 같습니다.
-![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_440dde32.png)
+![arduino_ide](./img/arduino_ide.png)
 
 1. 컴파일 버튼 : 이 버튼을 누르면 프로그램이 컴파일 합니다.(컴파일 결과는 4번에 표시)    
 2. 업로드 버튼 : 컴파일과 동시에 Arduino에 업로드 합니다. (컴파일 오류 또는 Arduino와의 USB 연결 오류가 발생하면 4번 영역에 표시)    
@@ -143,18 +146,18 @@ IRROBOT Ez Controller를 통해 테스트 프로그램을 동작시키기 위해
 1. 당사 웹사이트([http://www.mightyzap.com](http://www.mightyzap.com/)) API 자료실에서 IRROBOT_EZController_XXXX.Zip을 내려 받습니다.
    (사용하는 액츄에이터가 Position control제품인지, Force Control제품군인지 확인후 그에 맞는 자료실을 선택해 주세요)
 2. [스케치] – [라이브러리 포함하기] – [.ZIP 라이브러리 추가…] 선택
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_4331bc1.png)
+   ![arduino_add_library1](./img/arduino_add_library1.png)
 
 3. IRROBOT_EZController_XXXX.Zip를 선택 (파일명은 업데이트에 따라 변경될 수 있습니다.)
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_d04c68c.png)
+  ![arduino_add_library2](./img/arduino_add_library2.png)
 ## 3.4. 예제 불러오기
 1. 아두이노 IDE 실행
 2. [파일] - [예제] - [IRROBOT_EZController_FC]-[EZ] – 사용할 예제 선택
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_1d3bae97.png)
+   ![loading](./img/loading.png)
 ## 3.5. 프로그램 업로드 하기
 1. [툴]-[보드]-[Arduino Leonardo] 선택
 2. [툴]-[포트]-[COMXX (Arduino Leonardo)] 연결된 보드의 포트 선택
-   ![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_1fcc460b.png)
+   ![upload](./img/upload.png)
 3. 업로드 버튼을 통해 실행된 프로그램을 보드에 업로드 시켜줍니다.
 
 
@@ -171,7 +174,7 @@ EZ Controller는 아두이노 레오나르도 기반으로 제작된 보드이�
 가변저항으로 지정시킨 2Position을 2개의 스위치를 통해 이동시키는 예제입니다.  
 [예제] - [IRROBOT_EZController] - [EZ]–[EZController_2Positions] 선택
 
-![](file:///C:/Users/PARKSU~1/AppData/Local/Temp/lu153281491wx.tmp/lu153281491x1_tmp_498f67a6.jpg)  
+![2position](./img/2position.png)
   
 ### 4.3.1 사용 설명
 - 모드 스위치(8번)는 어디에 위치시켜도 무방합니다. (기본 내장 프로그램에서만 모드 스위치 동작)
@@ -237,21 +240,22 @@ void loop()
 	- long : 2100
 
 - **가변저항을 이용한 위치값 입력**
-  ```C++
-  A_stroke_val = map(A_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
-  B_stroke_val = map(B_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
+	```C++
+	A_stroke_val=map(A_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
+	B_stroke_val=map(B_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
 	```
+
 	- Position A 와 Position B 의 가변 저항 값을 읽어 A_stroke_val 변수와 B_stroke_val 변수에 각각 값을 할당해 줍니다.
 	- map()함수를 통해 가변저항의 저항 값을 액츄에이터의 위치 범위에 맞게 매핑시켜줍니다.
 	- 가변 저항을 이용하지 않을 시 아래의 값을 사용하시기 바랍니다.
-	  A_stroke_val = 100;
-	  B_stroke_val = 3600;
+		A_stroke_val = 100;
+		B_stroke_val = 3600;
 	
 - **출력 제어**
 	-  Easy.MightyZap.GoalPosition() : TTL/RS485 출력 제어
 	- Easy.servo_CH1.writeMicroseconds() : PWM 출력 제어
-  ```C++
-    Easy.MightyZap.GoalPosition(MightyZap_actID,position_val);
+	```C++
+	Easy.MightyZap.GoalPosition(MightyZap_actID,position_val);
 	Easy.servo_CH1.writeMicroseconds(PWM_VAL);
 	```  
 ## 4.3. 예제 - TogglePosition      
@@ -270,7 +274,7 @@ void loop()
 
 ### 4.3.2 프로그램 설명
 가변저항으로 설정된 두 지점을 A나 B 버튼을 눌렀을 시, A 지점에서 B지점 또는 B지점에서 A지점으로 반전 동작
-![[toggle.png]]
+![toggle](./img/toggle.png)
 ```C++
 #include <IRROBOT_EZController.h>  
 #define ID_MAX 11
@@ -336,7 +340,7 @@ Linear Potentiometer의 이동거리만큼 액츄에이터의 위치를 움직�
 - 중단의 가변 Potentiometer(사진의 17번) 를 조절하여 액츄에이터를 동작시켜 줍니다. 매뉴얼 모드에서는 위치 가변저항  
   (사진의 3, 4번)의 설정에 영향을 받지 않고, Potentiometer가 움직이는 만큼 full stroke 구간에서 위치 제어가 됩니다.  
 ### 4.4.2 프로그램 설명
-![[manual.png]]
+![manual](./img/manual.png)
 
 ```C++
 #include <IRROBOT_EZController.h>  
@@ -393,7 +397,11 @@ Slide 스위치를 통하여 액츄에이터 제어 방식을 전환시키며 �
 - 선택한 통신에 알맞은 커넥터에 방향을 유의하여 삽입해줍니다. (사진의 14번 PWM / 15번 TTL / 16번 RS-485)    
   (PWM 커넥터의 경우 페이지 핀맵을 참고하여 극성에 유의하여 삽입하여 주십시오
 - 모드 슬라이드 스위치(사진의 8) 로 Mode를 변환시켜 액츄에이터를 동작시켜 줍니다.  
-  ![[modeSw.png]]
+  
+| Manual                                    | Position Select                           | Position Toggle                           |
+| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
+| ![modeSW_manual](./img/modeSW_manual.png) | ![modeSW_select](./img/modeSW_select.png) | ![modeSW_toggle](./img/modeSW_toggle.png) |
+
 	1) Mode0 : Manual Control (스위치 최하단)  
 	2) Mode1 : 2 Position Control (스위치 중간단)  
 	3) Mode2 : Toggle Control (스위치 최상단)
@@ -492,7 +500,7 @@ void loop()
 
 - **Slide Switch Mode 정의**
 	- Slide Switch 의 하단, 중단, 상단이 각 순서대로 MODE_0,MODE_1,MODE_2 로 정의되어 있습니다.
-  ```
+ 	```
 	#define IS_MANUAL_MODE_ON Easy.MODE_0.isOFF()
 	#define IS_2P_MODE_ON Easy.MODE_1.isOFF()
 	#define IS_TOGGLE_MODE_ON Easy.MODE_2.isOFF()
@@ -501,26 +509,28 @@ void loop()
 	- Sw_status : 스위치가 눌러져 있는 상태 판별 
 	- sw_cnt : SW On 시, Debouncing 후 인식
 	```C++
-	if(IS_A_POSITION_ON || IS_B_POSITION_ON){
-      if(!Sw_status){
-        if(sw_cnt++>7){
-          tg_flag ^= 1;
-          Sw_status = 1;
-          sw_cnt = 0;
-        }
-      }
-      else sw_cnt = 0;
-    }
-    else {
-      sw_cnt = 0;
-      if(!IS_A_POSITION_ON && !IS_B_POSITION_ON){
-        if(cnt++>7){
-          cnt = 0;
-          Sw_status = 0;
-        }
-      }
-    }
+	if(IS_A_POSITION_ON || IS_B_POSITION_ON)
+	{
+		if(!Sw_status){
+			if(sw_cnt++>7){
+				tg_flag ^= 1;
+				Sw_status = 1;
+				sw_cnt = 0;
+			}
+		}
+		else sw_cnt = 0;
+	}
+	else {
+		sw_cnt = 0;
+		if(!IS_A_POSITION_ON && !IS_B_POSITION_ON){
+			if(cnt++>7){
+				cnt = 0;
+				Sw_status = 0;
+			}
+		}
+	}
 	```
+
 ## 4.6. 예제 –Extra IO(1)  
 상단의 Digital IO핀의 입력을 받아 액츄에이터를 제어하는 예제 입니다.  
 [예제] - [IRROBOT_EZController] - [EZ]–[EasyControl_ExtIO] 선택
@@ -537,7 +547,8 @@ void loop()
   두 번째 핀에 Low 신호를 가하게 되면 설정한 B 지점으로 액츄에이터가 이동합니다.
 - Push Button Switch 위에 6 개의 부가적인 IO 핀이 있으며 좌측 3 개는 Arduino 의 Digital IO, 우측 3 개는 Analog IO 핀 입니다.
 ### 4.6.2 프로그램 설명
-![[extraio_pinmap.png]]  
+![extraio_pinmap](./img/extraio_pinmap.png)
+
 ```C++
 #include <IRROBOT_EZController.h>
 #define ID_MAX 11
@@ -589,10 +600,10 @@ void loop() {
 	```
 - **IO input 제어**
 	- 7 번핀에 5V 신호가 인가되면 액츄에이터는 설정한 지점 A 로 11 번핀에 5V 신호가 인가되면 액츄에이터는 설정한 지점 B 로 이동한다.
-  ```C++
+  	```C++
 	if(digitalRead(7) == HIGH) position_val = A_stroke_val;
-    else if(digitalRead(11) == HIGH) position_val = B_stroke_val;
-    else position_val = position_val;
+	else if(digitalRead(11) == HIGH) position_val = B_stroke_val;
+	else position_val = position_val;
 	```
 ## 4.7. 예제 -Extra IO(2)  
 상단 Analog IO핀에 외부 센서의 입력을 받아 액츄에이터를 제어하는 예제 입니다.  
@@ -608,7 +619,8 @@ void loop() {
   ex) CDS => 밝을수록 전진, 어두울수록 후진 동작      
 ### 4.7.2 프로그램 설명
 - 라이브러리 내부적으로 상단의 아날로그핀 A0,A2,A3 가 각각 VR_4,VR_5,VR_6 으로 정의되어 있으며 사용하고자 하는 핀을 정의되어있는 이름으로 선언 또는 매칭되어 있는 아날로그 핀을 직접 선언하여 사용합니다.
-![[extraIO2.png]]
+![extraIO2](./img/extraIO2.png)
+
 ```C++
 #include <IRROBOT_EZController.h>
 
@@ -672,7 +684,8 @@ void loop() {
 - Serial.begin()함수로 시리얼 모니터의 baud rate 설정 Sw_func()함수와 ExtComData_Func()함수에서 송수신 된 데이터를 시리얼 모니터에 출력하여 확인합니다.
 - ExtComData_Listen() 함수를 통하여 통신 데이터를 한 바이트씩 수신해줍 니다.
 - Sw_Func()함수에선 A 와 B 각각 해당하는 ASCII 코드 값을 송신하며 ExtComData_Func()함수에선 수신된 ASCII 코드값에 해당하는 Position 으로 액츄에이터를 이동시켜줍니다.
-![[externalUart.png]]
+![externalUart_ENG](./img/externalUart_ENG.png)
+
 ```C++
 #include <IRROBOT_EZController.h>
 
@@ -755,7 +768,8 @@ bool ExtComData_Func(){
 ### 4.9.1 사용설명
 - [Basic Function]과 동일하게 슬라이드 스위치 위치에 따라 동작이 다르며 Mode별로 동작을 지정할 수 있습니다.
 ### 4.9.2 프로그램 설명
-![[modeSelect.png]]
+![modeSelect](./img/modeSelect.png)
+
 ```C++
 #include <IRROBOT_EZController.h>
 
@@ -822,7 +836,8 @@ void loop()
 - 중단의 가변 Potentiometer(사진의 17번) 를 조절하여 액츄에이터를 동작시켜 줍니다.  
   해당 프로그램에선 위치 가변저항 (사진의 3 ,4번)의 설정에 영향을 받으며, Potentiometer를 움직여도 가변저항으로 설정한 구간에서만 위치 제어가 됩니다.      
 ### 4.10.2 프로그램 설명
-![[accessories_etc/img/strokeLimit.png]]
+![strokeLimit](./img/strokeLimit.png)
+
 ```C++
 #include <IRROBOT_EZController.h>
 

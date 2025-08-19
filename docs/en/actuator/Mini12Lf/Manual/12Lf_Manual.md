@@ -467,9 +467,11 @@ After receiving Command Packet at multiple qty of mightZAPs, the servo whose ID 
 <font color="#ff0000">** from firmware 2.0 or above</font>
 
 ## 4.4. Data Description
-<font size='16'>[Non-Volatile Memory]</font>
+<font size='15'>[Non-Volatile Memory]</font>
+
 > [!warning] WARNING  
 > non-volatile memory area. If you change the data, communication may stop for a short time during saving process. Therefore, please be careful of frequent value changes during operation.
+
 ### 4.4.1. Model Number
 The model number of MightyZAP
 "Read" only to discriminate & recognize concerned model
@@ -549,6 +551,7 @@ If concerned bit is set as "1" when error occurs, error LED indication will be a
 |---|---|---|
 |Overload Error|5|Red Blink|
 |Input Voltage Error|0|Red Steadily ON|
+
 In case of Input Voltage Error, the alarm is immediately cleared when the error is resolved.
 In case of Overload Error, the alarm is not cleared even after overload condition is resolved, but can be cleared by rebooting the power or restarting the system.
 
@@ -640,10 +643,12 @@ highest voltage 및 Overload Error의 경우 Force Off (shutdown) 되며, 전원
 |---|---|---|
 |Stroke Limit|Short Stroke Limit ~ Long Stroke Limit|No limit on the available stroke range, only limit G/P input range (0~4095)|
 |Position Calibration|0 ~ 4095(Full range)|Input range (0~4095) is not limited, but the available stroke range may vary.|
+
 For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf-20F-27 is 5, increasing the Min Position Calibration value increases the Min Position value and the entire stroke range will be reduced as the Min Position increases.
 
 
-<font size='16'>[Volatile Memory]</font>
+<br><font size='15'>[Volatile Memory]</font>
+
 ### 4.4.20.  Force ON/OFF (Default : 1 / Force ON)
 - Setting for Force On and OFF ( 0 :  OFF, 1 :  ON)  
     
@@ -651,6 +656,7 @@ For example, if the Min Position Calibration value at Min Position 3.8mm of 12Lf
 |---|---|
 |0|Cut off power to the motor and Force is OFF. |
 |1|Power to be supplied to the motor and Force is ON.|
+
 > [!tip] TIP  
 > migtyZAP keeps its position due to mechanical design even after motor power is off.  For instance, mightyZAP having more than 27N rated load, rod sticks to its position firmly when motor power is off. So, in case servo motor needs to keep certain position (if mechanical frictional force is able to keep its position under power off condition against your load), apply FORCE OFF parameter. In this case, communication line is still alive and only motor power can be off which helps longer lifespan of the servo. Upon new positional command, servo will be FORCE on and do its next movement. 
 

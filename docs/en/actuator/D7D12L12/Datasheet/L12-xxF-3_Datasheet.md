@@ -73,7 +73,7 @@ version:
 | **Stroke length** |      | 27.0 |      | mm   |      |
 |                   |      |      |      |      |      |
 
--  Synchronize Min / Max Position by “Min / Max Position Calibration” feature on Manager software or Parameter Map.
+- Synchronize Min / Max Position by “Min / Max Position Calibration” feature on Manager software or Parameter Map.
 
 ### 2.6 No Load Speed
 
@@ -104,7 +104,7 @@ version:
 | ^                      |     | 22.48 |     | lbf  | ^           |
 | ^                      |     | 10.19 |     | kgf  | ^           |
 
-⁕ 1 kgf = 9.8N, 1lbf = 4.45N
+- 1 kgf = 9.8N, 1lbf = 4.45N
 
 ### 2.8 Self Lock Feature
 
@@ -117,7 +117,8 @@ version:
 | ^         |  -  |     ^     |  -  |      | L12-100x-3 |
 
 >[!tip] Tip
->**Self-lock feature :The force which actuator maintains its position by mechanical friction without motor power.****
+>**Self-lock feature :The force which actuator maintains its position by mechanical friction without motor power.**
+
 ## 3. Reference
 ### 3.1 Load Vs Current
 ![loadVSCurrent](./img/loadVSCurrent.png)

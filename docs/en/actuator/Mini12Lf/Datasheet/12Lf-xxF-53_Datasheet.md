@@ -108,6 +108,7 @@ version:
 | ^ | | 17.53 | 35.05 | lbf | ^ |
 | ^ | | 7.96 | 15.91 | kgf | ^ |
 <p align="right">⁕ 1 kgf = 9.8N, 1lbf = 4.45N</p>
+
 >[!warning] Caution
 >Use under rated load conditions as much as possible. When applying max applicable load (2 times rated load), set Goal current to 1600(1.6A) and reduce Duty cycle to 20% or less.
 

@@ -4,7 +4,7 @@ title: EZControllerUserManual
 modified: 
 version:
 ---
-# EZController Manual
+# EZController 
 # 1 Overview
 Arduino-based EZ Controller is a controller to easily operate / test mightyZAP linear servo actuators. The features of EZ Controller are as follows.
 
@@ -135,7 +135,8 @@ Basic composition of Arduino IDE is as below.
 ## 3.3. Add Library   
 1. Download Arduino API/Library(IRROBOT_EZController_XXXX.Zip) for EZ controller from the Digital Archives at http://www.mightyzap.com 
 >[!caution] Caution
->There are two different menus on our Digital Archives. The one is for the Position control lineup, and the other is for the Force control lineup actuators. According to the actuator you have, please select proper menu.)
+>There are two different menus on our Digital Archives. The one is for the Position control lineup, and the other is for the Force control lineup actuators. According to the actuator you have, please select proper menu.
+
 2. Click [Sketch] – [Include Library] – [Add .ZIP Library]
 ![arduino_add_library1](./img/arduino_add_library1.png)
 3. Select IRROBOT_EZController_XXXX.Zip you downloaded. (File name is subject to be changed according to future update.)
@@ -228,9 +229,9 @@ void loop()
 	- long : 2100
 
 - **Enter position value using variable resistance**
-  ```C++
-  A_stroke_val = map(A_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
-  B_stroke_val = map(B_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
+	```C++
+	A_stroke_val = map(A_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
+	B_stroke_val = map(B_POSITION_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
 	```
 	- Read the variable resistor values of Position A and Position B and assign values to “A_stroke_val” and “B_stroke_val” variables respectively.
 	- The map () function maps the variable resistor's resistor value to the actuator's position range.
@@ -238,11 +239,11 @@ void loop()
 	  A_stroke_val = 100;
 	  B_stroke_val = 3600;
 	
-- **Output control**
-Easy.MightyZap.GoalPosition() : TTL/RS485 control
+- **Output control**  
+Easy.MightyZap.GoalPosition() : TTL/RS485 control  
 Easy.servo_CH1.writeMicroseconds() : PWM control
-  ```C++
-    Easy.MightyZap.GoalPosition(MightyZap_actID,position_val);
+	```C++
+	Easy.MightyZap.GoalPosition(MightyZap_actID,position_val);
 	Easy.servo_CH1.writeMicroseconds(PWM_VAL);
 	```  
 ## 4.3. Example - TogglePosition      
@@ -309,7 +310,7 @@ void loop() {
 
 - **toggle motion**
 When the A or B button is pressed, the tg_flag value declared as bool is inverted, and when the value is 1, it moves to the A point, and when it is 0, it moves to the B point.
-  ```C++
+	```C++
 	if(IS_A_POSITION_ON || IS_B_POSITION_ON) tg_flag ^= 1;
 	if(tg_flag) position_val = A_stroke_val;
 	else position_val = B_stroke_val;
@@ -370,16 +371,16 @@ Actuator position operation after reading Potentiometer value with “Manual_pos
 
 ```C++
 Manual_position_val = map(MANUAL_POSITION_VR.read(),VR_MIN,VR_MAX,VAL_MIN,VAL_MAX);  
-  position_val = Manual_position_val;
-  Easy.MightyZap.GoalPosition(MightyZap_actID,position_val);
-  Easy.servo_CH1.writeMicroseconds(PWM_VAL);
+position_val = Manual_position_val;
+Easy.MightyZap.GoalPosition(MightyZap_actID,position_val);
+Easy.servo_CH1.writeMicroseconds(PWM_VAL);
 ```
   
 ## 4.5. Example – Basic Function (Factory program)
 Switching control mode and controlling actuator through Mode selection slide switch. 
 Select [Example] - [IRROBOT_EZController] - [EZ]-[EasyControl_BasicFunction]
 
-**\[Description]**
+**[Description]**
 - Supply power to the input power terminal (#7). Make sure correct input voltage(7.4V or 12V) and correct polarity.(GND and VCC) 
 - Carefully insert the connector suitable for the selected communication. (#14 PWM / #15 TTL / #16 RS-485) **(For PWM connector (#14), refer to the page 6 to make sure correct polarity.)** 
 - Switch the mode with the mode slide switch (#8) to operate the actuator. 
@@ -393,7 +394,7 @@ Select [Example] - [IRROBOT_EZController] - [EZ]-[EasyControl_BasicFunction]
   3) Mode2 : Toggle Control (Switch Top) 
 - When operating in Mode1 (Manual Control), note that the position setting variable resistor values by # 3 and 4 are set to the limit value of the movable range of the variable linear potentiometer (# 17).
 
-**\[Program Description]**
+**[Program Description]**
 ```C++
 #include <IRROBOT_EZController.h>
 
@@ -486,37 +487,38 @@ void loop()
 
 - **Define slide switch mode**
 The bottom, middle, and top of the Slide Switch are defined as MODE_0, MODE_1, and MODE_2 in each order
-  ```
+	```
 	#define IS_MANUAL_MODE_ON Easy.MODE_0.isOFF()
 	#define IS_2P_MODE_ON Easy.MODE_1.isOFF()
 	#define IS_TOGGLE_MODE_ON Easy.MODE_2.isOFF()
-```
+	```
 
 - **Debouncing by variable counting**
 Sw_status : Recognizing if the switch is pressed
 sw_cnt: When SW is On, recognizing after debouncing 
 cnt: When SW is off, recognizing after determining
 
-``` C++
-	if(IS_A_POSITION_ON || IS_B_POSITION_ON){
-      if(!Sw_status){
-        if(sw_cnt++>7){
-          tg_flag ^= 1;
-          Sw_status = 1;
-          sw_cnt = 0;
-        }
-      }
-      else sw_cnt = 0;
-    }
-    else {
-      sw_cnt = 0;
-      if(!IS_A_POSITION_ON && !IS_B_POSITION_ON){
-        if(cnt++>7){
-          cnt = 0;
-          Sw_status = 0;
-        }
-      }
-    }
+	```C++
+	if(IS_A_POSITION_ON || IS_B_POSITION_ON)
+	{
+		if(!Sw_status){
+			if(sw_cnt++>7){
+				tg_flag ^= 1;
+				Sw_status = 1;
+				sw_cnt = 0;
+			}
+		}
+		else sw_cnt = 0;
+	}
+	else {
+		sw_cnt = 0;
+		if(!IS_A_POSITION_ON && !IS_B_POSITION_ON){
+			if(cnt++>7){
+				cnt = 0;
+				Sw_status = 0;
+			}
+		}
+	}
 	```
 ## 4.6. Example –Extra IO(1)
 Controlling the actuator by receiving the input of the digital IO pin. 
@@ -581,18 +583,20 @@ void loop() {
 
 - **IO Pin settings**
 Among Digital IO (7,11,13), 7 and 11 IO are declared as input.
-``` C++
+	``` C++
 	pinMode(7,INPUT);
 	pinMode(11,INPUT);
 	```
 
-**IO input control**
-When 5V signal is applied to pin 7, the actuator moves to the set point A. When 5V signal is applied to pin 11 the actuator moves to the set point B.
-  ```C++
+- **IO input control**  
+When 5V signal is applied to pin 7, the actuator moves to the set point A. When 5V signal is applied to pin 11 the actuator moves to the set point B.  
+
+	```C++
 	if(digitalRead(7) == HIGH) position_val = A_stroke_val;
-    else if(digitalRead(11) == HIGH) position_val = B_stroke_val;
-    else position_val = position_val;
+	else if(digitalRead(11) == HIGH) position_val = B_stroke_val;
+	else position_val = position_val;
 	```
+
 ## 4.7. Example -Extra IO(2)  
 Controlling the actuator by receiving the input of an external sensor to the analog IO pin. 
 Select [Example] - [IRROBOT_EZController] - [EZ]–[EasyControl_Sensing]
@@ -649,11 +653,11 @@ void loop() {
 ```
 
 - analog pin settings
-  ```C++
+	```C++
 	#define EXT_ANALOG_VR Easy.VR_4   //VR4 : A0  //VR5 : A2  //VR6 : A3
 	```
 - analog input control
-  ```C++
+	```C++
     Ext_analog_val = map(EXT_ANALOG_VR.read(), VR_MIN, VR_MAX, VAL_MIN, VAL_MAX);
 	```
 ## 4.8. Example –External Communication
@@ -806,14 +810,14 @@ Index values for each mode are defined sequentially
 	#define EXT_COM_MODE 6
 	```
 - **Switch value define**
-	- 1 : when the mode switch is at the bottom 
-	  2 : mode switch at the middle
-	  3 : at the top
-	- Tester.ModeSelect(int mode1, int mode2. int mode3, int sw); 
-	  mode1 : operation when sw value is 1 
-	  mode 2 : operation when sw value is 2 
-	  mode3 : operation when sw value is 3 
-	  sw : Mode value set by mode switch
+	- 1 : when the mode switch is at the bottom  
+	  2 : mode switch at the middle  
+	  3 : at the top  
+	- Tester.ModeSelect(int mode1, int mode2. int mode3, int sw);   
+	  mode1 : operation when sw value is 1   
+	  mode 2 : operation when sw value is 2   
+	  mode3 : operation when sw value is 3   
+	  sw : Mode value set by mode switch 
 	```C++
 	if(ModeSW_1)sw_val = 1;
 	else if(ModeSW_2) sw_val = 2;
@@ -896,7 +900,7 @@ void loop()
 ```
 - **Set analog value Min/Max**
  Regardless of V/R(#3&4) location, large value sets max limit and small value sets min limit.
-  ```C++
+	```C++
 	if(short_stroke_limit>long_stroke_limit)
 	{
 		int temp = short_stroke_limit;
@@ -906,7 +910,7 @@ void loop()
 	```
 - **Position Limit value setting**
 Determine the potentiometer value so that linear potentiometer does not exceed the set range.
-  ```C++
+	```C++
 	if(Manual_position_val<short_stroke_limit) Manual_position_val = short_stroke_limit;
 	else if(Manual_position_val>long_stroke_limit) Manual_position_val = long_stroke_limit;
 	position_val = Manual_position_val;

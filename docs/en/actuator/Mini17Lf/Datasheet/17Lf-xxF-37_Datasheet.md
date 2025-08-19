@@ -77,7 +77,7 @@ version:
 | **MAX Position** | 41.5 | 42.0 | 42.5 | mm | |
 | **Stroke length** | | 37.0 | | mm | |
 
-⁕Min/Max position values ​​can be synchronized using the "Min/Max Position Calibration" function on the Manager software or parameter coding.
+- Min/Max position values ​​can be synchronized using the "Min/Max Position Calibration" function on the Manager software or parameter coding.
 
 ### 2.6 No Load Speed
 | Parameter | Min | Norm | Max | Unit | Note |
@@ -190,7 +190,7 @@ In case of user board, user can implement the communication circuit as follows.
 | 4 (WHITE) | Extended IO 4 | Action Enable, Force Off, Stop, Pause, Alarm Out, Restart |
 >[!note]
 >
->For the detailed description of each I/O function, please refer to the 17Lf series User Manual [mightyZAP 17Lf User Manualeng#2.4.18 Extended I/O Control |17Lf User manual 2.4.18 Extended I/O Control]] (==링크연결안됨)==
+>For the detailed description of each I/O function, please refer to the 17Lf series User Manual 
 
 **Extended I/O Pin Map**
 ![extende_io_pinmap](./img/extende_io_pinmap.png)

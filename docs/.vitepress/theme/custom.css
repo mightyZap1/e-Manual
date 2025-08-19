@@ -52,6 +52,14 @@
   color:#0d6fde!important;
   font-size: 1.1rem;
 }
+
+.vp-adaptive-theme{
+  background-color: #c9c9c9!important;
+
+}
+.vp-adaptive-theme code{
+  /* color : white!important; */
+}
 .downloadbtn{ 
   color: rgb(255 255 255) !important;
   text-decoration: none !important;

@@ -75,9 +75,6 @@ version:
 | **MAX Position** | 43.2 | 43.7 | 44.2 | mm | |
 | **Stroke length** | | 40.0 | | mm | |
 
-⁕ If you need to set the minimum retracted position of multiple mightyZAPs exactly the same, please consult separately.
-⁕ Min / Max Position Calibration function of the manager software or parameter map can be used to synchronize Min / Max position values.
-
 ### 2.6 No Load Speed
 | Parameter | Min | Norm | Max | Unit | Note |
 | :--- | :--- | :--- | :--- | :--- | :--- |

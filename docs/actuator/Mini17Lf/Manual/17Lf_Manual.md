@@ -23,7 +23,7 @@ mightyZAP 마이크로 선형 서보 액추에이터는 다양한 산업 분야�
 > 3. 제품의 사용 환경을 준수하세요 (전압 : 8V\~13V(정격전압 12V),  동작 온도 : -10도 \~ +60도)
 > 4. 최적의 수명 관리를 위해 Duty Rate 50%를 넘지 않고, 최대 연속 동작 시간 30초를 넘지 말아 주시기 바랍니다.
 > 5. 오배선에 유의 하여 주시기 바랍니다.
->    <font color="#ff0000">자세한 사항은</font> \[[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.</font>
+>    <font color="#ff0000">자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.</font>
 
 > [!warning] 취급 및 보관 
 >
@@ -31,7 +31,7 @@ mightyZAP 마이크로 선형 서보 액추에이터는 다양한 산업 분야�
 > * mightyZAP을 물기, 먼지, 기름으로부터 멀리 하십시오.
 > * 본 제품은 실내 용도로 설계된 제품입니다. 실외 사용을 금합니다.
 > * 어린이의 손이 닿지 않는 곳에 제품을 보관하십시오. 성인이 사용 시에도 모터의 동작 시 발생할 수 있는 신체 상해에 유의하십시오.
->    <font color="#ff0000">자세한 사항은</font> \[[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.</font>
+>    <font color="#ff0000">자세한 사항은</font> [[#3.1 사용 주의 사항]] <font color="#ff0000">을 참조 하여 주시기 바랍니다.</font>
 
 ### 1.2 사양
 
@@ -93,7 +93,7 @@ Control Table은 mightyZAP을 구동 및 제어하기 위한 Parameter와 현재
 
 > [!note] Note 
 >17Lf 시리즈는 MODBUS-RTU 프로토콜 만을 제공합니다.  (IR Open프로토콜 미지원)
->통신 Packet에 대한 자세한 내용은 \[[17Lf Modbus RTU_kor|MODBUS RTU]]를 참고하여 주시기 바랍니다.
+>통신 Packet에 대한 자세한 내용은 [[17Lf Modbus RTU_kor|MODBUS RTU]]를 참고하여 주시기 바랍니다.
 
 ### 2.1 Description
 
@@ -312,7 +312,7 @@ Hardware Error 가 발생 했을 때, 해당 Alarm LED  bit 가 세팅 되어 �
 하지만 저전압 Input Voltage LED Alarm의 경우 원인이 해결 되면 LED가 꺼지게 됩니다.
 
 > [!note] NOTE
-> Hardware Error에 대한 자세한 설명은 \[[#2.4.24 Hardware Error]]를 참조하여 주시기 바랍니다. 
+> Hardware Error에 대한 자세한 설명은 [[#2.4.24 Hardware Error]]를 참조하여 주시기 바랍니다. 
 
 #### 2.4.6 Alarm Shutdown
 
@@ -327,7 +327,7 @@ Shutdown은 Hardware Error가 발생할 경우, 모터를 Force Off 상태 즉, 
 하지만 저전압 Input Volatage에 의한 Shutdown의 경우 정상 전압으로 될 경우 다시 Force On 됩니다. Shutdown 기능은 활성된 상태로 출하되며, 사용자에 의해 비활성화가 가능하지만, 제품의 보호 차원에서 비활성화는 추천되지 않습니다. 
 
 > [!note] NOTE
-> Hardware Error에 대한 자세한 설명은 \[[#2.4.24 Hardware Error]]를 참조하여 주시기 바랍니다.
+> Hardware Error에 대한 자세한 설명은 [[#2.4.24 Hardware Error]]를 참조하여 주시기 바랍니다.
 
 #### 2.4.7 Short/Long Stroke Limit
 
@@ -345,7 +345,8 @@ Goal Position값이 Short Stroke Limit 값보다 작을 경우 또는 Long Strok
 > [!note] NOTE
 > mightyZAP이 사용자의 Application에 설치 되어 동작하기 전에 , 실제 가동 가능한 범위를 측정하여 Short Stroke Limit/Long Stroke Limit를 설정하신 후 사용하는 것을 추천 드립니다.\
 > 설치된 사용자 기구물의 기구 한계 밖의 위치 이동값을 입력할 경우 생길 수 있는 사용자 어플리케이션의 파손이나 액츄에이터의 오버로드 또는 파손을 방지할 수 있습니다.
-> 자세한 내용은 \[[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
+> 자세한 내용은 [[#3. 유의 사항]]을 확안하여 주시기 바랍니다.
+
 
 #### 2.4.8 Start Compliance Margin
 
@@ -437,7 +438,7 @@ mightyZAP이 위치 편차를 줄이기 위해 동작 중일 때 적용이 되�
 **기본 개념**
 End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
 진행 방향에서의 End Complilance Margin 위치에서 mightyZAP은 내부적으로 정해진 전기적 브레이크 명령을 내립니다. 이때 mightyZAP은 전기적인 브레이크, 내부적인 마찰과 관성등에 의해 일정 거리를 이동한 후 정지하게 됩니다.  전기적 브레이크 후 이동한 거리가 End Compliance Margin의 값과 동일하게 하게 면,  명령을 내린 목표위치에 가장 가깝게 됩니다. 
-![EndMarginBasic](./img/EndMarginBasic.gif)]]
+![EndMarginBasic](./img/EndMarginBasic.gif)
 **End Compliance 줄이기**
 부하가 적은 환경에서는 반복 정밀도를 높이기 위해 End compliance Margin을 줄이는 것이 효과적일 수 있습니다. 그렇지만 관성에 의해 밀리는 거리가 End Compliance Margin보다 길 경우 목표 위치를 벗어나 정지하게 되거나 그 이상의 거리를 이동한 후 정지 할 수 있습니다.
   ![EndMarginDec](./img/EndMarginDec.gif)
@@ -445,10 +446,10 @@ End Compliance Margin에 대한 기본적인 개념은 다음과 같습니다.
 Start Compliance Margin과 End Compliance Margin과의 거리가 가깝거나 같을 경우 문제가 발생할 수 있습니다.
 <font color="#4f81bd">상황 1.  Start Margin과 End Margin이 모두 작은 경우</font>
 아래의 이미지와 같이 Start Margin과 End Margin이 모두 작은 경우, 부하가 크거나 관성이 있는 환경에서는 반대편 Start Margin까지 벗어나게 되어 Overshoot 가 발생할 수 있습니다.
-![[eManual/Actuator/Mini 17Lf/img/StartEndMargin.gif]]
+![StartEndMargin](./img/StartEndMargin.gif)
 <font color="#4f81bd">상황 2.  Start Margin 과 End Margin이 같은 경우</font>
 Start Margin 과 End Margin 거의 같고 부하가 적고 관성이 적은 제품을 제어할 경우 위치 오차와 노이즈로 아래와 같이 정상적으로 정지를 못하고 진동할 수 있습니다.
-![[./img/StartEndMargin.gif|700]]
+![StartEndMargin](./img/StartEndMargin.gif)
 
 > [!tip] TIP
 > End Compliance Margin은 작을 수록 위치 정밀도가 높아지나, 일정 값 이하로 줄일 경우 그 효과가 미미해 집니다.  
@@ -571,11 +572,11 @@ Current Limit를 높게 설정할수록 과부하 상황에서 모터가 낼 수
 PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테스트 하시기 바랍니다.
 
 > [!warning] Warning
-> PID값을 변경하기 전에 \[[#2.4.10 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.
+> PID값을 변경하기 전에 [[#2.4.10 Acceleration/Deceration]]을 먼저 적용하고 테스트하여 주시기 바랍니다.
 > PID값을 수정하시기 전에 PID에 대한 충분히 숙지하신 후에 해당 값을 변경하여 주시기 바랍니다.  
->
-> [!tip] [ 일반적인 PID값 제어 방법 ]
-> ![[PID_Compensation_Animated.gif]]
+
+> [!tip] 일반적인 PID값 제어 방법
+> ![PID_Compensation_Animated](./img/PID_Compensation_Animated.gif)
 >  [참고 문헌]  <https://commons.wikimedia.org/wiki/File:PID_Compensation_Animated.gif> 
 
 #### 2.4.17 Indirect Address
@@ -594,11 +595,10 @@ PID 값을 수정하실 때는 기본 값에서 작은 값을 가 감하여 테�
 
 * Indirect Address 에 특정 Parameter Address를 설정하고 Indirect Data에서 데이터를 읽거나 쓰면 됩니다.
 
-[Example]
-
-* 사용하려고 하는 Parameter를 Data Map을 참조하여 Indirect Address 에 세팅합니다.
-    이때 쓰기용과 읽기용 파라메터들은 그룹핑을 하여 나누어 설정하는 것이 좋습니다. (빨간선 : 쓰기용, 파란선 : 읽기용)
-* Indirect Address 설정이 완료되면, 실사용 시에는 Indirect Data 파라메터에 데이터를 쓰고 읽으면,  Original Parameter Data의 값을 읽고 쓰는 것과 동일한 결과를 얻을 수 있습니다.
+>[!info]Example
+>* 사용하려고 하는 Parameter를 Data Map을 참조하여 Indirect Address 에 세팅합니다.
+>    이때 쓰기용과 읽기용 파라메터들은 그룹핑을 하여 나누어 설정하는 것이 좋습니다. (빨간선 : 쓰기용, 파란선 : 읽기용)
+>* Indirect Address 설정이 완료되면, 실사용 시에는 Indirect Data 파라메터에 데이터를 쓰고 읽으면,  Original Parameter Data의 값을 읽고 쓰는 것과 동일한 결과를 얻을 수 있습니다.
 
   > [!tip] TIP
   > Total Manager를 통해 Indricet Address 설정을 쉽게 사용할 수 있습니다.
@@ -616,7 +616,7 @@ Extended I/O는 RS485 통신으로 제공하지 못하는 추가적인 기능을
 | IO Port 3 | Action Enable, Force Off, Stop, Pause,<br> Alarm Out, Restart                |
 | IO Port 4 | Action Enable, Force Off, Stop, Pause,<br> Alarm Out, Restart                |
 
-Extended I/O Control은 스위치 또는 내부 \[[#2.4.19 Action Control|Action control]] 기능을 이용하여 사용자가 Programming 없이 제어가 가능합니다.
+Extended I/O Control은 스위치 또는 내부 [[#2.4.19 Action Control]] 기능을 이용하여 사용자가 Programming 없이 제어가 가능합니다.
 또한, Extended I/O 기능 중 Output으로 사용되는 기능을 사용할 경우 mightyZAP의 상태를 Digital Signal로 출력 합니다.
 
 Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며 외부 전원이 필요하지 않습니다.  각 기능 설명에 명시된 회로 구성대로 배선해야 mightyZAP 에 문제가 발생하지 않습니다.  
@@ -665,7 +665,7 @@ Extended I/O의 회로 구성은 각 기능에 따라 다르게 구성이 되며
 
 #### 2.4.19 Action Control
 
-Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  사용자는 특정 모션을 Total Manager 소프트웨어 상에서 작성하여, 액츄에이터에 저장, 사용할 수 있으며, 그후 I/O포트(\[[#2.4.18 Extended I/O Control]])를 통해 저장된 모션을 제어할 수 있습니다.
+Action 기능은 통신 및 외부 제어기 없이 mightyZAP을 제어하기 위한 방법으로 총 5개의 Action을 작성 할 수 있습니다.  사용자는 특정 모션을 Total Manager 소프트웨어 상에서 작성하여, 액츄에이터에 저장, 사용할 수 있으며, 그후 I/O포트([[#2.4.18 Extended I/O Control]])를 통해 저장된 모션을 제어할 수 있습니다.
 
 <font color="#4f81bd" size='5'><b>Action 실행과 종료</b></font>
 Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.  
@@ -680,8 +680,8 @@ Action 기능을 실행 및 종료 시키는 방법은 2가지가 있습니다.
 Action Setting은 모터가 움직이는 방식, 즉, Action Type과 그에 대한 Action Data를 설정합니다.  Action type 은 아래와 같이 구분됩니다.
 
 * Goal Position: Action Type을 Goal Position으로 설정한 후, Action Data에 Goal Position에 대한 절대 위치 값을 입력하고 해당 위치로 한번에 이동합니다.
-* Goal Distance : Goal Distance로 설정 후, Action Data에 Goal Distance 값을 입력하여 현재 위치로부터 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.
-  <font color="#4f81bd" size='5'><b>Repeat Setting</b></font>
+* Goal Distance : Goal Distance로 설정 후, Action Data에 Goal Distance 값을 입력하여 현재 위치로부터 Action Data값을 가감하여 위치 이동을 합니다. Goal Position 과 다르게 절대 위치 값이 아닌 상대적인 값으로 동작합니다.  
+<font color="#4f81bd" size='5'><b>Repeat Setting</b></font>
   Action Setting에서 설정된 내용에 대한 반복 횟수 또는 1회 동작에 대한 동작 시간 등을 설정하는 Parameter 입니다.
   **Repeat type**  
 * **Interval** : Repeat Time에 의해 설정된 시간 간격마다 Action을 수행합니다.  일정한 시간마다 반복된 동작이 필요할 경우 사용합니다. 
@@ -760,7 +760,7 @@ Error가 표시 되지 않을 때의 LED 표시를 사용자가 취향대로 제
 
 mightyZap이 동작 중 발생하는 위험 상황 중 아래의 상황에 대하여 스스로 감지하고, 다양한 방법으로 스스로를 보호할 수 있습니다.
 각  Bit들은 중복되어 설정이 되며, Alarm Shutdown, Alarm LED,  Extend IO 기능을 이용하여 Error 발생 시에 대한 조치를 할 수 있습니다.
-일반적으로 추천하는 방법은 [[#2.4.6 Alarm Shutdown|Alarm Shutdown]] 기능을 이용하여 해당 Error가 발생 할 경우, Force Off를 활성화하여,  mightyZap과  사용자의 System을 보호하는 것이 좋습니다.
+일반적으로 추천하는 방법은 [[#2.4.6 Alarm Shutdown]] 기능을 이용하여 해당 Error가 발생 할 경우, Force Off를 활성화하여,  mightyZap과  사용자의 System을 보호하는 것이 좋습니다.
 ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 이상 모터가 동작하지 않습니다. 아래 두가지 에러에 대해 LED알람과 shutdown 기능은 출하시 기본으로 설정됩니다.  
 
 | Bit   | Name                | Description                  |
@@ -777,8 +777,8 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
   ![overload_time](./img/overload_time.png)
   	
 * **누적 동작 전류 측정**
-  누적 동작 전류 측정 방식은 동작 중 발생하는 누적된 전류의 양을 측정하는 방식으로, 아래의 식과 같이 누적전류가 계산됩니다.  액츄에이터에 적용되는 실제 부하에 따른 소모전류와 관계가 있습니다. 
-  $$ i^2t = i^2*{peak}t-i^2*{norm}t=(I^2*{peak}-i^2*{norm})t$$
+  누적 동작 전류 측정 방식은 동작 중 발생하는 누적된 전류의 양을 측정하는 방식으로, 아래의 식과 같이 누적전류가 계산됩니다.  액츄에이터에 적용되는 실제 부하에 따른 소모전류와 관계가 있습니다.   
+  $$I^2t = I_{peak}^2 t - I_{norm}^2 t = (I_{peak}^2 - I_{norm}^2)t$$
 
     I<sup>2</sup>T 보호는 모터의 열 모델링을 기반으로 한 모터 과부하 보호 방법으로, 일종의 Sensorless 모터 과열 보호 장치 입니다.
     아래의 그림은 전류 누적과 Overload 발생에 대한 예 입니다.
@@ -803,7 +803,7 @@ ShutDown 기능을 설정하였을 경우 Restart 기능을 사용하지 않는 
 
 #### 2.4.25 Goal Position
 
-위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 목표 위치 값입니다. Goal Position은 [[#3.1.5 Stroke Limit 설정|Stroke Limit]] 설정 제한 값 까지 입력이 가능합니다.
+위치 이동 명령으로 migthtyZAP을 이동 시키고자 할 때 사용하는 목표 위치 값입니다. Goal Position은 [[#3.1.5 Stroke Limit 설정]] 설정 제한 값 까지 입력이 가능합니다.
 (즉, stroke limit 범위 밖으로는 위치 명령을 내려도 stroke limit위치까지만 움직입니다)
 
 | Range     | Description                                                                  |
@@ -826,7 +826,7 @@ mightyZAP의 동작 속도를 변경할 때 사용합니다.
 ( 0일 때 기동력 OFF 상태이고 1000일 때 최대 속도를 냅니다. )
 Goal Speed값을 이용하여 실제 예상되는 속도 계산값은 아래와 같습니다. 
 $$ TargetSpeed = MaxSpeed\times\frac{GoalSpeed}{1000}$$
-[[#2.4.13 Speed Limit|Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
+[[#2.4.13 Speed Limit]] 명령은 초기 설정 값으로 사용하며, 실시간 속도 변경이 필요한 경우 Goal Speed 를  사용합니다.  
 
 Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 다만, 너무 낮은 값을 설정 시 모터의 반응이 늦어지거나 움직이지 못할 수 있습니다.
@@ -839,13 +839,13 @@ Goal Speed를 변경해도 Force에 영향을 주지 않습니다.
 | -------- | --------------------- |
 | 0 ⁓ 1600 | mightyZap의 최대 전류 설정 값 |
 
-초기 전원 인가 시 비휘발성 파라메터인 [[#2.4.14 Current Limit|Current LImit]]에서 값을 불러와 휘발성 파라메터인 Goal Current에 저장합니다. 동작중 빈번한 전류 변경은 휘발성 파라메터인 Goal Current를 사용하여 주십시오.  
+초기 전원 인가 시 비휘발성 파라메터인 [[#2.4.14 Current Limit]]에서 값을 불러와 휘발성 파라메터인 Goal Current에 저장합니다. 동작중 빈번한 전류 변경은 휘발성 파라메터인 Goal Current를 사용하여 주십시오.  
 
 > [!note] Note - Goal Current를 이용한 Force 제한
 > Goal Current를 조절하면 모터가 낼 수 있는 최대 힘을 조절할 수 있습니다. 제어 대상 및 사용자의 어플리케이션에 따라 특정 Force 이상을 넘어가는 것을 제한하고 자 할 때 사용하시면 됩니다.
 > 지나치게 낮은 Goal Current는 모터의 내부 자체  기구 부하를 이기지 못해 동작하지 않을 수 있습니다. (200mA 이상 권장) 
 > Datasheet의 Goal Current Vs Stall Force 그래프를 참조하신 후 적절한 값을 적용하시기 바랍니다. 또한 해당 값은 약 +/- 15%의 오차를 포함합니다.  
->
+
 > [!warning] Warning - Over Current
 > Goal Current 800  이상 또는 1600- 설정으로 지속적인 사용시 모터에 무리가 발생합니다. 지속적으로 사용하는 구간이 아닌 특정상황에서 잠시 사용하는 구간입니다.  지속 적으로 사용할 경우 overload Error가 발생하거나 모터의 수명이 짧아지게 됩니다.
 
@@ -916,7 +916,7 @@ Overload에 관한 자세한 사항은 [[#2.4.24 Hardware Error]] 에서 확인�
 Overload Error가 발생하지 않도록 <u>Overload value 값을 90 이하</u>로 관리하여 주시기 바랍니다.  
 
 > [!tip] TIP
-> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 \[[#2.4.24 Hardware Error]]와 \[[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
+> 동작 Dutyrate를 50%이하로 관리하여 주시며, 최대 연속 동작 시간이 30초가 넘지 않아야 합니다. 자세한 사항은 [[#2.4.24 Hardware Error]]와 [[#3.1.3 Duty Rate]]를 참조하여 주시기 바랍니다.
 
 #### 2.4.34 Action Enable
 
@@ -928,7 +928,7 @@ Overload Error가 발생하지 않도록 <u>Overload value 값을 90 이하</u>�
 | 1     | Action Enable  |
 
 > [!tip] TIP
-> Action에 대한 자세한 사항은 \[[#2.4.19 Action Control]]을 참조하여 주시기 바랍니다.
+> Action에 대한 자세한 사항은 [[#2.4.19 Action Control]]을 참조하여 주시기 바랍니다.
 
 #### 2.4.35 Indirect Data
 
@@ -988,7 +988,7 @@ mightyZAP에 DC 정전압 장치를 사용하여 정격 전압에 맞게 전원�
   그러므로 모터 동작 시간 대비 일정 시간 쉴 수 있도록 Duty Cycle을 설정해 주어야 합니다.
   Duty Cycle이란 DC모터가 동작하는 시간 대비 쉬어주는 시간의 주기입니다.  즉, Duty Cycle 50%는 mightyZAP가 50%의 시간을 동작하면 50%의 시간은 쉬는 것을 의미하며,  Duty Cycle이 50%일 때 mightyZAP의 효율적인 수명 관리가 가능합니다.
   최적의 수명 관리를 위해, 적용 시 최대 Duty Cycle은 50%를 넘지 않도록 해주십시오. Duty Cycle이 적어질수록 mightyZAP의 수명은 연장됩니다.  
-* 설비 운용 중, mightyZAP을 사용하지 않는 상황 에서는, mightyZAP에 [[#2.4.20 Force On/Off|Force On/Off]] 명령을 내려mightyZAP의 수명을 늘릴 수 있습니다.
+* 설비 운용 중, mightyZAP을 사용하지 않는 상황 에서는, mightyZAP에 [[#2.4.20 Force On/Off]] 명령을 내려mightyZAP의 수명을 늘릴 수 있습니다.
 
 #### 3.1.4 배선
 

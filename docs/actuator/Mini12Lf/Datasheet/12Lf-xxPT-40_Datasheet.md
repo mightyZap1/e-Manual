@@ -118,6 +118,7 @@ version:
 
 >[!tip] Tip
 >Self-Lock 이란 액츄에이터가 전원을 통한 모터의 힘 없이, 기구마찰력만으로 위치를 고수할 수 있는 힘을 의미합니다.
+
 ## 3. 참고 자료
 ### 3.1 Voltage Vs Speed
 입력 전압에 따른 무 부하 시 속도 변화에 대한 그래프 입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.
@@ -125,6 +126,7 @@ version:
 >[!note] Note  
 >Voltage Vs Speed는 Goal Current 800에서 Test한 Data입니다.  
 >해당 Data는 약 +/-15%오차를 포함하고 있습니다.
+
 ### 3.2 Voltage Vs Stall Force 
 입력 전압에 따른 800mA에서 Stall Force를 측정한 Data입니다. 해당 Data는 오차를 포함하고 있음으로 참고로 사용하시면 됩니다.  
   ![voltageVSstallforce](./img/00_voltageVSstallforce.png)
@@ -134,12 +136,14 @@ version:
 
 >[!warning] Caution  
 >Stall force는 참고용으로, 제품의 파손을 방지하기 위해 실제 application에서의 사용시에는 정격부하에 맞추어 사용하여 주십시오.
+
 ### 3.3 Goal Speed Vs Speed  
 Goal Current가 800일 때, Goal Speed Parameter 값의 변화에 따른 무 부하 속도 변화를 나타냅니다.
 정격 부하 이하의 경우, 부하 정도에 따라 최고 속도가 나오는 시간이 달라지게 됩니다.  
 ![goalspeedVSspeed](./img/00_goalspeedVSspeed.png)
 >[!note] Note
 >Goal Speed Vs Speed Data는 Goal Current 800에서 Test한 Data입니다.
+
 ### 3.4 Goal Current vs Stall Force  
 Goal Current 값에 대한 mightyZAP의 Stall Force를 나타냅니다. 
 Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 값에 대한 힘만 측정한 값입니다.     
@@ -161,7 +165,7 @@ Stall Force 측정 방식은 속도 값을 최소한으로 하여 순수 전류 
 >|---|---|---|---|---|---|
 >|20N(Rated)|800|Max. 50%|35N(Rated)|800|Max. 50%|
 >|40N(Max)|1600|Max. 20%|70N(Max)|1600|Max. 20%|
->
+
 ### 3.5 Goal Current vs Speed <font size="4">at Rated Load</font>  
 정격 부하 시 Goal Current  값에 대한 mightyZAP의  속도 변화를 나타냅니다.  
 ![goalcurrentVSspeed](./img/00_goalcurrentVSspeed.png)

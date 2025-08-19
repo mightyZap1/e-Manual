@@ -100,6 +100,7 @@ version:
 
 >[!warning] Caution
 >Use under rated load conditions as much as possible. When applying max applicable load (2x rated load), set Goal current to 1600(1.6A) and reduce Duty cycle to 20% or less.
+
 ### 2.8 Self Lock Feature
 
 | Parameter | Min | Norm | Max | Unit | Note |
@@ -110,6 +111,7 @@ version:
 
 >[!tip] Tip
 >Self-Lock means the actuator can hold its position by mechanical friction without motor power.
+
 ## 3. Reference Data
 ### 3.1 Voltage Vs Speed
 Graph of speed change at no load according to input voltage. This data includes error and is for reference only.
@@ -117,6 +119,7 @@ Graph of speed change at no load according to input voltage. This data includes 
 >[!note] Note
 >Voltage Vs Speed data was tested at Goal Current 800.
 >This data includes about +/-15% error.
+
 ### 3.2 Voltage Vs Stall Force
 Stall Force measured at 800mA according to input voltage. This data includes error and is for reference only.
 ![voltageVSstallforce](./img/00_voltageVSstallforce.png)
@@ -126,12 +129,14 @@ Stall Force measured at 800mA according to input voltage. This data includes err
 
 >[!warning] Caution
 >Stall force is for reference only. To prevent product damage, use according to rated load in actual application.
+
 ### 3.3 Goal Speed Vs Speed
 Shows no load speed change according to Goal Speed Parameter value at Goal Current 800.
 At less than rated load, the time to reach maximum speed varies depending on the load.
 ![goalspeedVSspeed](./img/00_goalspeedVSspeed.png)
 >[!note] Note
 >Goal Speed Vs Speed data was tested at Goal Current 800.
+
 ### 3.4 Goal Current vs Stall Force
 Shows mightyZAP's Stall Force for each Goal Current value.
 Stall Force was measured at minimum speed to reflect only current-based force.
@@ -153,7 +158,7 @@ Stall Force was measured at minimum speed to reflect only current-based force.
 >|---|---|---|---|---|---|
 >|20N(Rated)|800|Max. 50%|35N(Rated)|800|Max. 50%|
 >|40N(Max)|1600|Max. 20%|70N(Max)|1600|Max. 20%|
->
+
 ### 3.5 Goal Current vs Speed <font size="4">at Rated Load</font>
 Shows mightyZAP's speed change for each Goal Current value at rated load.
 ![goalcurrentVSspeed](./img/00_goalcurrentVSspeed.png)

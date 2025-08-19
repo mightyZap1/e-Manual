@@ -115,7 +115,7 @@ version:
 | ^ | - | ^ | - | | L12-100x-3 |
 
 >[!tip] Tip
->**Self-lock feature :The force which actuator maintains its position by mechanical friction without motor power.**
+>**Self-lock feature :The force which actuator maintains its position by mechanical friction without motor power.**  
 
 ## 3. Reference
 ### 3.1 Load Vs Current

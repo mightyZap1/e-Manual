@@ -15,4 +15,4 @@ Arduino Based EZ Controller (USB Type-C)
 - Control via External Switch or Voltage Level Signal Available.
 - Current Capacity : 4A / Input voltage : 7.4V or 12V
 
-![[ezController.png]]
+![ezController](./ezController.png)

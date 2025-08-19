@@ -14,7 +14,136 @@ interface CellData {
   // 셀 내부의 복잡한 마크다운을 렌더링하기 위해 원본 content를 유지
   originalContent: string; 
 }
+// ==================================================================
+// ✨ 올인원 커스텀 플러그인: GitHub 스타일 Alert + 내부 링크 변환
+// ==================================================================
+function customAlertsAndLinksPlugin(md: MarkdownIt) {
+  // --- 내부 링크 변환에 필요한 함수들 ---
+  const slugify = (text: string) => {
+    const normalizedText = text.normalize('NFD'); // NFD 방식으로 정규화
+    return normalizedText
+      .toLowerCase().trim()
+      .replace(/[\s.]+/g, '-')
+      .replace(/[^\w\p{L}\-]/gu, '');
+  };
 
+  const convertInternalLinks = (text: string) => {
+    const pattern = /\[\[#([^\]]+)\]\]/g; // 모든 링크를 찾기 위해 g 플래그 추가
+    return text.replace(pattern, (match, content) => {
+      const headingText = content.trim();
+      const headingId = slugify(headingText);
+      return `<a href="#_${headingId}">${headingText}</a>`;
+    });
+  };
+
+  // --- 블록 규칙 정의 ---
+  const rule = (state, startLine, endLine, silent) => {
+    const pos = state.bMarks[startLine] + state.tShift[startLine];
+    const max = state.eMarks[startLine];
+    const line = state.src.slice(pos, max);
+
+    // '> [!type] Title' 형태인지 확인
+    const alertRegex = /^>\s*\[!(\w+)\]\s*(.*)$/;
+    const match = line.match(alertRegex);
+
+    if (!match) {
+      return false;
+    }
+
+    if (silent) {
+      return true;
+    }
+
+    const type = match[1].toLowerCase();
+    const title = match[2].trim();
+    const contentLines = [];
+    let nextLine = startLine + 1;
+
+    // 블록이 끝날 때까지 내용 수집
+    for (; nextLine < endLine; nextLine++) {
+      const linePos = state.bMarks[nextLine] + state.tShift[nextLine];
+      const lineMax = state.eMarks[nextLine];
+      let lineText = state.src.slice(linePos, lineMax);
+
+      if (lineText.trim() === '') {
+        // 빈 줄이면 블록 끝으로 간주
+        break;
+      }
+      
+      // 인용문 표시(>) 제거
+      if (lineText.startsWith('>')) {
+        lineText = lineText.slice(1).trim();
+      }
+      contentLines.push(lineText);
+    }
+
+    // 수집된 내용에서 [[#...]] 링크 변환
+    let content = contentLines.join('\n');
+    content = convertInternalLinks(content);
+    
+    // 변환된 내용을 다시 마크다운으로 렌더링
+    const renderedContent = md.render(content);
+
+    // 최종 HTML 토큰 생성
+    const token = state.push('html_block', '', 0);
+    token.content =
+      `<div class="custom-block ${type}">\n` +
+      `<p class="custom-block-title">${title}</p>\n` +
+      `${renderedContent}` +
+      `</div>\n`;
+
+    state.line = nextLine;
+    return true;
+  };
+
+  // 기존 blockquote 규칙보다 먼저 이 규칙을 실행하도록 등록
+  md.block.ruler.before('blockquote', 'custom_alerts', rule);
+}
+// ==================================================================
+// ✨ [[#...]] 내부 링크를 처리하는 수정된 커스텀 플러그인
+// ==================================================================
+function internalLinksPlugin(md) {
+  const slugify = (text) => {
+    // ⬇️ 이 부분이 핵심입니다. 문자열을 NFD 형식으로 강제 정규화합니다.
+    const normalizedText = text.normalize('NFD');
+
+    return normalizedText
+      .toLowerCase()
+      .trim()
+      .replace(/[\s.]+/g, '-') // 공백과 마침표를 하이픈으로
+      .replace(/[^\w\p{L}\-]/gu, ''); // 단어, 모든 언어 문자, 하이픈 외 제거
+  };
+
+  function wikilinkReplacer(state, silent) {
+    const src = state.src;
+    const pos = state.pos;
+
+    if (src.substring(pos, pos + 3) !== '[[#') {
+      return false;
+    }
+    const endPos = src.indexOf(']]', pos);
+    if (endPos === -1) {
+      return false;
+    }
+
+    const content = src.substring(pos + 3, endPos);
+
+    if (!silent) {
+      const token = state.push('link_open', 'a', 1);
+      token.attrSet('href', '#_' + slugify(content));
+
+      const textToken = state.push('text', '', 0);
+      textToken.content = content;
+
+      state.push('link_close', 'a', -1);
+    }
+
+    state.pos = endPos + 2;
+    return true;
+  }
+
+  md.inline.ruler.after('emphasis', 'internal_link', wikilinkReplacer);
+}
 /**
  * [최종 해결 버전] 토큰을 직접 수정하는 대신, 새로운 HTML을 생성하여 교체하는 안정적인 방식의 플러그인
  */
@@ -213,20 +342,25 @@ function obsidianPdfEmbedWithViewer(md) {
 
 export default defineConfig({
   lastUpdated: true,
-  head:[[
-    'script',
-      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-    ]
+  head:[
+    // KaTeX CSS
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js' }],
+    ['script',{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
   ],
   title: "e-Manual",
   description: "migntyZAP e-Manual",
   markdown: {
     config: (md) => {
       md.use(markdownItAttrs);
+      md.use(customAlertsAndLinksPlugin);
       // 위에서 만든 커스텀 플러그인을 사용하도록 등록
+      md.use(internalLinksPlugin); 
       md.use(obsidianPdfEmbedWithViewer);
       // md.use(markdownItMultimdTable, { rowspan: true });
       md.use(advancedTablePlugin);
+   
     }
   },
   themeConfig:{
@@ -885,10 +1019,8 @@ export default defineConfig({
               ]                            
             },     
           ]
-        }
- 
+        } 
       }
     }
-  }
-  
+  }  
 })
