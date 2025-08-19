@@ -21,56 +21,29 @@ collections:
       - "quote"
       - "table" # <-- 테이블 버튼을 명시적으로 추가
     files:
-      - name: "datasheet_27"
-        label: "mightyZAP 17Lf 27mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-27.md"
-        fields: # 각 파일에 개별적으로 fields 추가
+      - name: "17Lf Series"
+        label: "mightyZAP 17Lf Series"
+        folder: "docs/actuator/Mini17Lf/"
+        create: true # 관리자 페이지에서 새 문서 생성 기능 활성화
+        slug: "{{slug}}" # 파일명을 문서의 'slug' 필드 값으로 자동 생성
+        extension: "md" # 파일 확장자
+        fields: &manual_fields # 각 파일에 개별적으로 fields 추가
           - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
           - { label: "버전", name: "version", .widget: "rich_text", required: false }
           - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
           - { label: "본문", name: "body", widget: "markdown" }
 
-      - name: "datasheet_37"
-        label: "mightyZAP 17Lf 37mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-37.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-
-      - name: "datasheet_50"
+      - name: "12Lf Series"
+        label: "mightyZAP 12Lf Series"
+        folder: "docs/actuator/Mini12Lf"
+        create: true # 관리자 페이지에서 새 문서 생성 기능 활성화
+        slug: "{{slug}}" # 파일명을 문서의 'slug' 필드 값으로 자동 생성
+        extension: "md" # 파일 확장자
+        fields: *manual_fields
+      - name: "D7D12L12 Series"
         label: "mightyZAP 17Lf 50mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-50.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-
-      - name: "datasheet_87"
-        label: "mightyZAP 17Lf 87mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-87.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-          
-      - name: "manual_17lf"
-        label: "mightyZAP 17Lf 사용자 매뉴얼"
-        file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-          
-      - name: "17Lf Modbus RTU_kor"
-        label: "17Lf Modbus RTU_kor"
-        file: "docs/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
+        folder: "docs/actuator/D7D12L12"
+        create: true # 관리자 페이지에서 새 문서 생성 기능 활성화
+        slug: "{{slug}}" # 파일명을 문서의 'slug' 필드 값으로 자동 생성
+        extension: "md" # 파일 확장자
+        fields: *manual_fields

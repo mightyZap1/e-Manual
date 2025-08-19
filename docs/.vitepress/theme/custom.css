@@ -69,11 +69,20 @@
   
   /* public 폴더에 저장된 아이콘 이미지 파일을 사용 */
   /* background-image: url('/language.svg');  */
-  background-image: url('/earth.svg'); 
+  background-image: url('./earth.png'); 
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
+
+html[lang="ko-KR"] .VPNavBarTranslations button::after {
+  content: 'KO';
+}
+
+html[lang="en-US"] .VPNavBarTranslations button::after {
+  content: 'EN';
+}
+
 .VPDocOutlineItem  .active{
   color : blue!important;
 }
