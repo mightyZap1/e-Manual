@@ -1,12 +1,13 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: ''
-public_folder: ''
+media_folder: public/assets/images
+public_folder: /assets/images
 collections:
 - name: docs
   label: docs
   folder: docs
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -35,6 +36,7 @@ collections:
 - name: docs_.vitepress_en_actuator
   label: docs/.vitepress/en/actuator
   folder: docs/.vitepress/en/actuator
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -46,6 +48,7 @@ collections:
 - name: docs_accessories
   label: docs/accessories
   folder: docs/accessories
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -57,6 +60,7 @@ collections:
 - name: docs_accessories_Mounting
   label: docs/accessories/Mounting
   folder: docs/accessories/Mounting
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -68,6 +72,7 @@ collections:
 - name: docs_accessories_Mounting_IR-MB02
   label: docs/accessories/Mounting/IR-MB02
   folder: docs/accessories/Mounting/IR-MB02
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -79,6 +84,7 @@ collections:
 - name: docs_accessories_Mounting_IR-MB03
   label: docs/accessories/Mounting/IR-MB03
   folder: docs/accessories/Mounting/IR-MB03
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -90,6 +96,7 @@ collections:
 - name: docs_accessories_Mounting_IR-MB04
   label: docs/accessories/Mounting/IR-MB04
   folder: docs/accessories/Mounting/IR-MB04
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -101,6 +108,7 @@ collections:
 - name: docs_accessories_Mounting_IR-MB05
   label: docs/accessories/Mounting/IR-MB05
   folder: docs/accessories/Mounting/IR-MB05
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -112,6 +120,7 @@ collections:
 - name: docs_accessories_Mounting_IR-MB06
   label: docs/accessories/Mounting/IR-MB06
   folder: docs/accessories/Mounting/IR-MB06
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -123,6 +132,7 @@ collections:
 - name: docs_accessories_Mounting_IR-MB07
   label: docs/accessories/Mounting/IR-MB07
   folder: docs/accessories/Mounting/IR-MB07
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -134,6 +144,7 @@ collections:
 - name: docs_accessories_RodendTips
   label: docs/accessories/RodendTips
   folder: docs/accessories/RodendTips
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -145,6 +156,7 @@ collections:
 - name: docs_accessories_RodendTips_IR-EB01
   label: docs/accessories/RodendTips/IR-EB01
   folder: docs/accessories/RodendTips/IR-EB01
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -156,6 +168,7 @@ collections:
 - name: docs_accessories_RodendTips_IR-GT01
   label: docs/accessories/RodendTips/IR-GT01
   folder: docs/accessories/RodendTips/IR-GT01
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -167,6 +180,7 @@ collections:
 - name: docs_accessories_RodendTips_IR-MC05
   label: docs/accessories/RodendTips/IR-MC05
   folder: docs/accessories/RodendTips/IR-MC05
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -178,6 +192,7 @@ collections:
 - name: docs_accessories_RodendTips_IR-MC06
   label: docs/accessories/RodendTips/IR-MC06
   folder: docs/accessories/RodendTips/IR-MC06
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -189,6 +204,7 @@ collections:
 - name: docs_accessories_board_EZController
   label: docs/accessories/board/EZController
   folder: docs/accessories/board/EZController
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -200,6 +216,7 @@ collections:
 - name: docs_accessories_board_USBInterface
   label: docs/accessories/board/USBInterface
   folder: docs/accessories/board/USBInterface
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -211,6 +228,7 @@ collections:
 - name: docs_accessories_board_USBInterface_Datasheet
   label: docs/accessories/board/USBInterface/Datasheet
   folder: docs/accessories/board/USBInterface/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -222,6 +240,7 @@ collections:
 - name: docs_accessories_board_USBInterface_drawings
   label: docs/accessories/board/USBInterface/drawings
   folder: docs/accessories/board/USBInterface/drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -233,6 +252,7 @@ collections:
 - name: docs_accessories_board_USBInterface_drivers
   label: docs/accessories/board/USBInterface/drivers
   folder: docs/accessories/board/USBInterface/drivers
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -244,6 +264,7 @@ collections:
 - name: docs_accessories_board_UartInterfaceboard
   label: docs/accessories/board/UartInterfaceboard
   folder: docs/accessories/board/UartInterfaceboard
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -255,6 +276,7 @@ collections:
 - name: docs_accessories_etc
   label: docs/accessories/etc
   folder: docs/accessories/etc
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -266,6 +288,7 @@ collections:
 - name: docs_accessories_wire
   label: docs/accessories/wire
   folder: docs/accessories/wire
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -277,6 +300,7 @@ collections:
 - name: docs_actuator
   label: docs/actuator
   folder: docs/actuator
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -288,6 +312,7 @@ collections:
 - name: docs_actuator_D7D12L12
   label: docs/actuator/D7D12L12
   folder: docs/actuator/D7D12L12
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -299,6 +324,7 @@ collections:
 - name: docs_actuator_D7D12L12_Catalogue
   label: docs/actuator/D7D12L12/Catalogue
   folder: docs/actuator/D7D12L12/Catalogue
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -310,6 +336,7 @@ collections:
 - name: docs_actuator_D7D12L12_Datasheet
   label: docs/actuator/D7D12L12/Datasheet
   folder: docs/actuator/D7D12L12/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -321,6 +348,7 @@ collections:
 - name: docs_actuator_D7D12L12_Drawings
   label: docs/actuator/D7D12L12/Drawings
   folder: docs/actuator/D7D12L12/Drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -332,6 +360,7 @@ collections:
 - name: docs_actuator_D7D12L12_Manual
   label: docs/actuator/D7D12L12/Manual
   folder: docs/actuator/D7D12L12/Manual
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -343,6 +372,7 @@ collections:
 - name: docs_actuator_D7D12L12_firmware
   label: docs/actuator/D7D12L12/firmware
   folder: docs/actuator/D7D12L12/firmware
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -354,6 +384,7 @@ collections:
 - name: docs_actuator_Mini12Lf
   label: docs/actuator/Mini12Lf
   folder: docs/actuator/Mini12Lf
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -365,6 +396,7 @@ collections:
 - name: docs_actuator_Mini12Lf_Catalogue
   label: docs/actuator/Mini12Lf/Catalogue
   folder: docs/actuator/Mini12Lf/Catalogue
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -376,6 +408,7 @@ collections:
 - name: docs_actuator_Mini12Lf_Datasheet
   label: docs/actuator/Mini12Lf/Datasheet
   folder: docs/actuator/Mini12Lf/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -387,6 +420,7 @@ collections:
 - name: docs_actuator_Mini12Lf_Drawings
   label: docs/actuator/Mini12Lf/Drawings
   folder: docs/actuator/Mini12Lf/Drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -398,6 +432,7 @@ collections:
 - name: docs_actuator_Mini12Lf_Library
   label: docs/actuator/Mini12Lf/Library
   folder: docs/actuator/Mini12Lf/Library
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -409,6 +444,7 @@ collections:
 - name: docs_actuator_Mini12Lf_Manual
   label: docs/actuator/Mini12Lf/Manual
   folder: docs/actuator/Mini12Lf/Manual
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -420,6 +456,7 @@ collections:
 - name: docs_actuator_Mini12Lf_firmware
   label: docs/actuator/Mini12Lf/firmware
   folder: docs/actuator/Mini12Lf/firmware
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -431,6 +468,7 @@ collections:
 - name: docs_actuator_Mini17Lf
   label: docs/actuator/Mini17Lf
   folder: docs/actuator/Mini17Lf
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -442,6 +480,7 @@ collections:
 - name: docs_actuator_Mini17Lf_Catalogue
   label: docs/actuator/Mini17Lf/Catalogue
   folder: docs/actuator/Mini17Lf/Catalogue
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -453,6 +492,7 @@ collections:
 - name: docs_actuator_Mini17Lf_Datasheet
   label: docs/actuator/Mini17Lf/Datasheet
   folder: docs/actuator/Mini17Lf/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -464,6 +504,7 @@ collections:
 - name: docs_actuator_Mini17Lf_Drawing
   label: docs/actuator/Mini17Lf/Drawing
   folder: docs/actuator/Mini17Lf/Drawing
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -475,6 +516,7 @@ collections:
 - name: docs_actuator_Mini17Lf_Library
   label: docs/actuator/Mini17Lf/Library
   folder: docs/actuator/Mini17Lf/Library
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -486,6 +528,7 @@ collections:
 - name: docs_actuator_Mini17Lf_Manual
   label: docs/actuator/Mini17Lf/Manual
   folder: docs/actuator/Mini17Lf/Manual
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -497,6 +540,7 @@ collections:
 - name: docs_actuator_Mini17Lf_firmware
   label: docs/actuator/Mini17Lf/firmware
   folder: docs/actuator/Mini17Lf/firmware
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -508,6 +552,7 @@ collections:
 - name: docs_actuator_limitSwitch
   label: docs/actuator/limitSwitch
   folder: docs/actuator/limitSwitch
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -519,6 +564,7 @@ collections:
 - name: docs_actuator_limitSwitch_datasheet
   label: docs/actuator/limitSwitch/datasheet
   folder: docs/actuator/limitSwitch/datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -530,6 +576,7 @@ collections:
 - name: docs_actuator_limitSwitch_drawings
   label: docs/actuator/limitSwitch/drawings
   folder: docs/actuator/limitSwitch/drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -541,6 +588,7 @@ collections:
 - name: docs_en
   label: docs/en
   folder: docs/en
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -552,6 +600,7 @@ collections:
 - name: docs_en_accessories_Mounting
   label: docs/en/accessories/Mounting
   folder: docs/en/accessories/Mounting
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -563,6 +612,7 @@ collections:
 - name: docs_en_accessories_Mounting_IR-MB02
   label: docs/en/accessories/Mounting/IR-MB02
   folder: docs/en/accessories/Mounting/IR-MB02
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -574,6 +624,7 @@ collections:
 - name: docs_en_accessories_Mounting_IR-MB03
   label: docs/en/accessories/Mounting/IR-MB03
   folder: docs/en/accessories/Mounting/IR-MB03
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -585,6 +636,7 @@ collections:
 - name: docs_en_accessories_Mounting_IR-MB04
   label: docs/en/accessories/Mounting/IR-MB04
   folder: docs/en/accessories/Mounting/IR-MB04
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -596,6 +648,7 @@ collections:
 - name: docs_en_accessories_Mounting_IR-MB05
   label: docs/en/accessories/Mounting/IR-MB05
   folder: docs/en/accessories/Mounting/IR-MB05
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -607,6 +660,7 @@ collections:
 - name: docs_en_accessories_Mounting_IR-MB06
   label: docs/en/accessories/Mounting/IR-MB06
   folder: docs/en/accessories/Mounting/IR-MB06
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -618,6 +672,7 @@ collections:
 - name: docs_en_accessories_Mounting_IR-MB07
   label: docs/en/accessories/Mounting/IR-MB07
   folder: docs/en/accessories/Mounting/IR-MB07
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -629,6 +684,7 @@ collections:
 - name: docs_en_accessories_RodendTips
   label: docs/en/accessories/RodendTips
   folder: docs/en/accessories/RodendTips
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -640,6 +696,7 @@ collections:
 - name: docs_en_accessories_RodendTips_IR-EB01
   label: docs/en/accessories/RodendTips/IR-EB01
   folder: docs/en/accessories/RodendTips/IR-EB01
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -651,6 +708,7 @@ collections:
 - name: docs_en_accessories_RodendTips_IR-GT01
   label: docs/en/accessories/RodendTips/IR-GT01
   folder: docs/en/accessories/RodendTips/IR-GT01
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -662,6 +720,7 @@ collections:
 - name: docs_en_accessories_RodendTips_IR-MC05
   label: docs/en/accessories/RodendTips/IR-MC05
   folder: docs/en/accessories/RodendTips/IR-MC05
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -673,6 +732,7 @@ collections:
 - name: docs_en_accessories_RodendTips_IR-MC06
   label: docs/en/accessories/RodendTips/IR-MC06
   folder: docs/en/accessories/RodendTips/IR-MC06
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -684,6 +744,7 @@ collections:
 - name: docs_en_accessories_board_EZController
   label: docs/en/accessories/board/EZController
   folder: docs/en/accessories/board/EZController
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -695,6 +756,7 @@ collections:
 - name: docs_en_accessories_board_USBInterface
   label: docs/en/accessories/board/USBInterface
   folder: docs/en/accessories/board/USBInterface
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -706,6 +768,7 @@ collections:
 - name: docs_en_accessories_board_USBInterface_Datasheet
   label: docs/en/accessories/board/USBInterface/Datasheet
   folder: docs/en/accessories/board/USBInterface/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -717,6 +780,7 @@ collections:
 - name: docs_en_accessories_board_USBInterface_drawings
   label: docs/en/accessories/board/USBInterface/drawings
   folder: docs/en/accessories/board/USBInterface/drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -728,6 +792,7 @@ collections:
 - name: docs_en_accessories_board_USBInterface_drivers
   label: docs/en/accessories/board/USBInterface/drivers
   folder: docs/en/accessories/board/USBInterface/drivers
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -739,6 +804,7 @@ collections:
 - name: docs_en_accessories_board_UartInterfaceboard
   label: docs/en/accessories/board/UartInterfaceboard
   folder: docs/en/accessories/board/UartInterfaceboard
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -750,6 +816,7 @@ collections:
 - name: docs_en_accessories_board_UartInterfaceboard_Drawing
   label: docs/en/accessories/board/UartInterfaceboard/Drawing
   folder: docs/en/accessories/board/UartInterfaceboard/Drawing
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -761,6 +828,7 @@ collections:
 - name: docs_en_accessories_etc
   label: docs/en/accessories/etc
   folder: docs/en/accessories/etc
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -772,6 +840,7 @@ collections:
 - name: docs_en_accessories_wire
   label: docs/en/accessories/wire
   folder: docs/en/accessories/wire
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -783,6 +852,7 @@ collections:
 - name: docs_en_actuator
   label: docs/en/actuator
   folder: docs/en/actuator
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -794,6 +864,7 @@ collections:
 - name: docs_en_actuator_D7D12L12
   label: docs/en/actuator/D7D12L12
   folder: docs/en/actuator/D7D12L12
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -805,6 +876,7 @@ collections:
 - name: docs_en_actuator_D7D12L12_Catalogue
   label: docs/en/actuator/D7D12L12/Catalogue
   folder: docs/en/actuator/D7D12L12/Catalogue
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -816,6 +888,7 @@ collections:
 - name: docs_en_actuator_D7D12L12_Datasheet
   label: docs/en/actuator/D7D12L12/Datasheet
   folder: docs/en/actuator/D7D12L12/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -827,6 +900,7 @@ collections:
 - name: docs_en_actuator_D7D12L12_Drawings
   label: docs/en/actuator/D7D12L12/Drawings
   folder: docs/en/actuator/D7D12L12/Drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -838,6 +912,7 @@ collections:
 - name: docs_en_actuator_D7D12L12_Manual
   label: docs/en/actuator/D7D12L12/Manual
   folder: docs/en/actuator/D7D12L12/Manual
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -849,6 +924,7 @@ collections:
 - name: docs_en_actuator_D7D12L12_firmware
   label: docs/en/actuator/D7D12L12/firmware
   folder: docs/en/actuator/D7D12L12/firmware
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -860,6 +936,7 @@ collections:
 - name: docs_en_actuator_LimitSwitch
   label: docs/en/actuator/LimitSwitch
   folder: docs/en/actuator/LimitSwitch
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -871,6 +948,7 @@ collections:
 - name: docs_en_actuator_LimitSwitch_datasheet
   label: docs/en/actuator/LimitSwitch/datasheet
   folder: docs/en/actuator/LimitSwitch/datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -882,6 +960,7 @@ collections:
 - name: docs_en_actuator_LimitSwitch_drawings
   label: docs/en/actuator/LimitSwitch/drawings
   folder: docs/en/actuator/LimitSwitch/drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -893,6 +972,7 @@ collections:
 - name: docs_en_actuator_Mini12Lf
   label: docs/en/actuator/Mini12Lf
   folder: docs/en/actuator/Mini12Lf
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -904,6 +984,7 @@ collections:
 - name: docs_en_actuator_Mini12Lf_Catalogue
   label: docs/en/actuator/Mini12Lf/Catalogue
   folder: docs/en/actuator/Mini12Lf/Catalogue
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -915,6 +996,7 @@ collections:
 - name: docs_en_actuator_Mini12Lf_Datasheet
   label: docs/en/actuator/Mini12Lf/Datasheet
   folder: docs/en/actuator/Mini12Lf/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -926,6 +1008,7 @@ collections:
 - name: docs_en_actuator_Mini12Lf_Drawings
   label: docs/en/actuator/Mini12Lf/Drawings
   folder: docs/en/actuator/Mini12Lf/Drawings
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -937,6 +1020,7 @@ collections:
 - name: docs_en_actuator_Mini12Lf_Library
   label: docs/en/actuator/Mini12Lf/Library
   folder: docs/en/actuator/Mini12Lf/Library
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -948,6 +1032,7 @@ collections:
 - name: docs_en_actuator_Mini12Lf_Manual
   label: docs/en/actuator/Mini12Lf/Manual
   folder: docs/en/actuator/Mini12Lf/Manual
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -959,6 +1044,7 @@ collections:
 - name: docs_en_actuator_Mini12Lf_firmware
   label: docs/en/actuator/Mini12Lf/firmware
   folder: docs/en/actuator/Mini12Lf/firmware
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -970,6 +1056,7 @@ collections:
 - name: docs_en_actuator_Mini17Lf
   label: docs/en/actuator/Mini17Lf
   folder: docs/en/actuator/Mini17Lf
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -981,6 +1068,7 @@ collections:
 - name: docs_en_actuator_Mini17Lf_Catalogue
   label: docs/en/actuator/Mini17Lf/Catalogue
   folder: docs/en/actuator/Mini17Lf/Catalogue
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -992,6 +1080,7 @@ collections:
 - name: docs_en_actuator_Mini17Lf_Datasheet
   label: docs/en/actuator/Mini17Lf/Datasheet
   folder: docs/en/actuator/Mini17Lf/Datasheet
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1003,6 +1092,7 @@ collections:
 - name: docs_en_actuator_Mini17Lf_Drawing
   label: docs/en/actuator/Mini17Lf/Drawing
   folder: docs/en/actuator/Mini17Lf/Drawing
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1014,6 +1104,7 @@ collections:
 - name: docs_en_actuator_Mini17Lf_Library
   label: docs/en/actuator/Mini17Lf/Library
   folder: docs/en/actuator/Mini17Lf/Library
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1025,6 +1116,7 @@ collections:
 - name: docs_en_actuator_Mini17Lf_Manual
   label: docs/en/actuator/Mini17Lf/Manual
   folder: docs/en/actuator/Mini17Lf/Manual
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1036,6 +1128,7 @@ collections:
 - name: docs_en_actuator_Mini17Lf_firmware
   label: docs/en/actuator/Mini17Lf/firmware
   folder: docs/en/actuator/Mini17Lf/firmware
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1047,6 +1140,7 @@ collections:
 - name: docs_en_software_TotalManager
   label: docs/en/software/TotalManager
   folder: docs/en/software/TotalManager
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1058,6 +1152,7 @@ collections:
 - name: docs_img
   label: docs/img
   folder: docs/img
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1069,6 +1164,7 @@ collections:
 - name: docs_software_TotalManager
   label: docs/software/TotalManager
   folder: docs/software/TotalManager
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md
@@ -1080,6 +1176,7 @@ collections:
 - name: docs_software_TotalManager_Manual
   label: docs/software/TotalManager/Manual
   folder: docs/software/TotalManager/Manual
+  summary: '{{title}} ({{slug}})'
   create: true
   slug: '{{slug}}'
   extension: md

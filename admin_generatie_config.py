@@ -45,18 +45,17 @@ def generate_decap_config(target_dirs):
     for i, dir_path in enumerate(target_dirs):
         clean_path = dir_path.replace('\\', '/')
         collection_name = clean_path.replace('/', '_')
-        # label을 폴더 전체 경로로 표시하여 구분하기 쉽게 만듦
         collection_label = clean_path 
 
         collection_item = {
             'name': collection_name,
             'label': collection_label,
             'folder': clean_path,
+            'summary': '{{title}} ({{slug}})', # <-- ✅ 이 줄을 추가하여 목록 제목(summary)을 설정합니다.
             'create': True,
             'slug': '{{slug}}',
             'extension': 'md',
             'nested': {'depth': 100},
-            # 상대 경로 이미지 사용을 위한 설정 추가
             'media_folder': '',
             'public_folder': ''
         }
@@ -70,8 +69,8 @@ def generate_decap_config(target_dirs):
 
     config = {
         'backend': {'name': 'git-gateway', 'branch': 'main'},
-        'media_folder': '', # 기본 업로드 경로
-        'public_folder': '',
+        'media_folder': 'public/assets/images', # 기본 업로드 경로
+        'public_folder': '/assets/images',
         'collections': collections
     }
     return config
