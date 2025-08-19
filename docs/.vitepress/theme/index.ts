@@ -1,7 +1,7 @@
 // .vitepress/theme/index.ts
 import DefaultTheme from 'vitepress/theme'
 import { onMounted, watch, nextTick } from 'vue'
-import { h } from 'vue'
+import { h,resolveComponent  } from 'vue'
 import { useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom' // 이미지 확대 라이브러리 import
 
@@ -18,6 +18,7 @@ import './custom.css' // 커스텀 CSS 파일 import
 export default {
   ...DefaultTheme,
   Layout: () => {
+    const ClientOnly = resolveComponent('ClientOnly')
     return h(DefaultTheme.Layout, null, {
       // 'doc-before'는 문서 내용이 시작되기 전의 공간을 의미합니다.
       // 이 슬롯에 PageMetadata 컴포넌트를 렌더링합니다.
