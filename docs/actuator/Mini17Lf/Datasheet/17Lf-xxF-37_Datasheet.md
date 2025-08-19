@@ -1,5 +1,5 @@
 ---
-slug: 17Lf-xxF-37_Datasheet.ㅡㅇ
+slug: 17Lf-xxF-37_Datasheet.md
 title: 17Lf-xxF-37_Datasheet
 ---
 ## 1 Features / 주요 특장점
