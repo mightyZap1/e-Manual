@@ -1,5 +1,6 @@
 ---
-title: Mini 12Lf 액추에이터 설명서
+slug: 12Lf-xxF-27_Datasheet.md
+title: 12Lf-xxF-27_Datasheet
 ---
 ## 1. Features / 주요 특장점
 -  Micro size / 마이크로 사이즈  
