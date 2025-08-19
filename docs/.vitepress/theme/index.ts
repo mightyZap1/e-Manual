@@ -14,6 +14,7 @@ import PageMetadata from './PageMetadata.vue' // 2단계에서 만든 컴포넌�
 import HomePage from './HomePage.vue' //
 import HomePageEn from './HomePage_en.vue' //
 import './custom.css' // 커스텀 CSS 파일 import
+import DocInfo from './DocInfo.vue'
 
 export default {
   ...DefaultTheme,
@@ -22,8 +23,9 @@ export default {
     return h(DefaultTheme.Layout, null, {
       // 'doc-before'는 문서 내용이 시작되기 전의 공간을 의미합니다.
       // 이 슬롯에 PageMetadata 컴포넌트를 렌더링합니다.
-      'doc-before': () => h(PageMetadata),
+      // 'doc-before': () => h(PageMetadata),
       'layout-bottom': () => h(KatexRenderer),
+      'doc-before': () => h(DocInfo),
     })
   },
   // enhanceApp은 전역 컴포넌트 등록 전용으로 사용합니다.

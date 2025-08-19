@@ -2,7 +2,7 @@
 slug: 17Lf_Manual.md
 title: 17Lf_Manual
 modified: null
-version: null
+version: v0.9.0
 ---
 # 17Lf Series Manual
 

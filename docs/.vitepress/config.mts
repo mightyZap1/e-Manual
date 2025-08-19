@@ -414,7 +414,7 @@ export default defineConfig({
           },
           {
             text :"mightyZAP Home",
-            link : "http://mightyzap.com"
+            link : "http://mightyzap.com/ko/"
           }
         ],
         // --- 한국어 SIDEBAR ---
