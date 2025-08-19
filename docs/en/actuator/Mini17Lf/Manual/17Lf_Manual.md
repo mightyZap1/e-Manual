@@ -318,14 +318,15 @@ Start Compliance Margin is the minimum position deviation (margin) value for mig
 <font size="5" color="#4f81bd"><b>Start Compliance Margin applies in the following two cases :</b></font>
 1. When changing the Goal Position value to move from the present position to another position.  
     The minimum margin value for mightyZAP to start position movement. The actuator starts operating only when the difference between the present position value and the Goal Position value is greater than the (+) Margin value or smaller than the (-) Margin value.
->[!exam] Ex. 1  
+    
+>[!example] Ex. 1  
 >**When Goal Position is changed to be smaller than Start Compliance Margin**
 >- Start Compliance Margin : 20
 >- Present Positon  : 1000
 >- Goal Position : 1000 -> When changing to 1010
 >- <font color="#4f81bd">Result : The position deviation is smaller than the Margin value, so no position change occurs.</font>  
 
->[!exam] Ex. 2 
+>[!example] Ex. 2 
 >**When the Goal Position is changed to be greater than the Start Compliance Margin** 
 >- Start Compliance Margin : 20
 >- Present Positon  : 1000
@@ -337,14 +338,14 @@ Start Compliance Margin is the minimum position deviation (margin) value for mig
     
     Therefore, the larger the Start Compliance Margin value, the more stable operation will be made even in an environment where external pressure, electrical noise, or mechanical clearance increases, but the sensitivity to accurately drive to the desired position will be lower.
 
->[!exam] Ex. 1  
+>[!example] Ex. 1  
 >**When position deviation occurs due to external force**
 >- Start Compliance Margin : 20
 >- Goal Position : 1000
 >- Present Positon  : 1000 -> when changing to 1010
 >- <font color="#4f81bd">Result : The position deviation is smaller than the Margin value, so no position change occurs.</font> 
 
->[!exam] Ex. 2 
+>[!example] Ex. 2 
 >**When the position value changes significantly due to external force** 
 >- Start Compliance Margin : 20
 >- Goal Positon  : 1000
@@ -372,7 +373,7 @@ To be applied when mightyZAP is operating to reduce position deviation. If the d
 
 For example, if the Goal position command is given to mightyZAP to move to the position value 1000, assuming that it cannot physically stop at the exact position value 1000 due to mechanical errors, circuit errors, acceleration, etc., mighyZAP stops within a certain error range(End Compliance Margin) acknowledging that the command has been executed. 
 
->[!exam] Ex. 1  
+>[!example] Ex. 1  
 >**In case that Goal Position is 1000,**
 >- End Compliance Margin : 8
 >- Goal Position : 1000
