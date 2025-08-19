@@ -1,0 +1,17 @@
+| Model    | Version           | Download |
+| ------------- | --------------- | -------------------------------------------------------------------------------------------- |
+| L12-12F-3   | `V2.0` ➔ `V2.1` | [⬇️Download](https://https://drive.google.com/file/d/18kNNYby1Dm5zuuecNWYLuOjW07XlV19X/view) |
+| L12-12PT-3  |                 | [⬇️Download](https://https://drive.google.com/file/d/13tdx9jQ5Luc8DY68D5TdQNHGI8wIpOgu/view) |
+| L12-20F-3   |                 | [⬇️Download](https://drive.google.com/file/d/1ckKeRMg47QIsyu2Yy_qXNtGAER-AzxRe/view?usp=sharing) |
+| L12-20PT-3  |                 | [⬇️Download](https://drive.google.com/file/d/16ygBZXATqJRnXK62mgs9epEqDo_AtA4w/view?usp=sharing) |
+| L12-40F-3   |                 | [⬇️Download](https://drive.google.com/file/d/1ATvcHQh9x9-JcOQVNqNGm4Uvr8ufHdlj/view?usp=sharing) |
+| L12-40PT-3  |                 | [⬇️Download](https://drive.google.com/file/d/1YPWBEHMaXJsXsoxUx5E56ZmZYTsdmC0q/view?usp=sharing) |
+| L12-64F-3   |                 | [⬇️Download](https://drive.google.com/file/d/1GNqIiASB1LBsBdjX5cQQML7Acw8aMRqN/view?usp=sharing) |
+| L12-64PT-3  |                 | [⬇️Download](https://drive.google.com/file/d/1UJCa785pCs1iAUHqIYUOqjV_bbuYhfyG/view?usp=sharing) |
+| L12-100F-3  |                 | [⬇️Download](https://drive.google.com/file/d/1eFm7_6BASDkkzyd_TLSUyPe6Ig1FD7gc/view?usp=sharing) |
+| L12-100PT-3 |                 | [⬇️Download](https://drive.google.com/file/d/1dsLHicnyV11bawjuYF9XH1XAP16WG5By/view?usp=sharing) |
+
+
+
+
+

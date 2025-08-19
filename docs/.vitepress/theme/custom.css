@@ -1,7 +1,19 @@
 /* 예시: VitePress의 기본 스타일을 덮어씁니다. */
 :root {
-    --vp-c-brand-1: #646cff;
+    --vp-c-brand-1: #64b4ff;
     --vp-c-brand-2: #747bff;
+    --color-blue-600: #2563eb;
+    --color-blue-700: #1d4ed8;
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7281;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
   .mainLinkBox{
     display: flex;
     flex-direction: row;
@@ -9,7 +21,81 @@
     justify-content: center;
   }
 }
+.tip {
+  background-color: #d6fafa!important;
+}
+.tip .custom-block-title {
+  color:#64d8d6!important;
+  font-size: 1.1rem;
+}
 
+.warning {
+  background-color: #fcebda!important;
+}
+.warning .custom-block-title {
+  color:#ec8e30!important;
+  font-size: 1.1rem;
+}
+
+.note {
+  background-color: #d9e7fa!important;
+}
+.note .custom-block-title {
+  color:#0d6fde!important;
+  font-size: 1.1rem;
+}
+.downloadbtn{ 
+  color: rgb(255 255 255) !important;
+  text-decoration: none !important;
+  background-color: #8bcceb;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.downloadbtn:hover{ 
+  background-color: #00adff;
+}
+/* 1. 기본 언어 전환 아이콘(지구본)을 숨깁니다. */
+.VPNavBarTranslations button .vpi-languages {
+  display: none;
+}
+
+/* 2. 버튼 자체에 새로운 아이콘을 배경 이미지로 추가합니다. */
+.VPNavBarTranslations button ::before {
+  content: ''; /* 가상 요소 생성을 위해 필수 */
+  display: block;
+  width: 20px;  /* 아이콘 너비 */
+  height: 20px; /* 아이콘 높이 */
+  
+  /* public 폴더에 저장된 아이콘 이미지 파일을 사용 */
+  /* background-image: url('/language.svg');  */
+  background-image: url('/earth.svg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.VPDocOutlineItem  .active{
+  color : blue!important;
+}
+
+.localsearch-item-0 a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.localsearch-item-0 a::after {
+  content: attr(href);
+  font-size: 12px;
+ 
+}
+.VPMenuGroup .title {
+  color :red;
+}
+.sidebar-title {
+  color :#00b2ff;
+  font-size : 20px;
+  font-weight : 600;
+}
 .mainLinkBox :hover{
   /* box-shadow: 3px 3px 10px rgb(1, 74, 134); */
   background-color:rgb(235, 246, 253);
@@ -114,3 +200,230 @@ z-index: 35;
     padding: 5px 6px;
   }
 }
+
+
+/* mail 화면 css */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 640px) { .container { max-width: 640px; } }
+@media (min-width: 768px) { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+
+
+/* --- 1. 네비게이션 바 (GNB) --- */
+.main-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo-link svg { width: 2rem; height: 2rem; color: var(--color-blue-600); }
+.logo-link .brand { font-size: 1.25rem; font-weight: 700; color: var(--color-gray-800); }
+.logo-link .sub-title { font-size: 1.25rem; font-weight: 500; color: var(--color-gray-500); }
+
+.nav-menu {
+  display: none; /* 모바일에서는 숨김 */
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-menu a, .nav-menu button {
+  color: var(--color-gray-600);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+.nav-menu a:hover, .nav-menu button:hover { color: var(--color-blue-600); }
+.lang-switch { display: flex; align-items: center; }
+.lang-switch svg { width: 1.25rem; height: 1.25rem; }
+.lang-switch span { margin-left: 0.5rem; font-size: 0.875rem; font-weight: 500; }
+
+.mobile-menu-button { display: block; }
+.mobile-menu-button svg { width: 1.5rem; height: 1.5rem; }
+
+@media (min-width: 768px) {
+  .nav-menu { display: flex; }
+  .mobile-menu-button { display: none; }
+}
+
+/* --- 2. 히어로 섹션 --- */
+.hero-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  /* padding-top: 5rem;
+  padding-bottom: 5rem; */
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  line-height: 1.2;
+}
+.hero-section .subtitle {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: var(--color-gray-600);
+  max-width: 48rem; /* max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-wrapper { margin-top: 2rem; max-width: 42rem; margin-left: auto; margin-right: auto; position: relative; }
+.search-wrapper svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 1.25rem; height: 1.25rem; color: var(--color-gray-400); }
+.search-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  font-size: 1.125rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+.search-input:focus {
+  box-shadow: 0 0 0 2px var(--color-blue-600);
+  border-color: var(--color-blue-600);
+}
+.recommendations-panel {
+
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 20;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+
+.recommendation-item {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.recommendation-item:hover, .recommendation-item.active { /* active 클래스 추가 */
+  background-color: var(--vp-c-brand-1);
+}
+.recommendation-item:first-child { border-top-left-radius: 0.75rem; border-top-right-radius: 0.75rem; }
+.recommendation-item:last-child { border-bottom-left-radius: 0.75rem; border-bottom-right-radius: 0.75rem; }
+
+
+.hero-actions { margin-top: 1.5rem; display: flex; justify-content: center; align-items: center; gap: 1rem; }
+.btn { padding: 0.75rem 1.5rem; font-weight: 600; border-radius: 9999px; transition: all 0.2s ease-in-out; }
+.btn-primary { background-color: var(--color-blue-600); color: white; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+.btn-primary:hover { background-color: var(--color-blue-700); }
+.btn-secondary { background-color: white; color: var(--color-gray-700); border: 1px solid var(--color-gray-300); box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
+.btn-secondary:hover { background-color: var(--color-gray-100); }
+
+@media (min-width: 768px) {
+  .hero-section { padding-top: 8rem; padding-bottom: 8em; }
+  .hero-section h1 { font-size: 3.75rem; }
+  .hero-section .subtitle { font-size: 1.25rem; }
+}
+
+/* --- 3. 제품 & 4. 리소스 공통 --- */
+.feature-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h2 { font-size: 1.875rem; font-weight: 700; color: var(--color-gray-900); }
+.section-header p { margin-top: 0.5rem; font-size: 1.125rem; color: var(--color-gray-600); }
+.grid-container { display: grid; gap: 2rem; grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+@media (min-width: 768px) {
+  .feature-section { padding-top: 6rem; padding-bottom: 6rem; }
+  .grid-container-md-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .grid-container-lg-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid-container-lg-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* --- 3. 제품 시리즈 --- */
+.product-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.product-card:hover { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+.product-card .image-wrapper { padding: 1.5rem; background-color: var(--color-gray-100); }
+.product-card img { width: 100%; height: 12rem; object-fit: cover; border-radius: 0.5rem; }
+.product-card .content { padding: 1.5rem; }
+.product-card .content h3 { font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); transition: color 0.2s ease-in-out; }
+.product-card:hover .content h3 { color: var(--color-blue-600); }
+.product-card .content p { margin-top: 0.5rem; color: var(--color-gray-600); }
+
+/* --- 4. 기술 지원 리소스 --- */
+.resource-card {
+  padding: 2rem;
+  background-color: var(--color-gray-50);
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.resource-card:hover { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+.resource-card .icon-wrapper {
+  width: 4rem; height: 4rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resource-card .icon-wrapper svg { width: 2rem; height: 2rem; }
+.resource-card h3 { margin-top: 1.5rem; font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); }
+.resource-card p { margin-top: 0.5rem; color: var(--color-gray-600); }
+
+/* --- 5. 최신 업데이트 --- */
+.updates-container { max-width: 56rem; margin-left: auto; margin-right: auto; }
+.update-item {
+  display: block;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-gray-200);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: all 0.2s ease-in-out;
+}
+.update-item:hover { border-color: var(--color-blue-600); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+.update-item .date { font-size: 0.875rem; color: var(--color-gray-500); }
+.update-item h4 { margin-top: 0.25rem; font-size: 1.125rem; font-weight: 600; color: var(--color-gray-800); }
+.update-item p { margin-top: 0.5rem; color: var(--color-gray-600); }
+.updates-list { display: flex; flex-direction: column; gap: 1rem; }
+
+/* --- 6. 푸터 --- */
+.main-footer { background-color: var(--color-gray-800); color: white; }
+.footer-content { padding-top: 3rem; padding-bottom: 3rem; }
+.footer-grid { display: grid; gap: 2rem; grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.footer-grid h5 { font-weight: 600; color: #e5e7eb; }
+.footer-grid ul { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem; padding: 0; list-style: none; }
+.footer-grid a { color: var(--color-gray-400); }
+.footer-grid a:hover { color: white; }
+.footer-bottom { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-gray-700); text-align: center; font-size: 0.875rem; color: var(--color-gray-500); }

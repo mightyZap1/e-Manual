@@ -1,19 +1,76 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 
 media_folder: public/image
 public_folder: /image
 
 collections:
-  - name: 'guide'
-    label: 'Guide'
-    folder: 'guide'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: "17Lf"
+    label: "17Lf 시리즈"
+    widget: "rich_text"
+    # ⬇️ 표시할 버튼 목록을 직접 추가합니다.
+    buttons:
+      - "bold"
+      - "italic"
+      - "link"
+      - "heading-one"
+      - "heading-two"
+      - "bulleted-list"
+      - "numbered-list"
+      - "quote"
+      - "table" # <-- 테이블 버튼을 명시적으로 추가
+    files:
+      - name: "datasheet_27"
+        label: "mightyZAP 17Lf 27mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-27.md"
+        fields: # 각 파일에 개별적으로 fields 추가
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }
+
+      - name: "datasheet_37"
+        label: "mightyZAP 17Lf 37mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-37.md"
+        fields:
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }
+
+      - name: "datasheet_50"
+        label: "mightyZAP 17Lf 50mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-50.md"
+        fields:
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }
+
+      - name: "datasheet_87"
+        label: "mightyZAP 17Lf 87mm datasheet"
+        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-87.md"
+        fields:
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }
+          
+      - name: "manual_17lf"
+        label: "mightyZAP 17Lf 사용자 매뉴얼"
+        file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
+        fields:
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }
+          
+      - name: "17Lf Modbus RTU_kor"
+        label: "17Lf Modbus RTU_kor"
+        file: "docs/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor.md"
+        fields:
+          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
+          - { label: "버전", name: "version", .widget: "rich_text", required: false }
+          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+          - { label: "본문", name: "body", widget: "markdown" }

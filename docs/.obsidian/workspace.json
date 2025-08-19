@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1bcbedb9c4f0fb63",
+        "id": "a44072fc72ca16f2",
         "type": "tabs",
         "children": [
           {
-            "id": "8a511e953dca2a5d",
+            "id": "4ff750cd04374524",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "actuator/Mini17Lf/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,18 +22,21 @@
             }
           },
           {
-            "id": "1d867369ea0cb782",
+            "id": "8f2802bca4c7a576",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605.png"
+                "file": "accessories/wire/wire_connector.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "ENG-ver_IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605"
+              "icon": "lucide-file",
+              "title": "wire_connector"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -154,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "accessories/wire/wire_connector.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "index 의 개요"
+              "title": "wire_connector 의 개요"
             }
           }
         ],
@@ -168,7 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,53 +183,54 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "8a511e953dca2a5d",
+  "active": "8f2802bca4c7a576",
   "lastOpenFiles": [
-    "actuator/Mini12Lf/firmware/27mm.md",
-    "actuator/index.md",
-    "software/TotalManager/Total_manager_download.md",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/IRMAA02190220_without-Accessory_12D-12S7S-15_Rev01_20250605.STEP",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/IRMAA02190220_with-Accessory_12D-12S7S-15_Rev01_20250605.STEP",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605.DXF",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605.pdf",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_IRMAA02190220-12D-12S7S-15_inch_Rev01_20250605.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_IRMAA02190220-12D-12S7S-15_inch_Rev01_20250605.pdf",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_IRMAA02190220-12D-12S7S-15_inch_Rev01_20250605.DXF",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12L-xxxx-22-Limit-Swich-Series_mm_Rev03_20250523.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12L-xxxx-22-Limit-Swich-Series_mm_Rev03_20250523.pdf",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12L-xxxx-22-Limit-Swich-Series_inch_Rev03_20250523.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12L-xxxx-22-Limit-Swich-Series_inch_Rev03_20250523.pdf",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12D-xxxx-22-Limit-Swich-Series_mm_Rev03_20250523.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12D-xxxx-22-Limit-Swich-Series_mm_Rev03_20250523.pdf",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12D-xxxx-22-Limit-Swich-Series_inch_Rev03_20250523.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/data/ENG-ver_12D-xxxx-22-Limit-Swich-Series_inch_Rev03_20250523.pdf",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/datasheet/img/switch_voltagevsstallforce_7.4v.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/datasheet/img/switch_voltagevsstallforce_12v.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/datasheet/img/switch_voltageVSspeed_7.4.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/datasheet/img/switch_voltageVSspeed.png",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/12L Limit Switch.md",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/12D Nano Limit Switch.md",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/drawings/12D Limit Switch.md",
-    "en/actuator/12L12D_NANO_Mini_limitSwitch/datasheet/Datasheet_12L12D_Series_Limit_Switch_V2.0.md",
-    "actuator/Mini12Lf/firmware/L12 Series Firmware.md",
-    "software/TotalManager/User Manual.md",
-    "actuator/12L12D_NANO_Mini_limitSwitch/drawings/12D Limit Switch.md",
-    "en/actuator/Mini17Lf/Library/library.md",
-    "actuator/12L12D_NANO_Mini_limitSwitch/drawings/12L Limit Switch.md",
-    "actuator/12L12D_NANO_Mini_limitSwitch/drawings/12D Nano Limit Switch.md",
-    "actuator/12L12D_NANO_Mini_limitSwitch/drawings/무제.md",
-    "actuator/12L12D_NANO_Mini_limitSwitch/datasheet/Datasheet_12L12D_Series_Limit_Switch_V2.0.md",
-    "actuator/D7D12L12/Drawings/L12-xx-6 Drawings.md",
-    "actuator/Library/library.md",
-    "actuator/D7D12L12/Drawings/L12-xx-4 Drawings.md",
-    "actuator/D7D12L12/Drawings/L12-xx-3 Drawings.md",
-    "actuator/D7D12L12/Drawings/D7D12-xx-3 Drawings.md",
-    "actuator/Mini12Lf/Drawings/12Lf-xx-27 Drawings.md",
-    "actuator/Mini12Lf/firmware/D7D12L12(26mm).md",
-    "actuator/Mini12Lf/firmware/56mm.md",
-    "actuator/Mini12Lf/firmware/96mm.md",
-    "actuator/Mini12Lf/firmware/41mm.md",
-    "actuator/Mini12Lf/Catalogue/catalogue.md"
+    "accessories/Mounting/IR-MB06/img/mb06-vright.png",
+    "accessories/Mounting/IR-MB06/img/mb06-vleft.png",
+    "accessories/Mounting/IR-MB06/img/mb06-spacer.png",
+    "accessories/Mounting/IR-MB06/img/mb06-platebtm.png",
+    "accessories/Mounting/IR-MB06/img/mb06-asb-04.png",
+    "accessories/Mounting/IR-MB06/img/mb06-asb-02.png",
+    "accessories/Mounting/IR-MB06/img/mb06-asb-03.png",
+    "accessories/Mounting/IR-MB06/img/mb06-asb-01.png",
+    "accessories/Mounting/IR-MB06/img",
+    "accessories/Mounting/IR-MB07/img/mb07-spacer.png",
+    "accessories/Mounting/IR-MB07/img/mb07-washer.png",
+    "accessories/Mounting/IR-MB07/img/mb07-bracket-b.png",
+    "accessories/Mounting/IR-MB07/img",
+    "accessories/Mounting/IR-MB07/data copy/IR-MB07_2D_PDF.zip",
+    "accessories/Mounting/IR-MB07/data copy/IR-MB0307_Vertical_Rev01_20240826.STEP",
+    "accessories/Mounting/IR-MB07/data copy/IR-MB0307_Horizontal_Rev01_20240826.STEP",
+    "accessories/Mounting/IR-MB07/data copy/ENG-IROIX0027 WASHER FLT ID2.6XOD5.0X0.5T SUS_Rev01_20240913.pdf",
+    "accessories/Mounting/IR-MB07/data copy/ENG-IRMIS0019 SPACER, IR-MB07_Rev01_20240826.pdf",
+    "accessories/Mounting/IR-MB07/data copy/ENG-IRMIS0005 BRACKET C, IR-MB03&07_Rev05_20240826.pdf",
+    "accessories/Mounting/IR-MB07/data copy/ENG-IRMIS0004 BRACKET B, IR-MB03&07_Rev04_20240826.pdf",
+    "accessories/Mounting/IR-MB07/data copy/ENG-IRMIS0003 BRACKET A, IR-MB03&07_Rev05_20240826.pdf",
+    "accessories/RodendTips/IR-MC06/mc06-assemble.md",
+    "en/accessories/wire/wire_connector.md",
+    "accessories/wire/wire_connector.md",
+    "en/accessories/wire/index.md",
+    "accessories/wire/index.md",
+    "accessories/RodendTips/IR-MC06/MC06-drawing.md",
+    "accessories/RodendTips/IR-EB01/EB01-Drawing.md",
+    "accessories/RodendTips/IR-EB01/EB01-assemble.md",
+    "accessories/Mounting/MB07/mb07-drawing.md",
+    "accessories/Mounting/MB06/mb06-drawing.md",
+    "accessories/Mounting/MB05/mb05-drawing.md",
+    "accessories/Mounting/MB04/mb04-drawing.md",
+    "accessories/Mounting/MB04/mb04-assemble.md",
+    "accessories/Mounting/MB03/mb03-drawing.md",
+    "accessories/Mounting/MB03/mb03-assemble.md",
+    "accessories/Mounting/MB02/mb02-drawing.md",
+    "accessories/Mounting/MB02/mb02-assemble.md",
+    "en/software/TotalManager/index.md",
+    "en/software/TotalManager/TotalManager_Manual.md",
+    "software/TotalManager/index.md",
+    "software/TotalManager/Manual/Total_Manager_Manual.md",
+    "en/accessories/Mounting/index.md",
+    "en/accessories/RodendTips/index.md",
+    "actuator/Mini12Lf/index.md",
+    "actuator/limitSwitch/index.md",
+    "무제.canvas"
   ]
 }

@@ -212,6 +212,7 @@ function obsidianPdfEmbedWithViewer(md) {
 }
 
 export default defineConfig({
+  lastUpdated: true,
   head:[[
     'script',
       { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
@@ -237,7 +238,7 @@ export default defineConfig({
     },
   },
   locales: {
-    // --- 한국어 설정 ---
+    // --- 한국어 설정 ---    
     root: {
       lang: 'ko-KR',
       label: '한국어',
@@ -250,243 +251,315 @@ export default defineConfig({
         // 로컬 검색 활성화
         nav: [
           { text: 'HOME', link: '/' },
-          { text: 'Actuator', link: '/actuator/' },          
-          { text: 'Software', link: '/software/' },
-          { text: 'Accessores', link: '/accessories_etc/' },
+          { 
+            text: 'Actuator', 
+            items: [            
+              { text: '12Lf Series', link: '/actuator/Mini12Lf/' },
+              { text: '17Lf Series', link: '/actuator/Mini17Lf/' },
+              { text: 'D7,D12,L12', link: '/actuator/D7D12L12/' },
+              { text: 'Limit Switch', link: '/actuator/limitSwitch/' },
+            ]
+          },          
+          { text: 'Software', 
+            items : [
+              { text: 'Total Manager', link: '/software/TotalManager/' },
+            ]
+          },
+          { text: 'Accessores', 
+            items : [
+              {text : 'Board', 
+                items:[
+                  {text:"- EZ Controller",link: '/accessories/board/EZController/' },
+                  {text:"- USB Interface",link: '/accessories/board/USBInterface/' },
+                  {text:"- UART Interface",link: '/accessories/board/UartInterfaceboard/' },
+              ]},             
+              {text : 'Mount', link: '/accessories/Mounting/' },
+              {text : 'Wire', link: '/accessories/wire/' },
+              {text : 'Rodend Tips', link: '/accessories/RodendTips/' },
+            ]
+          },
+          {
+            text :"mightyZAP Home",
+            link : "http://mightyzap.com"
+          }
         ],
         // --- 한국어 SIDEBAR ---
         sidebar: {
-          '/actuator/': [
-            {//MIni12Lf
-              text: 'Mini 12Lf',
+          '/actuator/Mini12Lf/': [
+            {text:'<p class="sidebar-title">12Lf Series</p>'},
+            {
+              text: 'Manual',
               collapsed: true,
-              link:'/actuator/Mini12Lf',
               items: [
-                {
-                  text: 'Manual',
-                  collapsed: true,
-                  items: [
-                    { text: 'IR Protocol', link: '/actuator/Mini12Lf/Manual/12Lf IR Protocol' },
-                    { text: 'Modbus RTU', link: '/actuator/Mini12Lf/Manual/12Lf Modbus RTU_kor' },
-                    { text: 'User Manual', link: '/actuator/Mini12Lf/Manual/mightyZAP 12Lf User Manual' },                    
-                  ]
-                },
-                {
-                  text: 'Catalogue',
-                  collapsed: true,
-                  items: [
-                    { text: 'Catalogue', link: '/actuator/Mini12Lf/Catalogue/catalogue' }
-                  ]
-                },   
-                {
-                  text: 'Firmware',
-                  collapsed: true,
-                  items: [
-                    { text: '펌웨어 업데이트', link: '/actuator/Mini12Lf/firmware/firmware' },                    
-                  ]
-                },
-                {
-                  text: 'Drawings',
-                  collapsed: true,
-                  items: [
-                    { text: '12Lf-xx-27', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-27 Drawings' },
-                    { text: '12Lf-xx-40', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-40 Drawings' },
-                    { text: '12Lf-xx-53', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-53 Drawings' },
-                    { text: '12Lf-xx-90', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-90 Drawings' }
-                  ]
-                },
-                {
-                  text: 'Datasheet',
-                  collapsed: true,
-                  items: [
-                    { text: '12Lf-xxPT-27', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-27' },
-                    { text: '12Lf-xxPT-40', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-40' },
-                    { text: '12Lf-xxPT-53', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-53' },
-                    { text: '12Lf-xxPT-90', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-90' },
-                    { text: '12Lf-xxF-27', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-27' },
-                    { text: '12Lf-xxF-40', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-40' },
-                    { text: '12Lf-xxF-53', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-53' },
-                    { text: '12Lf-xxF-90', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-90' }
-                  ]
-                }
-              ]
-            },            
-            {//Mini17L
-              text: 'Mini 17Lf',
-              collapsed: false,
-              link:'/actuator/Mini17Lf',
-              items: [
-                {
-                  text: 'Datasheet',
-                  collapsed: true,
-                  items: [
-                    { text: '17Lf-xx-27', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-27' },
-                    { text: '17Lf-xx-37', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-37' },
-                    { text: '17Lf-xx-50', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-50' },
-                    { text: '17Lf-xx-87', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-87' },                    
-                  ]
-                },
-                {
-                  text: 'Drawings',
-                  collapsed: true,
-                  items: [
-                    { text: '17Lf-xx-27', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-27 Drawings' },
-                    { text: '17Lf-xx-37', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-37 Drawings' },
-                    { text: '17Lf-xx-50', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-50 Drawings' },
-                    { text: '17Lf-xx-87', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-87 Drawings' },  
-                  ]
-                },                
-                {
-                  text: 'Catalogue',
-                  collapsed: true,
-                  items: [
-                    { text: 'Catalogue', link: '/actuator/Mini17Lf/Catalogue/catalogue' }
-                  ]
-                },
-                {
-                  text: 'Manual',
-                  collapsed: true,
-                  items: [
-                    { text: 'Modbus RTU', link: '/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor' }, 
-                    { text: 'User Manual', link: '/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual_kor' }, 
-                  ]
-                },
-                {
-                  text: 'firmware',
-                  collapsed: true,
-                  items: [
-                    { text: '펌웨어 업데이트', link: '/actuator/Mini17Lf/firmware/firmware' },                    
-                  ]
-                },
-              ]
-            },
-            {//D7D12
-              text: 'D7, D12, L12 Series',
-              collapsed: true,              
-              items: [
-                {
-                  text: 'Datasheet',
-                  collapsed: true,
-                  items: [
-                    { text: 'L12-xxPT-3', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-3' },
-                    { text: 'L12-xxPT-4', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-4' },
-                    { text: 'L12-xxPT-6', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-6' },
-                    { text: 'L12-xxPT-10', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-10' },
-                    { text: 'L12-xxF-3', link: '/actuator/D7D12L12/Datasheet/L12-xxF-3' },
-                    { text: 'L12-xxF-4', link: '/actuator/D7D12L12/Datasheet/L12-xxF-4' },
-                    { text: 'L12-xxF-6', link: '/actuator/D7D12L12/Datasheet/L12-xxF-6' },
-                    { text: 'L12-xxF-10', link: '/actuator/D7D12L12/Datasheet/L12-xxF-10' }
-                  ]
-                },
-                {
-                  text: 'Drawings',
-                  collapsed: true,
-                  items: [
-                    { text: 'D7D12-xx-3', link: '/actuator/D7D12L12/Drawings/D7D12-xx-3 Drawings' },
-                    { text: 'L12-xx-3', link: '/actuator/D7D12L12/Drawings/L12-xx-3 Drawings' },
-                    { text: 'L12-xx-4', link: '/actuator/D7D12L12/Drawings/L12-xx-4 Drawings' },
-                    { text: 'L12-xx-6', link: '/actuator/D7D12L12/Drawings/L12-xx-6 Drawings' },
-                    { text: 'L12-xx-10', link: '/actuator/D7D12L12/Drawings/L12-xx-10 Drawings' }
-                  ]
-                },
-                {
-                  text: 'Catalogue',
-                  collapsed: true,
-                  items: [
-                    { text: 'Catalogue', link: '/actuator/D7D12L12/Catalogue/catalogue' }
-                  ]
-                },
-                {
-                  text: 'Manual',
-                  collapsed: true,
-                  items: [                    
-                    { text: 'User Manual', link: '/actuator/D7D12L12/Manual/Usermanual' },
-                    { text: 'Life cycle', link: '/actuator/D7D12L12/Manual/lifecycle' },
-                  ]
-                },
-                {
-                  text: 'firmware',
-                  collapsed: true,
-                  items: [
-                    { text: '펌웨어 업데이트', link: '/actuator/D7D12L12/firmware/firmware' },                    
-                  ]
-                }
-                
+                { text: 'IR Protocol', link: '/actuator/Mini12Lf/Manual/12Lf_IRProtocol' },
+                { text: 'Modbus RTU', link: '/actuator/Mini12Lf/Manual/12Lf_ModbusRTU' },
+                { text: 'User Manual', link: '/actuator/Mini12Lf/Manual/12Lf_Manual' },                    
               ]
             },
             {
-              text: '12L12D_NANO_Mini_limitSwitch',
-              collapsed: true,              
-              items: [
-                {
-                  text: 'Datasheet',
-                  collapsed: true,
-                  items: [
-                    { text: '12L12D_NANO_Mini_limitSwitch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/datasheet/Datasheet_12L12D_Series_Limit_Switch_V2.0' }
-                  ]
-                },
-                {
-                  text: 'Drawings',
-                  collapsed: true,
-                  items: [
-                    { text: '12D Limit Switch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Drawings/12D Limit Switch' },
-                    { text: '12D Nano Limit Switch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Drawings/12D Nano Limit Switch' },
-                    { text: '12L Limit Switch', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Drawings/12L Limit Switch' }
-                  ]
-                },
-                // {
-                //   text: 'Catalogue',
-                //   collapsed: true,
-                //   items: [
-                //     { text: 'Catalogue', link: '/actuator/12L12D_NANO_Mini_limitSwitch/Catalogue/catalogue' }
-                //   ]
-                // },
-                // {
-                //   text: 'Manual',
-                //   collapsed: true,
-                //   items: [                    
-                //     { text: 'User Manual', link: '/actuator/D7D12L12/Manual/Usermanual' },
-                //     { text: 'Life cycle', link: '/actuator/D7D12L12/Manual/lifecycle' },
-                //   ]
-                // },
-                // {
-                //   text: 'firmware',
-                //   collapsed: true,
-                //   items: [
-                //     { text: '펌웨어 업데이트', link: '/actuator/D7D12L12/firmware/firmware' },                    
-                //   ]
-                // }                
-              ]
-            }
-          ],          
-          '/software/': [
-            {
-              text: 'Total Manager',
+              text: 'Catalogue',
               collapsed: true,
               items: [
-                { text: 'User Manual', link: '/software/TotalManager/Total Manager User Manual_kor' }
+                { text: 'Catalogue', link: '/actuator/Mini12Lf/Catalogue/12Lf_Catalogue' }
+              ]
+            },   
+            {
+              text: 'Firmware',
+              collapsed: true,
+              items: [
+                { text: '펌웨어 업데이트', link: '/actuator/Mini12Lf/firmware/12Lf_firmware' },                    
+              ]
+            },
+            {
+              text: 'Drawings',
+              collapsed: true,
+              items: [
+                { text: '12Lf-xx-27', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-27_Drawings' },
+                { text: '12Lf-xx-40', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-40_Drawings' },
+                { text: '12Lf-xx-53', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-53_Drawings' },
+                { text: '12Lf-xx-90', link: '/actuator/Mini12Lf/Drawings/12Lf-xx-90_Drawings' }
+              ]
+            },
+            {
+              text: 'Datasheet',
+              collapsed: true,
+              items: [
+                { text: '12Lf-xxPT-27', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-27_Datasheet' },
+                { text: '12Lf-xxPT-40', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-40_Datasheet' },
+                { text: '12Lf-xxPT-53', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-53_Datasheet' },
+                { text: '12Lf-xxPT-90', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxPT-90_Datasheet' },
+                { text: '12Lf-xxF-27', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-27_Datasheet'},
+                { text: '12Lf-xxF-40', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-40_Datasheet'},
+                { text: '12Lf-xxF-53', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-53_Datasheet'},
+                { text: '12Lf-xxF-90', link: '/actuator/Mini12Lf/Datasheet/12Lf-xxF-90_Datasheet'}
+              ]
+            }, 
+          ],      
+          '/actuator/Mini17Lf/': [    
+            {text:'<p class="sidebar-title">17Lf Series</p>'},            
+            {//
+              text: 'Datasheet',
+              collapsed: true,
+              items: [
+                { text: '17Lf-xx-27', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-27_Datasheet' },
+                { text: '17Lf-xx-37', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-37_Datasheet' },
+                { text: '17Lf-xx-50', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-50_Datasheet' },
+                { text: '17Lf-xx-87', link: '/actuator/Mini17Lf/Datasheet/17Lf-xxF-87_Datasheet' },                    
+              ]
+            },
+            {
+              text: 'Drawings',
+              collapsed: true,
+              items: [
+                { text: '17Lf-xx-27', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-27_Drawings' },
+                { text: '17Lf-xx-37', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-37_Drawings' },
+                { text: '17Lf-xx-50', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-50_Drawings' },
+                { text: '17Lf-xx-87', link: '/actuator/Mini17Lf/Drawing/17Lf-xx-87_Drawings' },  
+              ]
+            },                
+            {
+              text: 'Catalogue',
+              collapsed: true,
+              items: [
+                { text: 'Catalogue', link: '/actuator/Mini17Lf/Catalogue/17Lf_Catalogue' }
+              ]
+            },
+            {
+              text: 'Manual',
+              collapsed: true,
+              items: [
+                { text: 'Modbus RTU', link: '/actuator/Mini17Lf/Manual/17Lf_ModbusRTU' }, 
+                { text: 'User Manual', link: '/actuator/Mini17Lf/Manual/17Lf_Manual' }, 
+              ]
+            },
+            {
+              text: 'firmware',
+              collapsed: true,
+              items: [
+                { text: '펌웨어 업데이트', link: '/actuator/Mini17Lf/firmware/17Lf_firmware' },                    
               ]
             }
           ],
-          '/accessories_etc/': [
-            {
-              text: 'EZ Controller',
+          '/actuator/D7D12L12/': [  
+            {text:'<p class="sidebar-title">D7 D12 L12 Series</p>'},              
+            {//D7D12
+              text: 'Datasheet',
               collapsed: true,
               items: [
-                    { text: 'User Manual', link: '/accessories_etc/board/EZ Controller User Manual' },                                                              
+                { text: 'L12-xxPT-3', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-3_Datasheet' },
+                { text: 'L12-xxPT-4', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-4_Datasheet' },
+                { text: 'L12-xxPT-6', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-6_Datasheet' },
+                { text: 'L12-xxPT-10', link: '/actuator/D7D12L12/Datasheet/L12-xxPT-10_Datasheet' },
+                { text: 'L12-xxF-3', link: '/actuator/D7D12L12/Datasheet/L12-xxF-3_Datasheet'},
+                { text: 'L12-xxF-4', link: '/actuator/D7D12L12/Datasheet/L12-xxF-4_Datasheet'},
+                { text: 'L12-xxF-6', link: '/actuator/D7D12L12/Datasheet/L12-xxF-6_Datasheet'},
+                { text: 'L12-xxF-10', link: '/actuator/D7D12L12/Datasheet/L12-xxF-10_Datasheet' }
               ]
             },
             {
-              text: 'etc',
+              text: 'Drawings',
               collapsed: true,
               items: [
-                    { text: '소음 저감 Tip', link: '/accessories_etc/etc/소음 저감 Tip' },
-                    { text: '제품 설치 방법(26_27mm)', link: '/accessories_etc/etc/제품 설치 방법(26_27mm)' },
-                    { text: '제품 설치 방법(40_96mm)', link: '/accessories_etc/etc/제품 설치 방법(40_96mm)' },
-                    { text: '컨트롤러별mightyZAP 결선도', link: '/accessories_etc/etc/컨트롤러별mightyZAP 결선도' },
+                { text: 'D7D12-xx-3', link: '/actuator/D7D12L12/Drawings/D7D12-xx-3_Drawings' },
+                { text: 'L12-xx-3', link: '/actuator/D7D12L12/Drawings/L12-xx-3_Drawings' },
+                { text: 'L12-xx-4', link: '/actuator/D7D12L12/Drawings/L12-xx-4_Drawings' },
+                { text: 'L12-xx-6', link: '/actuator/D7D12L12/Drawings/L12-xx-6_Drawings' },
+                { text: 'L12-xx-10', link: '/actuator/D7D12L12/Drawings/L12-xx-10_Drawings' }
               ]
+            },
+            {
+              text: 'Catalogue',
+              collapsed: true,
+              items: [
+                { text: 'Catalogue', link: '/actuator/D7D12L12/Catalogue/D7D12L12_Catalogue' }
+              ]
+            },
+            {
+              text: 'Manual',
+              collapsed: true,
+              items: [                    
+                { text: 'User Manual', link: '/actuator/D7D12L12/Manual/D7D12L12_manual' },
+                { text: 'Life cycle', link: '/actuator/D7D12L12/Manual/D7D12L12_lifecycle' },
+              ]
+            },
+            {
+              text: 'firmware',
+              collapsed: true,
+              items: [
+                { text: '펌웨어 업데이트', link: '/actuator/D7D12L12/firmware/D7D12L12_firmware' },                    
+              ]
+            },
+          ],
+          '/actuator/limitSwitch/': [  
+            {text:'<p class="sidebar-title">Switch Series</p>'},    
+            {
+              text: 'Datasheet',
+              collapsed: true,
+              items: [
+                { text: 'limitSwitch', link: '/actuator/limitSwitch/datasheet/12L12D_Limit_Switch_Datasheet' }
+              ]
+            },
+            {
+              text: 'Drawings',
+              collapsed: true,
+              items: [
+                { text: '12D Limit Switch', link: '/actuator/limitSwitch/Drawings/12D_Limit_Switch_Drawings' },
+                { text: '12D Nano Limit Switch', link: '/actuator/limitSwitch/Drawings/12D_Nano_Limit_Switch_Drawings' },
+                { text: '12L Limit Switch', link: '/actuator/limitSwitch/Drawings/12L_Limit_Switch_Drawings' }
+              ]
+            },                      
+          ],          
+          '/software/TotalManager/': [
+            {text:'<p class="sidebar-title">Total Manager</p>'},  
+            {
+              text: 'User Manual', 
+              collapsed : true,
+              items:[
+                {text:"User Manual", link: '/software/TotalManager/Manual/Total_manager_Manual' }
+              ]              
             }
-          ]
+          ],
+          '/accessories/board/EZController/': [
+            {text:'<p class="sidebar-title">EZ Controller</p>'},             
+            {text: 'User Manual', link: '/accessories/board/EZController/EZ_Controller(CT-01)_Manual' },
+            {text: 'drawings', link: '/accessories/board/EZController/EZ_Controller_drawings' }            
+          ],'/accessories/board/USBInterface/': [
+            {text:'<p class="sidebar-title">USB Interface</p>'},  
+            { text: 'USB-03 Datasheet', link: '/accessories/board/USBInterface/Datasheet/USB-03_datasheet' },            
+            { text: 'USB-02 Drawings', link: '/accessories/board/USBInterface/drawings/USB-02_drawing' },   
+            { text: 'USB-03 Drawings', link: '/accessories/board/USBInterface/drawings/usb-03_drawing' },   
+            { text: 'Driver', link: '/en/accessories/board/USBInterface/drivers/Drivers' },  
+          ],'/accessories/board/UartInterfaceboard/': [
+            {text:'<p class="sidebar-title">UART Interface</p>'},
+            { text: 'Drawing', link: '/accessories/board/UartInterfaceboard/UART01-drawing' }
+          ],'/accessories/Mounting/': [
+            {text:'<p class="sidebar-title">Mounting</p>'},
+            {
+              text: 'IR-MB02', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/Mounting/IR-MB02/mb02-drawing' },
+                {text:"assemble", link: '/accessories/Mounting/IR-MB02/mb02-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB03', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/Mounting/IR-MB03/mb03-drawing' },
+                {text:"assemble", link: '/accessories/Mounting/IR-MB03/mb03-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB04', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/Mounting/IR-MB04/mb04-drawing' },
+                {text:"assemble", link: '/accessories/Mounting/IR-MB04/mb04-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB05', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/Mounting/IR-MB05/mb05-drawing' },
+                {text:"assemble", link: '/accessories/Mounting/IR-MB05/mb05-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB06', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/Mounting/IR-MB06/mb06-drawing' },
+                {text:"assemble", link: '/accessories/Mounting/IR-MB06/mb06-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB07', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/Mounting/IR-MB07/mb07-drawing' },
+                {text:"assemble", link: '/accessories/Mounting/IR-MB07/mb07-assemble' },
+              ]                            
+            }     
+          ],'/accessories/wire/': [
+            {text:'<p class="sidebar-title">Wire</p>'},
+            { text: 'Wire Connector', link: '/accessories/wire/wire_connector'}
+          ],'/accessories/RodendTips/': [
+            {text:'<p class="sidebar-title">Rodend Tips</p>'},
+            {
+              text: 'IR-EB01', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/RodendTips/IR-EB01/EB01-Drawing' },
+                {text:"assemble", link: '/accessories/RodendTips/IR-EB01/EB01-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-GT01', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/RodendTips/IR-GT01/GT01-Drawing' }                              
+              ]                            
+            },  
+            {
+              text: 'IR-MC05', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/RodendTips/IR-MC05/mc05-Drawing' },
+                {text:"assemble", link: '/accessories/RodendTips/IR-MC05/mc05-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MC06', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/accessories/RodendTips/IR-MC06/mc06-Drawing' },
+                {text:"assemble", link: '/accessories/RodendTips/IR-MC06/mc06-assemble' },
+              ]                            
+            },     
+          ]      
+                      
         }
       },      
     },
@@ -497,107 +570,323 @@ export default defineConfig({
       label: 'English',
       description: 'Technical documentation for our products.',
       themeConfig: {
+        outline: {
+          level: 'deep' // h2와 h3 헤더를 목차에 표시
+        },
         // --- 영어 NAV ---
         nav: [
-          { text: 'Home', link: '/en/' },
-          { text: 'Actuator', link: '/en/actuator/Mini-12Lf/Datasheet/12Lf-xxF-27_eng' },
-          { text: 'Boards', link: '/en/Boards/Ez-Controller' },
-          { text: 'Software', link: '/en/Software/Total-Manager/Manual/Total-Manager-User-Manual' }
+          { text: 'HOME', link: '/en/' },
+          { 
+            text: 'Actuator', 
+            items: [            
+              { text: '12Lf Series', link: '/en/actuator/Mini12Lf/' },
+              { text: '17Lf Series', link: '/en/actuator/Mini17Lf/' },
+              { text: 'D7,D12,L12', link: '/en/actuator/D7D12L12/' },
+              { text: 'Limit Switch', link: '/en/actuator/LimitSwitch/' },
+            ]
+          },          
+          { text: 'Software', 
+            items : [
+              { text: 'Total Manager', link: '/en/software/TotalManager/' },
+            ]
+          },
+          { text: 'Accessores', 
+            items : [
+              {text : 'Board', 
+                items:[
+                  {text:"- EZ Controller",link: '/en/accessories/board/EZController/' },
+                  {text:"- USB Interface",link: '/en/accessories/board/USBInterface/' },
+                  {text:"- UART Interface",link: '/en/accessories/board/UartInterfaceboard/' },
+              ]},             
+              {text : 'Mount', link: '/en/accessories/Mounting/' },
+              {text : 'Wire', link: '/en/accessories/wire/' },
+              {text : 'Rodend Tips', link: '/en/accessories/RodendTips/' },
+            ]
+          },
+          {
+            text :"mightyZAP Home",
+            link : "http://mightyzap.com/en/"
+          }
         ],
         // --- 영어 SIDEBAR ---
         sidebar: {
-          '/en/actuator/': [
+          '/en/actuator/Mini12Lf/': [
+            {text:'<p class="sidebar-title">12Lf Series</p>'},
             {
-              text: 'Mini 12Lf',
-              collapsed: false,
+              text: 'Manual',
+              collapsed: true,
               items: [
-                {
-                  text: 'Datasheet',
-                  items: [
-                    { text: '12Lf-xxPT-27', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-27' },
-                    { text: '12Lf-xxPT-40', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-40' },
-                    { text: '12Lf-xxPT-53', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-53' },
-                    { text: '12Lf-xxPT-90', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-90' },
-                    { text: '12Lf-xxF-27', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-27' },
-                    { text: '12Lf-xxF-40', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-40' },
-                    { text: '12Lf-xxF-53', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-53' },
-                    { text: '12Lf-xxF-90', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-90' }
-                  ]
-                },
-                {
-                  text: 'Drawings',
-                  collapsed: true,
-                  items: [
-                    { text: '12Lf-xx-27', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-27 Drawings' },
-                    { text: '12Lf-xx-40', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-40 Drawings' },
-                    { text: '12Lf-xx-53', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-53 Drawings' },
-                    { text: '12Lf-xx-90', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-90 Drawings' }
-                  ]
-                },
-                {
-                  text: 'Manual',
-                  items: [
-                    { text: '12Lf IR Protocol', link: '/en/actuator/Mini12Lf/Manual/12Lf IR Protocol' },
-                    { text: '12Lf Modbus RTU', link: '/en/actuator/Mini12Lf/Manual/12Lf Modbus RTU' },
-                    { text: 'Manual', link: '/en/actuator/Mini12Lf/Manual/mightyZAP 12Lf User Manual' },
-                    { text: 'Life cycle', link: '/en/actuator/Mini12Lf/Manual/lifecycle' },
-                  ]
-                }
+                { text: 'IR Protocol', link: '/en/actuator/Mini12Lf/Manual/12Lf_IRProtocol' },
+                { text: 'Modbus RTU', link: '/en/actuator/Mini12Lf/Manual/12Lf_ModbusRTU' },
+                { text: 'User Manual', link: '/en/actuator/Mini12Lf/Manual/12Lf_Manual' },                    
               ]
             },
             {
-              text: 'Mini 17Lf',
-              collapsed: false,
+              text: 'Catalogue',
+              collapsed: true,
               items: [
-                {
-                  text: 'Datasheet',
-                  collapsed: true,
-                  items: [
-                    { text: '17Lf-xx-27', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-27' },
-                    { text: '17Lf-xx-37', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-37' },
-                    { text: '17Lf-xx-50', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-50' },
-                    { text: '17Lf-xx-87', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-87' },                    
-                  ]
-                },
-                {
-                  text: 'Drawings',
-                  collapsed: true,
-                  items: [
-                    { text: '17Lf-xx-27', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-27 Drawings' },
-                    { text: '17Lf-xx-37', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-37 Drawings' },
-                    { text: '17Lf-xx-50', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-50 Drawings' },
-                    { text: '17Lf-xx-87', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-87 Drawings' },  
-                  ]
-                },
-                {
-                  text: 'Manual',
-                  collapsed: true,
-                  items: [
-                    { text: '17Lf Modbus RTU', link: '/en/actuator/Mini17Lf/Manual/17Lf Modbus RTU_eng' }, 
-                    { text: 'mightyZAP 17Lf User Manual', link: '/en/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual_eng' }, 
-                  ]
-                }
+                { text: 'Catalogue', link: '/en/actuator/Mini12Lf/Catalogue/12Lf_catalogue' }
+              ]
+            },   
+            {
+              text: 'Firmware',
+              collapsed: true,
+              items: [
+                { text: 'Firmware', link: '/en/actuator/Mini12Lf/firmware/12Lf_firmware' },                    
+              ]
+            },
+            {
+              text: 'Drawings',
+              collapsed: true,
+              items: [
+                { text: '12Lf-xx-27', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-27_Drawings' },
+                { text: '12Lf-xx-40', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-40_Drawings' },
+                { text: '12Lf-xx-53', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-53_Drawings' },
+                { text: '12Lf-xx-90', link: '/en/actuator/Mini12Lf/Drawings/12Lf-xx-90_Drawings' }
+              ]
+            },
+            {
+              text: 'Datasheet',
+              collapsed: true,
+              items: [
+                { text: '12Lf-xxPT-27', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-27_Datasheet' },
+                { text: '12Lf-xxPT-40', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-40_Datasheet' },
+                { text: '12Lf-xxPT-53', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-53_Datasheet' },
+                { text: '12Lf-xxPT-90', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxPT-90_Datasheet' },
+                { text: '12Lf-xxF-27', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-27_Datasheet' },
+                { text: '12Lf-xxF-40', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-40_Datasheet' },
+                { text: '12Lf-xxF-53', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-53_Datasheet' },
+                { text: '12Lf-xxF-90', link: '/en/actuator/Mini12Lf/Datasheet/12Lf-xxF-90_Datasheet' }
+              ]
+            }, 
+          ],      
+          '/en/actuator/Mini17Lf/': [    
+            {text:'<p class="sidebar-title">17Lf Series</p>'},            
+            {//
+              text: 'Datasheet',
+              collapsed: true,
+              items: [
+                { text: '17Lf-xx-27', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-27_Datasheet' },
+                { text: '17Lf-xx-37', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-37_Datasheet' },
+                { text: '17Lf-xx-50', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-50_Datasheet' },
+                { text: '17Lf-xx-87', link: '/en/actuator/Mini17Lf/Datasheet/17Lf-xxF-87_Datasheet' },                    
+              ]
+            },
+            {
+              text: 'Drawings',
+              collapsed: true,
+              items: [
+                { text: '17Lf-xx-27', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-27_Drawings' },
+                { text: '17Lf-xx-37', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-37_Drawings' },
+                { text: '17Lf-xx-50', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-50_Drawings' },
+                { text: '17Lf-xx-87', link: '/en/actuator/Mini17Lf/Drawing/17Lf-xx-87_Drawings' },  
+              ]
+            },                
+            {
+              text: 'Catalogue',
+              collapsed: true,
+              items: [
+                { text: 'Catalogue', link: '/en/actuator/Mini17Lf/Catalogue/17Lf_Catalogue' }
+              ]
+            },
+            {
+              text: 'Manual',
+              collapsed: true,
+              items: [
+                { text: 'Modbus RTU', link: '/en/actuator/Mini17Lf/Manual/17Lf_ModbusRTU' }, 
+                { text: 'User Manual', link: '/en/actuator/Mini17Lf/Manual/17Lf_Manual' }, 
+              ]
+            },
+            {
+              text: 'Firmware',
+              collapsed: true,
+              items: [
+                { text: 'Firmware', link: '/en/actuator/Mini17Lf/firmware/17Lf_Firmware' }                 
               ]
             }
           ],
-          '/en/Accessories/': [
-            {
-              text: 'Accessories',
+          '/en/actuator/D7D12L12/': [  
+            {text:'<p class="sidebar-title">D7 D12 L12 Series</p>'},              
+            {//D7D12
+              text: 'Datasheet',
+              collapsed: true,
               items: [
-                { text: 'IR-MB07 Drawings', link: '/en/Accessories/[IR-MB07]-Metal-Bracket-drawings' },
-                { text: 'IR-MB06 Drawings', link: '/en/Accessories/[IR-MB06]-Metal-Bracket-drawings' }
+                { text: 'L12-xxPT-3', link: '/en/actuator/D7D12L12/Datasheet/L12-xxPT-3_Datasheet' },
+                { text: 'L12-xxPT-4', link: '/en/actuator/D7D12L12/Datasheet/L12-xxPT-4_Datasheet' },
+                { text: 'L12-xxPT-6', link: '/en/actuator/D7D12L12/Datasheet/L12-xxPT-6_Datasheet' },
+                { text: 'L12-xxPT-10', link: '/en/actuator/D7D12L12/Datasheet/L12-xxPT-10_Datasheet' },
+                { text: 'L12-xxF-3', link: '/en/actuator/D7D12L12/Datasheet/L12-xxF-3_Datasheet' },
+                { text: 'L12-xxF-4', link: '/en/actuator/D7D12L12/Datasheet/L12-xxF-4_Datasheet' },
+                { text: 'L12-xxF-6', link: '/en/actuator/D7D12L12/Datasheet/L12-xxF-6_Datasheet' },
+                { text: 'L12-xxF-10', link: '/en/actuator/D7D12L12/Datasheet/L12-xxF-10_Datasheet' }
               ]
+            },
+            {
+              text: 'Drawings',
+              collapsed: true,
+              items: [
+                { text: 'D7D12-xx-3', link: '/en/actuator/D7D12L12/Drawings/D7D12-xx-3_Drawings' },
+                { text: 'L12-xx-3', link: '/en/actuator/D7D12L12/Drawings/L12-xx-3_Drawings' },
+                { text: 'L12-xx-4', link: '/en/actuator/D7D12L12/Drawings/L12-xx-4_Drawings' },
+                { text: 'L12-xx-6', link: '/en/actuator/D7D12L12/Drawings/L12-xx-6_Drawings' },
+                { text: 'L12-xx-10', link: '/en/actuator/D7D12L12/Drawings/L12-xx-10_Drawings' }
+              ]
+            },
+            {
+              text: 'Catalogue',
+              collapsed: true,
+              items: [
+                { text: 'Catalogue', link: '/en/actuator/D7D12L12/Catalogue/D7D12L12_Catalogue' }
+              ]
+            },
+            {
+              text: 'Manual',
+              collapsed: true,
+              items: [                    
+                { text: 'User Manual', link: '/en/actuator/D7D12L12/Manual/D7D12L12_Manual' },
+                { text: 'Life cycle', link: '/en/actuator/D7D12L12/Manual/D7D12L12_lifecycle' },
+              ]
+            },
+            {
+              text: 'Firmware',
+              collapsed: true,
+              items: [
+                { text: 'Firmware', link: '/en/actuator/D7D12L12/firmware/D7D12L12_firmware' },                    
+              ]
+            },
+          ],
+          '/en/actuator/LimitSwitch/': [  
+            {text:'<p class="sidebar-title">Switch Series</p>'},    
+            {
+              text: 'Datasheet',
+              collapsed: true,
+              items: [
+                { text: 'Datasheet', link: '/en/actuator/limitSwitch/datasheet/12L12D_Series_Limit_Switch' }
+              ]
+            },
+            {
+              text: 'Drawings',
+              collapsed: true,
+              items: [
+                { text: '12D Limit Switch', link: '/en/actuator/limitSwitch/Drawings/12D_LimitSwitch_Drawings' },
+                { text: '12D Nano Limit Switch', link: '/en/actuator/limitSwitch/Drawings/12D_Nano_LimitSwitch_Drawings' },
+                { text: '12L Limit Switch', link: '/en/actuator/limitSwitch/Drawings/12L_LimitSwitch_Drawings' }
+              ]
+            },                      
+          ],          
+          '/en/software/TotalManager/': [
+            {text:'<p class="sidebar-title">Total Manager</p>'},  
+            {
+              text: 'User Manual', 
+              collapsed : true,
+              items:[
+                {text:"User Manual", link: '/en/software/TotalManager/TotalManager_Manual' }
+              ]              
             }
           ],
-          '/en/Software/': [
+          '/en/accessories/board/EZController/': [
+            {text : "EZ Controller"},
+            { text: 'Manual', link: '/en/accessories/board/EZController/EZControllerUserManual' },
+            { text: 'Drawing', link: '/en/accessories/board/EZController/CT-01_drawing' },
+            { text: 'Arduino', link: '/en/accessories/board/EZController/EZ Controller User Manual' }          
+          ],'/en/accessories/board/USBInterface/': [
+            {text : "USB Interface"},     
+            { text: 'USB-03 Datasheet', link: '/en/accessories/board/USBInterface/Datasheet/USB-03_datasheet' },            
+            { text: 'USB-02 Drawings', link: '/en/accessories/board/USBInterface/drawings/USB-02_drawing' },   
+            { text: 'USB-03 Drawings', link: '/en/accessories/board/USBInterface/drawings/usb-03_drawing' },   
+            { text: 'Driver', link: '/en/accessories/board/USBInterface/drivers/Drivers' },  
+          ],'/en/accessories/board/UartInterfaceboard/': [
+            {text : "UART Interface"},
+            {text: 'Drawing', link: '/en/accessories/board/UartInferfaceboard/Drawing/UART01drawing' }
+          ],'/en/accessories/Mounting/': [
+            {text : "Mounting"},
             {
-              text: 'Total Manager',
-              items: [
-                { text: 'User Manual', link: '/en/Software/Total-Manager/Manual/Total-Manager-User-Manual' }
-              ]
-            }
+              text: 'IR-MB02', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/Mounting/IR-MB02/mb02-drawing' },
+                {text:"assemble", link: '/en/accessories/Mounting/IR-MB02/mb02-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB03', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/Mounting/IR-MB03/mb03-drawing' },
+                {text:"assemble", link: '/en/accessories/Mounting/IR-MB03/mb03-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB04', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/Mounting/IR-MB04/mb04-drawing' },
+                {text:"assemble", link: '/en/accessories/Mounting/IR-MB04/mb04-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB05', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/Mounting/IR-MB05/mb05-drawing' },
+                {text:"assemble", link: '/en/accessories/Mounting/IR-MB05/mb05-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB06', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/Mounting/IR-MB06/mb06-drawing' },
+                {text:"assemble", link: '/en/accessories/Mounting/IR-MB06/mb06-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MB07', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/Mounting/IR-MB07/mb07-drawing' },
+                {text:"assemble", link: '/en/accessories/Mounting/IR-MB07/mb07-assemble' },
+              ]                            
+            }           
+          ],'/en/accessories/wire/': [
+            {text : "Wire"},
+            { text: 'wire connector', link: '/en/accessories/Wire/wire_connector' },
+          ],'/en/accessories/RodendTips/': [
+            {text : "Rodend Tips"},
+            {
+              text: 'IR-EB01', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/RodendTips/IR-EB01/EB01-Drawing' },
+                {text:"assemble", link: '/en/accessories/RodendTips/IR-EB01/EB01-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-GT01', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/RodendTips/IR-GT01/GT01-Drawing' }                              
+              ]                            
+            },  
+            {
+              text: 'IR-MC05', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/RodendTips/IR-MC05/mc05-Drawing' },
+                {text:"assemble", link: '/en/accessories/RodendTips/IR-MC05/mc05-assemble' },
+              ]                            
+            },
+            {
+              text: 'IR-MC06', 
+              collapsed : true,
+              items:[
+                {text:"drawing", link: '/en/accessories/RodendTips/IR-MC06/mc06-Drawing' },
+                {text:"assemble", link: '/en/accessories/RodendTips/IR-MC06/mc06-assemble' },
+              ]                            
+            },     
           ]
         }
+ 
       }
     }
   }

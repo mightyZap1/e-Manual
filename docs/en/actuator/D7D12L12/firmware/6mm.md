@@ -1,0 +1,15 @@
+| Model    | Version          | Download                                                                                         |
+| ------------- | --------------- | -------------------------------------------------------------------------------------------- |
+| L12-20F-6   |  `V2.0` ➔ `V2.1` | [⬇️Download](https://drive.google.com/file/d/12okb6EYpvIRR_hVD5Dmz3nsFlD0Tq1oW/view?usp=sharing) |
+| L12-20PT-6  |                 | [⬇️Download](https://drive.google.com/file/d/1Fo4i5yaJFq68tW4lDw13T1cTMAReirVx/view?usp=sharing) |
+| L12-30F-6   |                 | [⬇️Download](https://drive.google.com/file/d/12qC4zeWfzfAulUzFk2Lv0wZSiT6UWsOo/view?usp=sharing) |
+| L12-30PT-6  |                 | [⬇️Download](https://drive.google.com/file/d/1A4Mk1twb_PYQ4pbf-7DDDnmkSUg8-czW/view?usp=sharing) |
+| L12-50F-6   |                 | [⬇️Download](https://drive.google.com/file/d/1FtEZaRc6lgwSoB8QSJeS9hFjGVZphcbo/view?usp=sharing) |
+| L12-50PT-6  |                 | [⬇️Download](https://drive.google.com/file/d/14IA8PaBZdSR8aJy6rG0K-4m34X736Gc8/view?usp=sharing) |
+| L12-80F-6  |                 | [⬇️Download](https://drive.google.com/file/d/1ZoFOLsuzhM5jFUKcKeypkVzJoxfLCM3j/view?usp=sharing) |
+| L12-80PT-6 |                 | [⬇️Download](https://drive.google.com/file/d/1LIiuAyf_OXf7uBE77A3WBpZUzGW71911/view?usp=sharing) |
+
+
+
+
+
