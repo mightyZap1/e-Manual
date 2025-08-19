@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: USB Interfaceboard Index
+modified: 
+version:
+---
 PC USB Interface
 # IR-USB02
 

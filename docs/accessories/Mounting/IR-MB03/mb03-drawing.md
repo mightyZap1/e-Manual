@@ -1,4 +1,10 @@
-## IR-MB03
+---
+slug: mb03-drawing.md
+title: mb03-drawing
+modified: 
+version:
+---
+# IR-MB03
 
 메탈 브라켓 IR-MB03의 3D(STEP) / 2D(DWG)도면 입니다.  
 12Lf, L12 시리즈의 40mm ~ 96mm stroke전용입니다.

@@ -1,3 +1,10 @@
+---
+slug: 12L12D_Series_Limit_Switch.md
+title: 12L12D_Series_Limit_Switch datasheet
+modified: 
+version:
+---
+# 12L/12D Series Limit Switch Datasheet
 ## Features - 12L / 12D Series Limit Switch mightyZAP Actuator 
 - Simple linear motion control between two points by limit switch
 - Compactly integrated into small case (Limit switch, DC motor, gearbox, lead screw, rod, etc.) 

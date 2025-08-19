@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: Basic Connector Wire
+modified: 
+version:
+---
 # Basic Connector Wire
 ## IR-EW05
 <div style="display:flex">

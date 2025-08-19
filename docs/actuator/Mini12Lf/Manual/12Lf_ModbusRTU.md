@@ -1,3 +1,10 @@
+---
+slug: 12Lf_ModbusRTU.md
+title: 12Lf ModbusRTU
+modified: 
+version:
+---
+# 12Lf ModbusRTU Manaual
 ## 1 개요
 MODBUS 프로토콜은 산업용 프로토콜로 PLC통신 등에 주로 사용되는 표준이 되는 프로토콜입니다.
 주로 사용하는 방식은 RTU방식과 ASCII방식이 주로 사용되고, 요즘에는 TCP방식도 나와있습니다.

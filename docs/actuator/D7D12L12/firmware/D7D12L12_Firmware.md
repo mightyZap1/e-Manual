@@ -1,3 +1,10 @@
+---
+slug: D7D12L12_Firmware.md
+title: D7D12L12_Firmware
+modified: 
+version:
+---
+# D7D12L12 Firmware
 **mightyZAP Force Control 라인업** (모델명 12Lf) 제품의 성능 개선 및 안정화를 위한 **V2.1** 펌웨어 업데이트입니다. 
 - **업데이트 대상:** 12Lf  전 모델
 - **업데이트 버전:** **V2.1** (최종 업데이트: 2022년 2월 28일)

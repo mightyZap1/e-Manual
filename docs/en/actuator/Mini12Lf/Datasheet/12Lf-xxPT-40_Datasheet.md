@@ -1,3 +1,10 @@
+---
+slug: 12Lf-xxPT-40_Datasheet.md
+title: 12Lf-xxPT-40_Datasheet
+modified: 
+version:
+---
+# 12Lf-xxPT-40 Datasheet
 ## 1. Features
 - Micro size
 - Precise position control

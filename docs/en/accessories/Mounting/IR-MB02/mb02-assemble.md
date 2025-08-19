@@ -1,3 +1,10 @@
+---
+slug: mb02-assemble.md
+title: mb02-assemble
+modified: 
+version:
+---
+# IR-MB02 Assemble
 ## Using Lateral Mounting Metal Barcket(IR-MB02) (IR-MB02 which is dedicated for 26mm, 27mm stroke version Lateral mounting)
 This is the most common method to mount mightyZAP. 
 Fix mightyZAP using dedicated metal bracket IR-MB02.

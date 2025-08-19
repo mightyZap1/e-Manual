@@ -1,3 +1,10 @@
+---
+slug: L12-xxPT-6_Datasheet.md
+title: L12-xxPT-6_Datasheet
+modified: 
+version:
+---
+# L12-xxPT-6 Datasheet
 ## 1. Features / 주요 특장점
 -  Micro size / 마이크로 사이즈  
 -  Precise position control / 정밀 위치 제어

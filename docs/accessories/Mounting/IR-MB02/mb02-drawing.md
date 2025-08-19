@@ -1,4 +1,10 @@
-## IR-MB02
+---
+slug: mb02-drawing.md
+title: mb02 drawing
+modified: 
+version:
+---
+# IR-MB02
 메탈 브라켓 IR-MB02의 3D(STEP) / 2D(DWG)도면 입니다.  12Lf, L12, D12, D7, 12L, 12D 시리즈 22mm, 26mm, 27mm stroke 전용이며, 수평장착 브라켓입니다.
 
 ### 브라켓 모델별 제품 호환성

@@ -1,3 +1,10 @@
+---
+slug: mb03-drawing.md
+title: mb03-drawing
+modified: 
+version:
+---
+# IR-MB03 Drawing
 ## [IR-MB03] Metal Bracket 3D / 2D Drawings (12Lf, L12 series 40~96mm Stroke only)
 3D and 2D drawings for the metal bracket, IR-MB03.
 The IR-MB03 is for 12Lf, L12 series 40~96mm stroke version only.

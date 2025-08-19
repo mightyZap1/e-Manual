@@ -1,3 +1,9 @@
+---
+slug: mb07-drawing.md
+title: mb07-drawing
+modified: 
+version:
+---
 ## [IR-MB07] 메탈 브라켓 3D / 2D 도면 (17Lf 시리즈 37, 50, 87mm stroke 제품 전용)- 수직, 수평 장착용
 
 메탈 브라켓 IR-MB07의 3D(STEP) / 2D(PDF)도면 입니다.  IR-MB07 은 17Lf 시리즈 전용 37, 50, 87mm stroke 제품을 위한 "수직,수평 장착" 브라켓입니다.

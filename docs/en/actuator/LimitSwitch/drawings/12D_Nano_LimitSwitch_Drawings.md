@@ -1,3 +1,10 @@
+---
+slug: 12D_Nano_LimitSwitch_Drawings.md
+title: 12D_Nano_LimitSwitch_Drawings
+modified: 
+version:
+---
+# 12D Nano LimitSwitch Drawings
 ## # 12D Nano Limit Switch Uint : mm
 ![12D-12S7S-15 Drawing](./data/ENG-ver_IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605.png)  
 **Download** <a class="downloadbtn" href="./data/ENG-ver_IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605.pdf" download>PDF</a> <a class="downloadbtn" href="./data/IRMAA02190220_without-Accessory_12D-12S7S-15_Rev01_20250605.step" download>STEP</a> <a class="downloadbtn" href="./data/IRMAA02190220-12D-12S7S-15_mm_Rev01_20250605.DXF" download>DXF</a>

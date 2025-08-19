@@ -1,3 +1,10 @@
+---
+slug: 17Lf_Manual.md
+title: 17Lf_Manual
+modified: 
+version:
+---
+# 17Lf Series Manual
 #### <font color="#ff0000">제품군을 확인하세요!  </font>
 <font color="#ff0000">모델번호가 17Lf-로 시작하나요?  </font>
 > **본 메뉴얼은 MODBUS RTU protocol을 제공하는 17Lf 시리즈 mightyZAP 전용 매뉴얼입니다.**  **12Lf, L12, D12/7 시리즈 사용자분들께서는 별도의 전용 매뉴얼을 참고하시기 바랍니다.**  

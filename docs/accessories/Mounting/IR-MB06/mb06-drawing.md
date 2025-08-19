@@ -1,3 +1,9 @@
+---
+slug: mb06-drawing.md
+title: mb06-drawing
+modified: 
+version:
+---
 ## [IR-MB06] 메탈 브라켓 3D / 2D 도면 (17Lf 시리즈 27mm stroke제품 전용) - 수평장착용
 
 메탈 브라켓 IR-MB06의 3D(STEP) / 2D(DXF)도면 입니다.  IR-MB06는 17Lf 시리즈 전용 27mm stroke제품을 위한 "수직장착" 브라켓입니다.  

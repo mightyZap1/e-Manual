@@ -1,3 +1,10 @@
+---
+slug: 17Lf_Manual.md
+title: 17Lf_Manual
+modified: 
+version:
+---
+# 17Lf Series Manual
 ### **<font color="#ff0000">Check your product series!  </font>
 <font color="#ff0000">Does your model number start with 17Lf-?  </font>
 > This manual is dedicated for the 17Lf series actuators which only supports MODBUS RTU protocol.  For the users with 12Lf, L12, D12/7 series, please refer to separated manuals. 

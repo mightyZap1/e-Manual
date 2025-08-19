@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: Limit seitch Index
+modified: 
+version:
+---
 # 12L / 12D MINI Limit Switch Series
 ## Overview
 Simple linear operation via built-in limit switches without drive circuit & potentiometer.

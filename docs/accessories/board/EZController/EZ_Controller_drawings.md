@@ -1,3 +1,10 @@
+---
+slug: EZ_Controller_drawings.md
+title: EZ Controller drawings
+modified: 
+version:
+---
+
 ## CT-01 Drawing
 [IR-CT01] Ez controller 2D 도면 (dxf)입니다.
 ### Uint : mm

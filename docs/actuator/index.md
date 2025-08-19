@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: Actuator Index
+modified: 
+version:
+---
 # 각 제품군 개요
 
 <div style="color:white;background-color:#00caef;width:460px;padding:10px 15px;border-radius:20px;margin:20px 0 0px 0;font-weight:600;font-size:20px">17Lf Servo Series</div>

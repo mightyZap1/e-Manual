@@ -1,3 +1,10 @@
+---
+slug: 17Lf-xxF-27_Datasheet.md
+title: 17Lf-xxF-27_Datasheet
+modified: 
+version:
+---
+# 17Lf-xxF-27 Datasheet
 ## 1 Features
 - Micro size
 - Precise position control & feedback

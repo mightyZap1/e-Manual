@@ -1,3 +1,10 @@
+---
+slug: 12Lf-xxPT-53_Datasheet.md
+title: 12Lf-xxPT-53_Datasheet
+modified: 
+version:
+---
+# 12Lf-xxPT-53 Datasheet
 ## 1. Features
 - Micro size
 - Precise position control

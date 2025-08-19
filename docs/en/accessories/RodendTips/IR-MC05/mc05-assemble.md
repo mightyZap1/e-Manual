@@ -1,3 +1,10 @@
+---
+slug: MC05-assemble.md
+title: MC05-assemble
+modified: 
+version:
+---
+# IR-MC05 Assemble
 ## Using U Type Rod-End Bracket(IR-MC05)
 The IR-MC05 U Type Rod-End Bracket is a good replacement of basic rod-end tip, allowing the user to set the desired angle more easily and freely. It can be used together with the Hinge (standard accessory) and optional metal brackets – IR-MB02, MB03, and MB04.
 

@@ -1,3 +1,10 @@
+---
+slug: 12Lf-xxPT-27_Datasheet.md
+title: 12Lf-xxPT-27_Datasheet
+modified: 
+version:
+---
+# 12Lf-xxPT-27 Datasheet
 ## 1. Features
 - Micro size
 - Precise position control

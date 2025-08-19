@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: D7D12L12 Index
+modified: 
+version:
+---
 # D7 / D12 Servo Series 
 ## Overview
 경제적인 가격의 cored DC모터를 적용하고, 속도 및 전류 제어기능 없이, 통신을 통해 정밀 위치제어 기능을 제공하는 mightyZAP 1세대 서보 제품군. 

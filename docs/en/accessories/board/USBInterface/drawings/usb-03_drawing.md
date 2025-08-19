@@ -1,6 +1,10 @@
 ---
-수정일자: 2025-07-25
+slug: USB-03_drawing.md
+title: USB-03_drawing
+modified: 
+version:
 ---
+# USB-03 Drawing
 ## USB-03 USB Interface Baord
 USB-03 PC USB Interface board에 대한 도면 자료입니다
 

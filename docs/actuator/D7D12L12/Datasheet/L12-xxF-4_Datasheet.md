@@ -1,3 +1,9 @@
+---
+slug: L12-xxF-4_Datasheet.md
+title: L12-xxF-4_Datasheet
+modified: 
+version:
+---
 # L12-xxF-4 Datasheet
 ## 1. Features / 주요 특장점
 -  Micro size / 마이크로 사이즈  

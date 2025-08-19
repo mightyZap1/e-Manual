@@ -1,3 +1,10 @@
+---
+slug: Total_manager_download.md
+title: Total_manager_download
+modified: 
+version:
+---
+# Overview
 새롭게 업데이트된 Total Manager 소프트웨어 V0.9.11이 릴리즈되었습니다.  
   
 신제품인 17Lf 시리즈 액추에이터 출시와 함께 기존 Manager 소프트웨어를 대체하는 Total Manager 소프트웨어가 릴리즈되어, 신제품인 17Lf 시리즈뿐만 아니라 기존 12Lf, L12, D12, D7 사용자분들께서도 Total Manager 소프트웨어를 사용하실 수 있습니다.  

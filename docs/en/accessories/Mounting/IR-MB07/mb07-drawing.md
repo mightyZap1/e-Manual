@@ -1,3 +1,10 @@
+---
+slug: mb07-drawing.md
+title: mb07-drawing
+modified: 
+version:
+---
+# IR-MB07 Drawing
 ## [IR-MB07] Metal bracket 3D / 2D drawings (for 17Lf series 37, 50, 87mm stroke only) - For Vertical mounting & Horizontal mounting
 
 Here are 3D(STEP)/2D(PDF) drawings for the metal bracket IR-MB07 which is dedicated for 17Lf series, 37, 50, 87mm stroke actuators' VERTICAL mounting & Horizontal mounting

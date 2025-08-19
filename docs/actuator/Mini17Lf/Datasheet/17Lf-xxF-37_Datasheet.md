@@ -1,7 +1,10 @@
 ---
 slug: 17Lf-xxF-37_Datasheet.md
 title: 17Lf-xxF-37_Datasheet
+modified: 
+version:
 ---
+# 17Lf-xxF-37 Datasheet
 ## 1 Features / 주요 특장점
 
 * Micro size / 마이크로 사이즈  /test

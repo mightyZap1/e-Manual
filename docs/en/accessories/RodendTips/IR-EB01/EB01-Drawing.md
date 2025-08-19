@@ -1,3 +1,10 @@
+---
+slug: EB01-Drawing.md
+title: EB01-Drawing
+modified: 
+version:
+---
+# IR-EB01 Drawing
 ## [IR-EB01] Rod End Bearing 2D / 3D Drawings
 2D drawings(PDF / DXF) and 3D drawings(STEP) for IR-EB01 which mounts migthyZAP at the both end using end bearings.  In case of 3D drawings, there are two different files for both M2.5 and M3.0. (1 set IR-EB01 = 1 x M2.5 end bearing + 1 x M3.0 end bearing)
 

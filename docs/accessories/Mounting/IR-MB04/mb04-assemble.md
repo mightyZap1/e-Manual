@@ -1,3 +1,10 @@
+---
+slug: mb04-assemble,md
+title: mb04-assemble
+modified: 
+version:
+---
+# IR-MB04 Assemble
 ## 메탈 브라켓(IR-MB04) - 26mm, 27mm Stroke 수직장착용
 서보모터의 힌지를 이용한 설치가 아닌, 수직 고정장착을 할 때 사용할 수 있는 메탈 브라켓입니다.
 1) **메탈브라켓을 아래 그림의 오른쪽과 같이 좌, 우 부분을 구분합니다.** 

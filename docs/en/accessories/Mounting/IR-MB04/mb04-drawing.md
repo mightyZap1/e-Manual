@@ -1,3 +1,10 @@
+---
+slug: mb04-drawing.md
+title: mb04-drawing
+modified: 
+version:
+---
+# IR-MB04 Drawing
 ## [IR-MB04] Metal Bracket 3D / 2D Drawings (12Lf, L12, D12, D7 26mm, 27mm stroke only) - Vertical mounting
 
 The IR-MB04 is for the **Vertical mounting** of 12Lf, L12, D12, D7, 12L, 12D 22mm, 26mm, 27mm stroke version.

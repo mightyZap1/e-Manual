@@ -1,3 +1,10 @@
+---
+slug: 12Lf-xx-27_Drawings.md
+title: 12Lf-xx-27_Drawings
+modified: 
+version:
+---
+# 12Lf-xx-27 Drawings
 ## 12Lf-xx-27 Uint : mm
 ![12Lf-xxF-27 Drawing](./data/ENG-ver_12Lf-xxxxx-27-Servo-Series_mm_Rev03_20250523.png)  
 **Download** <a class="downloadbtn" href="./data/ENG-ver_12Lf-xxxxx-27-Servo-Series_mm_Rev03_20250523.pdf" download>PDF</a> <a class="downloadbtn" href="./data/12Lf-xxxxx-27-Servo-Series_Rev03_20250523.step" download>STEP</a> <a class="downloadbtn" href="./data/12Lf-xxxxx-27-Servo-Seriesmm_Rev03_20250523.DXF" download>DXF</a>

@@ -1,3 +1,10 @@
+---
+slug: mightyZAP Actuator connection diagram for various controllers.md
+title: mightyZAP Actuator connection diagram for various controllers
+modified: 
+version:
+---
+# mightyZAP Actuator connection diagram for various controllers
 **Here are simple diagrams for various applications to help your understanding.**
 ## 1. PLC
 - PLC application using  RS-485 communication card

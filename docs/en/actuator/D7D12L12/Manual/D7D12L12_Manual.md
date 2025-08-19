@@ -1,5 +1,10 @@
-(참고 자료 : 홈페이지 사용자매뉴얼 V3.2)
-
+---
+slug: D7D12L12_Manual.md
+title: D7D12L12_Manual
+modified: 
+version:
+---
+# D7D12L12 Series Manual
 >[!note] NOTE
 >- This manual is for Position Control Lineup mightyZAP actuators with firmware version 20 or higher whose model names start with L12, D12, or D7. After checking the firmware of your actuator, if the firmware version is lower than V20, please update the actuator firmware first and refer to this manual.
 >- For the Users who use Force Control lineup actuators whose model name starts with 12Lf, please refer to the separate force control lineup manual.

@@ -1,3 +1,9 @@
+---
+slug: USB-02_drawing.md
+title: USB-02_drawing
+modified: 
+version:
+---
 ## USB-03 USB Interface Baord
 USB-03 PC USB Interface board에 대한 도면 자료입니다
 .

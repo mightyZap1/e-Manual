@@ -1,3 +1,9 @@
+---
+slug: EZ_Controller(CT-01)_Manual.md
+title: EZ_Controller(CT-01)_Manual
+modified: 
+version:
+---
 # 1 개 요
 Arduino 기반의 EZ Controller는 mightyZAP 리니어 액츄에이터를 손쉽게 동작 / 테스트해보기 위한 컨트롤러입니다.
 

@@ -1,3 +1,10 @@
+---
+slug: wire_connector.md
+title: wire_connector
+modified: 
+version:
+---
+# Wire Connector
 ## Drawings for wire connector, part number and wire specification
 
 **아래와 같이 와이어 커넥터 도면 및 와이어 사양을 공개하오니 참고하시기 바랍니다.**

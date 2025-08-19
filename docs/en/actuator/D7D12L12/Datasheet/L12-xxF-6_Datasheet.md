@@ -1,3 +1,10 @@
+---
+slug: L12-xxF-6_Datasheet.md
+title: L12-xxF-6_Datasheet
+modified: 
+version:
+---
+# L12-xxF-6 Datasheet
 ## 1. Features
 -  Micro size  
 -  Precise position control

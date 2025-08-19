@@ -1,3 +1,10 @@
+---
+slug: mb04-assemble.md
+title: mb04-assemble
+modified: 
+version:
+---
+# IR-MB04 Assemble
 ## Using Vertical Mounting Metal Barcket(IR-MB04) (IR-MB04 which is dedicated for 26mm, 27mm stroke version Vertical mounting)
 
 1. **Separate the metal brackets from the top and bottom as shown in the figure below.**

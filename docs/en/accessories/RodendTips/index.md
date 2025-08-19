@@ -1,3 +1,10 @@
+---
+slug: index.md
+title: Rod End Tips Index
+modified: 
+version:
+---
+# Rod End Tips
 ## IR-EB01
 <div style="display:flex">
 	<img style="width:200px"src="./eb01.png" />

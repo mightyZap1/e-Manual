@@ -1,3 +1,10 @@
+---
+slug: mb02-drawing.md
+title: mb02-drawing
+modified: 
+version:
+---
+# IR-MB02 Drawing
 ## [IR-MB02] Metal Bracket 3D / 2D Drawings (26, 27mm Stroke only) - Lateral mounting
 
 3D and 2D drawings for New metal bracket, IR-MB02.

@@ -1,3 +1,9 @@
+---
+slug: 12Lf_Lifecycle.md
+title: 12Lf_Lifecycle
+modified: 
+version:
+---
 # mightyZAP 내구수명 가이드라인 (FORCE Control Lineup)
 ### Test Condition
 - Full Stroke / 50% Duty Rate / Pull spring Load (Rated full load)

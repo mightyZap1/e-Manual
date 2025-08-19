@@ -1,3 +1,10 @@
+---
+slug: UART01drawing.md
+title: UART01 drawing
+modified: 
+version:
+---
+# UART01 Drawing
 ## [IR-UART01] UART to Half Duplex TTL/RS-485 converter 2D/3D 도면
 
 ### UART-01  Uint : mm

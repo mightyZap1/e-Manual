@@ -1,3 +1,10 @@
+---
+slug: EB01-Drawing.md
+title: EB01-Drawing
+modified: 
+수정일자:
+---
+# EB01 Drawing
 ## 1. IR-EB01 Rod End Bearing 도면(2D/3D)
 migthyZAP의 양단을 IR-EB01, end bearing으로 고정할 수 있는 IR-EB01의 2D 도면(PDF, DXF), 3D 도면(STEP)입니다.  3D 도면의 경우 M2.5, M.30 규격별로 별도의 도면이 있으니 참고하십시오. (1 set IR-EB01 = 1 x M2.5 end bearing + 1 x M3.0 end bearing)
 

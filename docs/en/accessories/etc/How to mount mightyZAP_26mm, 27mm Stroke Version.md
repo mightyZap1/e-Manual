@@ -1,3 +1,10 @@
+---
+slug: How to mount mightyZAP_26mm, 27mm Stroke Version.md
+title: How to mount mightyZAP_26mm, 27mm Stroke Version
+modified: 
+version:
+---
+# How to mount mightyZAP_26mm, 27mm Stroke Version
 ## Option#1 : Using End bearing(IR-EB01)
 This method can be used to secure both sides of servo motor using End bearing. 
 In this case, mechanical condition should permit servo motor movement by using spring or LM Guide. (<font color="#ff0000">In case of spring connection</font>, tension should be within the range of rated force to prevent overload.)

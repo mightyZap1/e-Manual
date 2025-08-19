@@ -1,3 +1,10 @@
+---
+slug: 12L12D_Limit_Switch_Datasheet.md
+title: 12L12D Limit Switch Datasheet
+modified: 
+version:
+---
+# 12L12D Limit Switch Datasheet
 ## 12L / 12D Series Limit Switch mightyZAP Actuator 특장점 
 - 내장된 위치인식 센서가 아닌 리미트 스위치를 장착하여 두 지점간 위치를 왕복하는 제품 
 - 회로, 리미트 스위치, DC 모터, 기어박스, 리드스크류, 로드 등이 집적된 Compact한 사이즈 

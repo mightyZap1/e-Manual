@@ -1,8 +1,10 @@
 ---
-modified: 2025.08.04
-version: v1.0
+slug: 12Lf_Manual.md
+title: 12Lf_Manual
+modified: 
+version:
 ---
-# mightyZAP 12Lf User Manual
+# 12Lf Series Manual
 ### **<font color="#ff0000">Check your product series!  </font>
 <font color="#ff0000">Does your model number start with 12Lf-?  </font>**
 

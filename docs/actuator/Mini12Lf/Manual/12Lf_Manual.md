@@ -1,8 +1,10 @@
 ---
-modified: 2025.08.04
-version: v1.0
+slug: 12Lf_Manual.md
+title: 12Lf Manual
+modified: 
+version:
 ---
-## mightyZAP 12Lf User Manual
+# mightyZAP 12Lf User Manual
 <font color="#ff0000">제품군을 확인하세요!  </font>
 <font color="#ff0000">모델번호가 12Lf-로 시작하나요?  </font>
 >[!note] NOTE

@@ -1,3 +1,10 @@
+---
+slug: 17Lf-xxF-50_Datasheet.md
+title: 17Lf-xxF-50_Datasheet
+modified: 
+version:
+---
+# 17Lf-xxF-50 Datasheet
 ## 1 Features
 - Micro size
 - Precise position control & feedback

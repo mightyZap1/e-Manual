@@ -1,3 +1,10 @@
+---
+slug: 12Lf_Library.md
+title: 12Lf_Library
+modified: 
+version:
+---
+# 12Lf Series Library
  아래와 같이 12Lf Force control lineup을 위한 각 제어 언어별 API 업데이트본을 공지합니다.
 - 12Lf Force control lineup제품군(모델명 12Lf로 시작) 사용자분들만 해당되며, 기존의 Position control lineup 제품군 (모델명 L12, D12, D7 으로 시작) 을 사용하는 사용자분들은 해당 자료실의 별도 페이지에서 API를 다운로드 받으시기 바랍니다.
 -  또한 본 API들은 IR Open Protocol사용자용이니,  MODBUS RTU Protocol 사용 고객분들께는 적용이 되지 않습니다.

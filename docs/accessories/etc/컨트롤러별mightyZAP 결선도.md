@@ -1,3 +1,10 @@
+---
+slug: 컨트롤러별mightyZAP 결선도.md
+title: 컨트롤러별mightyZAP 결선도
+modified: 
+version:
+---
+# 컨트롤러별mightyZAP 결선도
 각종 application의 컨트롤러별 사용방법 및 간단한 결선도에 대한 개념이해를 돕고자 아래와 같이 diagram을 준비하였습니다.
 
 ## 1. PLC

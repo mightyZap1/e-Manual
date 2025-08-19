@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: D7D12L12 index
+modified: 
+version:
+---
 # 12L / 12D MINI Limit Switch Series
 ## Overview
 통신제어 없이 내장 리미트 스위치를 통해 간단한 2점 위치 제어가 가능한 심플한 리미트 스위치 제품군

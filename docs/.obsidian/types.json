@@ -3,6 +3,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "수정일자": "date"
+    "수정일자": "date",
+    "modified": "date"
   }
 }

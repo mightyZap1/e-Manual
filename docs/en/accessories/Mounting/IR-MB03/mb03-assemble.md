@@ -1,3 +1,10 @@
+---
+slug: mb03-assemble.md
+title: mb03-assemble
+modified: 
+version:
+---
+# IR-MB03 Assemble
 ## Metal Barcket (IR-MB03 which is dedicated for 40mm ~ 96mm Stroke Version)
 
 - Mount mightyZAP laterally or longitudinally using the M3 bolt as shown in Figure Method 1) and Method 2). 

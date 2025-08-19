@@ -1,3 +1,10 @@
+---
+slug: mb05-drwing.md
+title: mb05-drwing
+modified: 
+version:
+---
+# IR-MB05 Drwing
 ## [IR-MB05] Metal bracket 3D / 2D drawings (for 17Lf series 27mm stroke only) - For LATERAL mounting
 
 Here are 3D(STEP)/2D(DXF) drawings for the metal bracket IR-MB05 which is dedicated for 17Lf series, 27mm stroke actuators' LATERAL mounting.  

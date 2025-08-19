@@ -1,4 +1,10 @@
-# IR-MB02
+---
+slug: index.md
+title: Mounting Index
+modified: 
+version:
+---
+# Mounting
 
 <div style="display:flex">
 	<img style="width:200px"src="./mb02.png" />

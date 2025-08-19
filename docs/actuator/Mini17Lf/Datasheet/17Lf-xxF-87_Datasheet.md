@@ -1,3 +1,10 @@
+---
+slug: 17Lf-xxF-87_Datasheet.md
+title: 17Lf-xxF-87_Datasheet
+modified: 
+version:
+---
+# 17Lf-xxF-87 Datasheet
 ## 1 Features / 주요 특장점
 - Micro size / 마이크로 사이즈  
 - Precise position control & feedback / 정밀 위치 제어 및 위치피드백

@@ -1,3 +1,10 @@
+---
+slug: 12Lf-xx-290_Drawings.md
+title: 12Lf-xx-290 Drawings
+modified: 
+version:
+---
+# 12Lf-xx-90 Drawings
 ## 12Lf-xx-90 Uint : mm
 ![12Lf-xxF-90 Drawing](./data/ENG-ver_12Lf-xxxxx-90-Servo-Series_mm__Rev03_20250526.png)  
 **Download** <a href="./data/ENG-ver_12Lf-xxxxx-90-Servo-Series_mm__Rev03_20250526.pdf" download>PDF</a> <a href="./data/12Lf-xxxxx-90-Servo-Series_Rev03_20250523.step" download>STEP</a> <a href="./data/12Lf-xxxxx-90-Servo-Seriesmm_Rev03_20250523.DXF" download>DXF</a>

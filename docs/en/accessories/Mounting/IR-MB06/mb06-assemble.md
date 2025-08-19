@@ -1,3 +1,10 @@
+---
+slug: mb06-assemble.md
+title: mb06-assemble
+modified: 
+version:
+---
+# IR-MB06 Assemble
 ## Using Metal Barcket(IR-MB06)
 
 The IR-MB06 metal bracket dedicated to the 17Lf 27mm stroke series allows the servo actuator to be mounted vertically.

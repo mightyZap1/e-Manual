@@ -1,3 +1,10 @@
+---
+slug: L12-xxF-3_Datasheet.md
+title: L12-xxF-3_Datasheet
+modified: 
+version:
+---
+
 # L12-xxF-3 Datasheet
 ## 1. Features / 주요 특장점
 -  Micro size / 마이크로 사이즈  

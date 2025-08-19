@@ -1,9 +1,15 @@
-
-# 1 Getting Started - Total Manager
+---
+slug: TotalManager_Manual.md
+title: TotalManager Manual
+modified: 
+version:
+---
+# Total Manager Manual
+## 1 Getting Started - Total Manager
 The Total Manager is the new generation of dedicated software that allows users to easily manage and control mightyZAP Actuators. The Total Manager supports various OSs such as Windows, Linux, and iOS, and has an improved user interface. In addition to the existing L12/D12/D7/12Lf series actuators, user is also able to manage the parameters of new 17Lf series. 
 This manual covers the basics of installing Total Manager and using each function.
 
-## 1.1 Introduction
+### 1.1 Introduction
 mightyZAP Total Manager is a multi-purpose software with various functions like motion test, parameter settings, parameter monitoring, and firmware updates. User is also able to set up and test special features depending on their actuator model.
 
 >[!note]
@@ -11,7 +17,7 @@ mightyZAP Total Manager is a multi-purpose software with various functions like 
 
 ![total_image](./img/total_image.png)
 
-## 1.2 Environment
+### 1.2 Environment
 mightyZAP uses Half Duplex TTL, RS485, and CAN communications depending on the communication version. Users need to use some sort of signal converter for communication between PC and mightyZAP.
 The USB Interface Board for mightyZAP (IR-USBXX) can be purchased from our e-shop for easier PC connection.
 User is also able to use the 3rd party converter, but for convenience & safety reasons, it is recommended to use our Interface Board .
@@ -21,30 +27,30 @@ User is also able to use the 3rd party converter, but for convenience & safety r
 > - Make sure proper wiring when using 3rd party converter. 
 > - Appropriate DC power matching the rated input voltage of each actuator should be supplied to the actuator so as to utilize the Manager software. When using our USB Interface Board (IR-USBXX), just supply the power through the board.
 
-## 1.3 Feature
-### 1.3.1 Information
+### 1.3 Feature
+#### 1.3.1 Information
 Displays basic information related to the connected actuator, such as model name, stroke length, rate load, and firmware version. This is the first screen that appears when user runs the software.
 ![managerInfo](./img/managerInfo.png)
-### 1.3.2 Parameter
+#### 1.3.2 Parameter
 In the Parameter section, user is able to do a Motion test, changing parameters, and monitoring parameter.
 User can select and control only single mightyZAP even if multiple actuators are connected, and the screen is divided into Non-voltatile Memory and Volatile Memoty screens depending on the type of parameter. For detailed explanations of each parameter, please refer to the user manual of each actuator series, [17Lf Manual - 2. Control Table](en/actuator/Mini17Lf/Manual/17Lf_Manual#2. Control Table)  for the 17Lf series. The parameter configuration varies depending on the connected actuator series and model, and the screen configuration changes depending on the screen size.
 
 ![control-view](./img/control-view.png)
 
-### 1.3.3 Update
+#### 1.3.3 Update
 It is for the future firmware update. Generally, the latest firmware is applied from the factory, but in very rare cases, a firmware update may be required for products stored by the resellers. If necessory, user can proceed with the update after downloading the update file for user's model from our website. 
 Additionally, in this update menu, if the servo motor is not searched due to update failure or user error, user is able to restore the firmware.
 ![update-veiw](./img/update-veiw.png)
-# 2 Total Manager Download & Installation
+## 2 Total Manager Download & Installation
 Total Manager is compatible with Windows and Linux.
-## 2.1 OS Requirement
+### 2.1 OS Requirement
 - Windows : Windows 10 64bit or higher
 - Linux : Ubuntu LTD 20.04 64bit
 >[!Note]
 >Please download proper installation file for each OS at
 >[mightyZAP Total Manager Download](https://github.com/mightyZap1/totalmanager/releases) 
-## 2.2 Installation
-### 2.2.1 Windows
+### 2.2 Installation
+#### 2.2.1 Windows
 To install Total Manager software on a Windows PC, please check the OS version of Windows and download the appropriate version.  
 - 64bit windows : mightyZAPTotalManagerx.y.z_x64.exe  
 
@@ -58,12 +64,12 @@ To install Total Manager software on a Windows PC, please check the OS version o
 Run the downloaded file and install it according to the instructions of the installation guide. Installation may take several minutes -- 이미지 수정 필요 --
 ![window_install](./img/window_install.jpg)
 Now, mightyZAP Total Manager software on Windows is ready to use.
-### 2.2.2 Linux
+#### 2.2.2 Linux
 Download the file package dedicated for Linux OS. To install Total Manager for Debian/Ubuntu-based Total Manager, download and install the .deb package (64bit) through the following command line.
 ```
 $ sudo dpkg -i [file].deb
 ```
-## 2.3 Screen Layout
+### 2.3 Screen Layout
 The screen layout is divided into four parts: Header, Side bar, Contents, and Footer in general.
 ![mainView-description](./img/mainView-description.png)
 
@@ -76,7 +82,7 @@ The screen layout is divided into four parts: Header, Side bar, Contents, and Fo
 7. <font color = "blue">Communication Status</font> : Displays Communication status such as protocol type and transmission/reception errors. 
 8. <font color = "blue">Manager Status </font>: Displays Manager software's version and Language (English/Korean)
 
-## 2.4 USB Interface Board 
+### 2.4 USB Interface Board 
 A USB-TTL or RS-485 serial converter is required for Total Manager to communicate with mightyZAP. Below explanation is based on our genuine USB Interface Board - IR-USB02 or 03. First, connect to the PC using a USB cable with IR-USB02 or 03. (IR-USB02 is equipped with a Micro 5 pin USB connector, and IR-USB03 is equipped with a new C type USB connector.)
 
 > [!CAUTION] 
@@ -84,7 +90,7 @@ A USB-TTL or RS-485 serial converter is required for Total Manager to communicat
 > - Make sure proper wiring when using 3rd party converter.
 > - Appropriate DC power matching the rated input voltage of each actuator should be supplied to the actuator so as to utilize the Manager software. When using our USB Interface Board (IR-USBXX), just supply the power through the board.
 
-### 2.4.1 For Windows
+#### 2.4.1 For Windows
 We have two types of USB Interface Board depending on the time of release, and the method of installing the driver is different for each type. Install the driver by referring to the instructions below.
 
 1) **IR-USB02 Driver installation** (CH340x)
@@ -105,7 +111,7 @@ We have two types of USB Interface Board depending on the time of release, and t
 3) Interface Board Connection Check
 	Connect the USB Interface Board to the PC. Check whether the Serial Port is properly connected in [System]-[Device manager]- [Ports]. If connected properly, user can see that a new COM port is added as shown in the image below.
 ![wincontrolPanel](./img/wincontrolPanel.png)
-### 2.4.2 Linux[ubuntu/Demian]
+#### 2.4.2 Linux[ubuntu/Demian]
 <font size="5"> Driver Installation</font>
 1) IR-USB02 Driver Installation (CH341 Driver)
 	The CH341 driver can be used only for IR-USB-02. The serial drivers for CH340 and CH341 are built-in starting from Linux kernel version 2.6.24, and its location is drivers/usb/serial/ch341.c. However, if user wishes to keep the driver up-to-date, please see below.
@@ -172,12 +178,12 @@ Done
 ```
 After adding to a group, user must log out and log in again for the changes to take effect.
 
-# 3 Total Manager Description
-## 3.1 Communication connection & Search
+## 3 Total Manager Description
+### 3.1 Communication connection & Search
 Run the program, and click the SCAN button on the right side of the top menu bar to activate a pop-up window for Actuator Scan.  
 ![Pasted image 20240717142300.png](./img/connectionAndSearch.png)
 
-### 3.1.1 Basic information
+#### 3.1.1 Basic information
 Actuator Scan pop-up window is as follows.  
 ![ScanBasicInformation](./img/ScanBasicInformation.png)
 
@@ -186,9 +192,9 @@ Actuator Scan pop-up window is as follows.
 - **Baudrate** :  Communication speed selection (default 57600bps). Duplicate selection available for scanning
 - **Scan Result** : SCAN progress and result.
 - **SCAN, CLOSE** : SCAN and Close window button
-### 3.1.2 Communication Setting
-##### 1. Serial COM Port Selection
-Please refer to [[## 2.4 USB Interface Board]] above and check the Serial Port name before proceeding. Select the same port as the connected serial port and click the OPEN button to connect the serial port  
+#### 3.1.2 Communication Setting
+###### 1. Serial COM Port Selection
+Please refer to [[### 2.4 USB Interface Board]] above and check the Serial Port name before proceeding. Select the same port as the connected serial port and click the OPEN button to connect the serial port  
 ![ScanActuator-PortSelect.png](./img/ScanActuator-PortSelect.png)
 The option items(protocol and baudarate) becomes active when the user opens the serial port.  
 Each item can be selected individually or in duplicate and progress sequentially during the search. Click the "All" button to select or deselect all.
@@ -206,19 +212,19 @@ Here are default setting information for protocol type and baudrate.
 >- If user does not remember the protocol type and baudrate they previously set, set it to All and search.
 >- However, when set to All, the search time will naturally increase
 
-### 3.1.3 Scan Actuator
+#### 3.1.3 Scan Actuator
  When clicking the SCAN button, the search begins sequentially according to the selected option and the corresponding results are to be displayed
  When desired actuators are scanned, user can stop scan process by clicking the STOP button to end the search without waiting for completion.
 ![ScanActuator.png](./img/ScanInformation.png)
  
  When the scan is complete, click the Close button to close the Pop-up window.
-## 3.2 First page after scan
+### 3.2 First page after scan
 The "information" page displays general information of the connected actuator such as the model name, rated Load, stroke, and firmware version. 
 
 This is the first screen when the Manager is launched after completing the scan. User can go back to the page anytime by clicking the first icon in the sidebar menu as shown in the image below.
 ![AfterScanInformation](./img/ScanActuator.png)
 
-### 3.2.1 Actuator List
+#### 3.2.1 Actuator List
 As shown in the picture below, the scanned actuator is displayed on the left side of the Manager software. 
 Scanned actuators are classified / displayed according to Baudrate and Protocol, and can be fold/unfold by Baudrate.
 ![Actuator List](./img/ActuatorList.png)
@@ -226,7 +232,7 @@ Scanned actuators are classified / displayed according to Baudrate and Protocol,
 >[!Note] NOTE
 >When scanning multiple actuators through a serial daisy chain connection, <u>the IDs of each actuator must be different</u>  to prevent communication conflicts. If the IDs are different, all connected actuators can be scanned, but each must be set individually.
 
-### 3.2.2 Information
+#### 3.2.2 Information
 Select a scanned actuator in the Actuator List, then general information such as the model name, stroke length, rated load, and communication protocol of the actuator are displayed
 ![Information](./img/Information.png)
 
@@ -234,13 +240,13 @@ Please note that some important information is displayed in the bottom footer of
 
 ![FooterDiscription.png](./img/FooterDiscription.png)
 The information in the footer is also displayed on other pages.
-## 3.3 Parameter
+### 3.3 Parameter
 In Parameter page, user is able to set up various parameters of the mightyZAP Actuator, perform a motion test, and monitor the operation status.
 Click the icon shown below in the Menu selection window to go to this page.  
 ![Parameter.png](./img/Parameter.png)
 User can set various parameters such as Stroke, ID, Baudrate, etc. to suit user's requirement and perform a simple motion test.
 For a description of each parameter, please refer to the parameter description in each actuator user manual.
-### 3.3.1 Screen Layout
+#### 3.3.1 Screen Layout
 - The configuration of the Parameter page is divided into Non-Volatile Memory and Volatile Memory areas.
 - The Non-volatile parameters are in the non-volatile memory area, and modified / saved data is stored in the internal flash memory, thus, they will not be erased even when the motor power is turned off. 
 - The Volatile parameters is a volatile memory area and modified / saved data is stored in the RAM until the power is turned off. But the data will be erased/ initialized when the power is turned off  
@@ -251,7 +257,7 @@ For a description of each parameter, please refer to the parameter description i
 There are question mark icons( <span style="display:inline-block;background-color:black; color:white;width:18px;border-radius:25px;padding:0 6px;font-size:12px">?</span> ) next to each Parameter name. Hover the mouse over the icon, a brief description of the parameter will be displayed. The language of the tooltip also changes depending on the language setting
 ![tooltip](./img/tooltip.png)
 
-### 3.3.2 Parameter Control
+#### 3.3.2 Parameter Control
 - **Slide Control** : <font color="#4f81bd">Non-volatile Memory</font>  
   The most common method of changing data for Non-Volatile Memory parameters. Drag the slide bar or directly enter the data into the TextBox.
   ![SlidebarVolatile.png](./img/SlidebarVolatile.png)
@@ -289,7 +295,7 @@ There are question mark icons( <span style="display:inline-block;background-colo
    The "Button Control Box" is a feature exclusive to **Volatile Memory** used to stop the motor's operation
    As shown in the image below, the button has two different images depending on its **enabled or disabled state**. For a detailed description of this parameter, please refer to the product's user manual.
    ![Button-Volatile.png](./img/Button-Volatile.png)
-### 3.3.3 Monitoring
+#### 3.3.3 Monitoring
 User is able to to check and get feedback for several key parameters such as present position, present current, present motor operating value, etc in real time basis on the Manager software. 
 Parameter items vary depending on the actuator series, and only one parameter can be selected through the check box.
 ![Monitoring-Data.png](./img/Monitoring-Data.png)
@@ -303,15 +309,15 @@ Monitoring function is composed as follows.
   Interval refers to the reading time interval per data sample and operates at approximately 50ms intervals.
 - **Hover function**
   When user places the mouse over the graph, the data value and Sample Counter value at that location are displayed.
-## 3.4 Update    
+### 3.4 Update    
 All actuators are applied with the latest firmware when shipped from the factory. If the firmware is updated over time after purchase, user can update to the latest firmware. To improve product performance and functionality, we recommend users to maintain the latest firmware version. However, before applying the updated firmware, it is necessory to test whether the changes are suitable for the user's environment before applying. Please download the latest firmware file from our website Digital archives.
 
 [Firmware Download](https://mightyzap.com/en/digitalarchive4/?category1=Firmware&mod=list&pageid=1)
-### 3.4.1 화면 구성    
+#### 3.4.1 화면 구성    
 As shown in the image, the Update Page consists of firmware update and actuator recovery areas, and each can be executed by selecting the corresponding icon from the menu in the top header.
 ![ScreenLayout](./img/ScreenLayout.png)
 
-### 3.4.2 Firmware Update   
+#### 3.4.2 Firmware Update   
 **Actuator Connection**  
 Connect the servo actuator to be updated and run SCAN.  
 
@@ -341,7 +347,7 @@ If necessary, user can additionally perform a reset or factory reset.
 If the update fails, the Fail message appears as shown in the image below. In that case, please try the update again first. Once again, please make sure whether the update file is for the update model before the update. 
 ![updatefail](./img/updatefail.png)
 If the update fails again despite additional update attempts, please run Recovery below and if it still fails, please contact us at cs@mightyzap.com.
-### 3.4.3 Recovery  
+#### 3.4.3 Recovery  
 If the firmware update fails or the actuator cannot be searched through SCAN, proceed with recovery. After connecting only single problematic actuator, click the Recovery icon in the top menu. 
 ![Recovery-Button.png](./img/Recovery-Button.png)
 Recovery progress is displayed with images or text for each stage.
@@ -362,28 +368,28 @@ Recovery progress is displayed with images or text for each stage.
   An update completion pop-up window will appear, then the SCAN window will be activated.
   ![UpdateComplete-SCAN.png](./img/UpdateComplete-SCAN.png)
 
-### 3.4.4 Reset
+#### 3.4.4 Reset
 A command to reset(initialize) the parameters of mightyZAP except ID, Baudrate, Protocol, and Calibration Parameters. 
 ![reset_selcect_popup](./img/reset_selcect_popup.png)  
 Click the Reset icon on the top menu, a popup window will appear as above. Click OK button for parameters reset. Then, the screen blinks and moves to the parameter window, and the reset data is loaded again.
 ![resetAction.gif](./img/resetAction.gif)
-### 3.4.5 Restart  
+#### 3.4.5 Restart  
 Can be used to restart mightyZAP's system. Usually, to initialize the servo system after Overload error shutdown or to check changes in data of changed Non-Volatile Parameters.
 ![restartSelect.png](./img/restartSelect.png)  
 Click the Restart button at the top menu, then the screen blinks once and moves to the Parameter window to read the data again.
-### 3.4.6 Factory Reset   
+#### 3.4.6 Factory Reset   
 Return the actuator to the factory default setting including ID, Baudrate, Protocol, and Calibration Parameters. Calibration process will be made.
 >[!CAUTION] 
 >During Factroy Reset, the actuator moves back and forth to the maximum/minimum position for calibration. For proper calibration, secure a no-load state without connecting the actuator to the user's application, and perform the calibration in a space where the maximum operating stroke can be maintained.
 
 FClick Factory Reset button on the top menu, the pop-up window will appear
 ![FactoryReset-Button.png](./img/FactoryReset-Button.png)
-##### 1. Screen Layout
+###### 1. Screen Layout
 See the pop-up window. In the pop-up window, there are two "remind(maintain)" options, progress state text box and Factory reset button.
 ![[en/software/TotalManager/img/FactoryReset-Disc.png]]
-##### 2. Options
+###### 2. Options
 There are two remind options for Factory Reset - ID Remind and Baudrate Remind. When checking the Remind checkbox, the parameter will NOT be reset, and all other parameters will be initialized. Options user wants to maintain even after Factory Reset can be selected in the Remind options. Protocol type and Min/Max Position Calibration, which are not initialized in a general Reset, are initialized, and the internal parameters are also modified while performing calibration of the potentiometer.  
-##### 3. Factory Reset 
+###### 3. Factory Reset 
 Click the Factory Reset button at the bottom for Factory Reset. Reset progress states are displayed in the Text Area window.
 ![FactoryReset-Popup.png](./img/FactoryReset-Popup.png)
 For Factory Reset, the actuator restarts the system several times with the LED blinkings. Also, during calibration, the actuator extend/retract to its maximum position during calibration. 

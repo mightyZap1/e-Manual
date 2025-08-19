@@ -1,3 +1,10 @@
+---
+slug: EZControllerUserManual.md
+title: EZControllerUserManual
+modified: 
+version:
+---
+# EZController Manual
 # 1 Overview
 Arduino-based EZ Controller is a controller to easily operate / test mightyZAP linear servo actuators. The features of EZ Controller are as follows.
 

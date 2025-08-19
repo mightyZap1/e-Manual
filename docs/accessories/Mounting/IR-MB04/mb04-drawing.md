@@ -1,4 +1,10 @@
-## IR-MB04
+---
+slug: mb04-drawing,md
+title: mb04-drawing
+modified: 
+version:
+---
+# IR-MB04
 
 수직 장착이 가능한 12Lf, L12, D12, D7, 12L, 12D 시리즈의 22mm, 26mm, 27mm stroke 전용 메탈 브라켓의 3D(STEP) / 2D(DXF)도면 입니다.
 

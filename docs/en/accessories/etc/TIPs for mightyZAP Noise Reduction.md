@@ -1,3 +1,10 @@
+---
+slug: TIPs for mightyZAP Noise Reduction.md
+title: TIPs for mightyZAP Noise Reduction
+modified: 
+version:
+---
+# TIPs for mightyZAP Noise Reduction
 mightyZAP makes a big deceleration based on a small high speed DC motor that rotates at super high speed in order to produce larger force in a small size. Therefore, some mechanical noise is inevitable, but you can reduce the noise by changing the installation method or changing some parameter condition. 
 
 Noise is an absolute loudness (db), and mightyZAP’s noise is about 50db at 1m distance. But, when we consider there are also emotional noises that people feel depending on the frequency level of noise (absolute noise is not so loud, but emotional noise is different case). 

@@ -1,3 +1,10 @@
+---
+slug: 12Lf_Firmware.md
+title: 12Lf_Firmware
+modified: 
+version:
+---
+# 12Lf Series Firmware
 ## **mightyZAP Force Control Lineup (Model: 12Lf) V2.1 Firmware Update**
 This is the V2.1 firmware update for performance improvement and stabilization of the **mightyZAP Force Control lineup** (Model: 12Lf).
   * **Target Models:** All 12Lf models

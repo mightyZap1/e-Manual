@@ -1,3 +1,10 @@
+---
+slug: EB01-assemble.md
+title: EB01-assemble
+modified: 
+version:
+---
+# IR-EB01 Assemble
 ## Using End bearing(IR-EB01)
 This method can be used to secure both sides of servo motor using End bearing. 
 In this case, mechanical condition should permit servo motor movement by using spring or LM Guide. (<font color="#ff0000">In case of spring connection</font>, tension should be within the range of rated force to prevent overload.)

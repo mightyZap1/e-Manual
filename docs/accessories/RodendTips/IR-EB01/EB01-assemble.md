@@ -1,3 +1,10 @@
+---
+slug: EB01-assemble.md
+title: EB01-assemble
+modified: 
+version:
+---
+# EB01 Assemble
 ## IR-EB01 End bearing 을 통한 고정
 서보모터의 양쪽을 고정할 때 사용할 수 있는 End bearing을 이용한 고정방법 입니다.
 서보모터 자체를 고정하는 것이 아닌 양단의 베어링을 고정하는 방식입니다. 

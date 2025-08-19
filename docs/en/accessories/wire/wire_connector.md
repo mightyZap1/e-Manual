@@ -1,3 +1,10 @@
+---
+slug: wire_connector.md
+title: Wire Connector
+modified: 
+version:
+---
+# Wire Connector
 ## Drawings for wire connector, part number and wire specification
 
 **Here are drawings for wire connectors, parts numbers as well as wire specification.**

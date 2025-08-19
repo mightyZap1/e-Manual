@@ -1,3 +1,10 @@
+---
+slug: mb06-drawing.md
+title: mb06-darwing
+modified: 
+version:
+---
+# IR-MB06 Drawing
 ## [IR-MB06] Metal bracket 3D / 2D drawings (for 17Lf series 27mm stroke only) - For VERTICAL mounting
 
 Here are 3D(STEP)/2D(DXF) drawings for the metal bracket IR-MB06 which is dedicated for 17Lf series, 27mm stroke actuators' VERTICAL mounting.

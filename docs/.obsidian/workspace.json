@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "accessories/wire/wire_connector.md",
+                "file": "actuator/D7D12L12/Datasheet/L12-xxF-4_Datasheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "wire_connector"
+              "title": "L12-xxF-4_Datasheet"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "accessories/wire/wire_connector.md",
+                "file": "actuator/D7D12L12/Datasheet/L12-xxF-4_Datasheet.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "wire_connector 의 개요"
+              "title": "L12-xxF-4_Datasheet 의 개요"
             }
           }
         ],
@@ -185,6 +185,34 @@
   },
   "active": "8f2802bca4c7a576",
   "lastOpenFiles": [
+    "actuator/D7D12L12/Datasheet/L12-xxF-3_Datasheet.md",
+    "actuator/D7D12L12/Catalogue/D7D12L12_Catalogue.md",
+    "accessories/RodendTips/index.md",
+    "accessories/RodendTips/IR-MC06/MC06-drawing.md",
+    "accessories/RodendTips/IR-MC06/mc06-assemble.md",
+    "accessories/RodendTips/IR-MC05/mc05-drawing.md",
+    "accessories/RodendTips/IR-MC05/mc05-assemble.md",
+    "accessories/RodendTips/IR-GT01/GT01-drawing.md",
+    "accessories/RodendTips/IR-EB01/EB01-Drawing.md",
+    "accessories/RodendTips/IR-EB01/EB01-assemble.md",
+    "accessories/Mounting/index.md",
+    "accessories/Mounting/IR-MB07/mb07-drawing.md",
+    "accessories/Mounting/IR-MB07/mb07-assemble.md",
+    "accessories/Mounting/IR-MB06/mb06-drawing.md",
+    "accessories/Mounting/IR-MB06/mb06-assemble.md",
+    "accessories/Mounting/IR-MB05/mb05-drawing.md",
+    "accessories/Mounting/IR-MB04/mb04-drawing.md",
+    "accessories/Mounting/IR-MB04/mb04-assemble.md",
+    "accessories/Mounting/IR-MB03/mb03-drawing.md",
+    "accessories/Mounting/IR-MB03/mb03-assemble.md",
+    "accessories/Mounting/IR-MB02/mb02-drawing.md",
+    "accessories/Mounting/IR-MB02/mb02-assemble.md",
+    "accessories/etc/컨트롤러별mightyZAP 결선도.md",
+    "accessories/etc/제품 설치 방법(40_96mm).md",
+    "accessories/etc/제품 설치 방법(26_27mm).md",
+    "accessories/etc/소음 저감 TIP.md",
+    "accessories/board/UartInterfaceboard/uartboard.png",
+    "accessories/board/EZController/ezController.png",
     "accessories/Mounting/IR-MB06/img/mb06-vright.png",
     "accessories/Mounting/IR-MB06/img/mb06-vleft.png",
     "accessories/Mounting/IR-MB06/img/mb06-spacer.png",
@@ -194,9 +222,6 @@
     "accessories/Mounting/IR-MB06/img/mb06-asb-03.png",
     "accessories/Mounting/IR-MB06/img/mb06-asb-01.png",
     "accessories/Mounting/IR-MB06/img",
-    "accessories/Mounting/IR-MB07/img/mb07-spacer.png",
-    "accessories/Mounting/IR-MB07/img/mb07-washer.png",
-    "accessories/Mounting/IR-MB07/img/mb07-bracket-b.png",
     "accessories/Mounting/IR-MB07/img",
     "accessories/Mounting/IR-MB07/data copy/IR-MB07_2D_PDF.zip",
     "accessories/Mounting/IR-MB07/data copy/IR-MB0307_Vertical_Rev01_20240826.STEP",
@@ -206,31 +231,6 @@
     "accessories/Mounting/IR-MB07/data copy/ENG-IRMIS0005 BRACKET C, IR-MB03&07_Rev05_20240826.pdf",
     "accessories/Mounting/IR-MB07/data copy/ENG-IRMIS0004 BRACKET B, IR-MB03&07_Rev04_20240826.pdf",
     "accessories/Mounting/IR-MB07/data copy/ENG-IRMIS0003 BRACKET A, IR-MB03&07_Rev05_20240826.pdf",
-    "accessories/RodendTips/IR-MC06/mc06-assemble.md",
-    "en/accessories/wire/wire_connector.md",
-    "accessories/wire/wire_connector.md",
-    "en/accessories/wire/index.md",
-    "accessories/wire/index.md",
-    "accessories/RodendTips/IR-MC06/MC06-drawing.md",
-    "accessories/RodendTips/IR-EB01/EB01-Drawing.md",
-    "accessories/RodendTips/IR-EB01/EB01-assemble.md",
-    "accessories/Mounting/MB07/mb07-drawing.md",
-    "accessories/Mounting/MB06/mb06-drawing.md",
-    "accessories/Mounting/MB05/mb05-drawing.md",
-    "accessories/Mounting/MB04/mb04-drawing.md",
-    "accessories/Mounting/MB04/mb04-assemble.md",
-    "accessories/Mounting/MB03/mb03-drawing.md",
-    "accessories/Mounting/MB03/mb03-assemble.md",
-    "accessories/Mounting/MB02/mb02-drawing.md",
-    "accessories/Mounting/MB02/mb02-assemble.md",
-    "en/software/TotalManager/index.md",
-    "en/software/TotalManager/TotalManager_Manual.md",
-    "software/TotalManager/index.md",
-    "software/TotalManager/Manual/Total_Manager_Manual.md",
-    "en/accessories/Mounting/index.md",
-    "en/accessories/RodendTips/index.md",
-    "actuator/Mini12Lf/index.md",
-    "actuator/limitSwitch/index.md",
     "무제.canvas"
   ]
 }

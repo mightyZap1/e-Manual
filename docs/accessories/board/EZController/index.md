@@ -1,3 +1,10 @@
+---
+slug: index.md
+title: EZ Controller Index
+modified: 
+version:
+---
+
 Arduino Based EZ Controller (USB Type-C)
 # IR-CT01 (USB Tpye-C)
 

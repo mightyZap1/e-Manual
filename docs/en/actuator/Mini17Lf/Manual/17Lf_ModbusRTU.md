@@ -1,3 +1,10 @@
+---
+slug: 17Lf_ModbusRTU.md
+title: 17Lf_ModbusRTU
+modified: 
+version:
+---
+# 17Lf Series ModbusRTU Manual
 # 1 Introduction
 
 The MODBUS is an industrial protocol and is a standard protocol mainly used for PLC communication.

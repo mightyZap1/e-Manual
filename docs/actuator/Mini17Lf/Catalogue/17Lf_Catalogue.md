@@ -1,3 +1,10 @@
+---
+slug: 17Lf_Catalogue.md
+title: 17Lf_Catalogue
+modified: 
+version:
+---
+# 17Lf Catalogue
 드라이브 회로, 위치인식 센서, 17mm 직경의 coreless 모터,기어박스 일체형  
 - 17mm 직경의 DC 모터 채용으로 12Lf 시리즈의 동급 정격부하, 모델 대비 더 빠른 속도 및 더욱 우수한
 내구성 제공  

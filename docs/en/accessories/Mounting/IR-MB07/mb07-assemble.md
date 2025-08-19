@@ -1,3 +1,10 @@
+---
+slug: mb07-assemble.md
+title: mb07-assemble
+modified: 
+version:
+---
+# IR-MB07 Assemble
 ## Using Metal Barcket(IR-MB07)
 
 The IR-MB07 is a metal bracket exclusively designed for the 17Lf series 37mm to 87mm strokes actuators. Mount the servo actuator without any directional restrictions of the actuator.

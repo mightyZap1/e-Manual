@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: 17Lf index
+modified: 
+version:
+---
 # Overview
 - The new mightyZAP servo series with a 17mm diameter motor which improve durability. Provide faster speed under the same rated load specification comparing to the 12Lf series.   
 - Overall functionality is almost same as the 12Lf series, but only RS-485 communication and MODBUS RTU protocol are provided, and user expandability has been improved with the expansion I/O port.

@@ -1,3 +1,10 @@
+---
+slug: MC06-drawing.md
+title: MC06-drawing
+modified: 
+version:
+---
+# IR-MC06 Drawing
 ## [IR-MC06] Drawings for the new SUS Rod-End Tip
 - Here are drawings for the new SUS Rod-End Tip (2D/3D) with enhanced strength comparing to the old one in the actuator package. 
 - Please kindly note that SUS Rod-End Tip's shape is slightly different from old rod end tip.

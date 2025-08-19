@@ -1,3 +1,10 @@
+---
+slug: 12Lf_ModbusRTU.md
+title: 12Lf_ModbusRTU
+modified: 
+version:
+---
+# 12Lf Series ModbusRTU Manual
 ## 1 Introduction
 The MODBUS is an industrial protocol and is a standard protocol mainly used for PLC communication.
 MODBUS has several different types - RTU, ASCII, and recently TCP method, and we have applied MODBUS RTU for our actuators. 

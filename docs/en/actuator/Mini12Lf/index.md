@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: 12Lf Index
+modified: 
+version:
+---
 # 12Lf Servo Series
 ## Overview
 The 2nd Generation of mightyZAP actuators supporting position, current and speed control. Both MODBUS RTU & IR Open Protocols available

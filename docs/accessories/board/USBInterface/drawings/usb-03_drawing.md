@@ -1,5 +1,8 @@
 ---
-수정일자: 2025-07-25
+slug: USB-03_drawing.md
+title: USB-03_drawing
+modified: 
+version:
 ---
 ## USB-03 Interface Board Drawings
 USB to Half Duplex TTL/RS-485 Converter 외곽(PDF) / STEP

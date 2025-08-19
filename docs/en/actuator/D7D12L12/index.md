@@ -1,4 +1,10 @@
-# D7 / D12 Servo Series 
+---
+slug: index.md
+title: D7D12L12 Index
+modified: 
+version:
+---
+# D7 / D12 / L12 Servo Series 
 ## Overview
 The 1st generation of mightyZAP actuator equipped with reasonable cost Cored DC motor and supporting precise position control / position feedback through communication without speed and current control features. IR Open protocol provided.
 image

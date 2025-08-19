@@ -1,3 +1,10 @@
+---
+slug: 12Lf-xxPT-27_Datasheet.md
+title: 12Lf-xxPT-27_Datasheet
+modified: 
+version:
+---
+# 12Lf-xxPT-27 Datasheet
 ## 1. Features / 주요 특장점
 -  Micro size / 마이크로 사이즈  
 -  Precise position control / 정밀 위치 제어

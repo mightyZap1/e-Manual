@@ -1,3 +1,10 @@
+---
+slug: mb05-assemble.md
+title: mb05-assemble
+modified: 
+version:
+---
+# IR-MB05 Assemble
 ## Using Metal Barcket(IR-MB05)
 
 - The IR-MB05 metal bracket dedicated to the 17Lf 27mm stroke series allows the servo actuator to be mounted horizontally without any directional restrictions.

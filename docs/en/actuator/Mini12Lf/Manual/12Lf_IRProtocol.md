@@ -1,3 +1,10 @@
+---
+slug: 12Lf_IRProtocol.md
+title: 12Lf_IRProtocol
+modified: 
+version:
+---
+# 12Lf IRProtocol
 ## 1. 개요
 mightyZAP을 제어하기 위해서는 Protocol에 맞추어 통신을 해야하며, mightyZAP에서는 제어를 위한 전용 IR Protocol을 제공하고 있습니다.  
 IR Protocol 을 지원하는 모델은 아래와 같습니다.

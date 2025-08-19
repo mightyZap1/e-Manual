@@ -1,3 +1,9 @@
+---
+slug: index.md
+title: 12Lf index
+modified: 
+version:
+---
 # 12Lf Servo Series
 ### 제품개요
 통신제어를 통해 위치, 속도 및 전류 제어까지 가능한 mightyZAP 2세대 서보 제품군. MODBUS RTU와 IR Open 프로토콜 제공

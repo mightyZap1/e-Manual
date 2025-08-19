@@ -1,3 +1,9 @@
+---
+slug: 12Lf-xxPT-90_Datasheet.md
+title: 12Lf-xxPT-90_Datasheet
+modified: 
+version:
+---
 # 12Lf-xxPT-90 Datasheet
 ## 1. Features
 - Micro size

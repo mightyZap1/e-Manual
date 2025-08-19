@@ -1,5 +1,12 @@
+---
+slug: index.md
+title: EZController Index
+modified: 
+version:
+---
+# EZController
 Arduino Based EZ Controller (USB Type-C)
-# IR-CT01 (USB Tpye-C)
+## IR-CT01 (USB Tpye-C)
 
 - mightyZAP EZ Controller based on Arduino (USB Type-C)
 - TTL / RS-485, PWM Interface
