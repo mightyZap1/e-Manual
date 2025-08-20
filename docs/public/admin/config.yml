@@ -4,7 +4,7 @@ backend:
 
 # 이미지 등 미디어 파일을 저장하고 불러올 경로 설정
 media_folder: public/image
-public_folder: /image
+public_folder: public/image
 
 # collections는 여러 개의 독립된 컬렉션 목록입니다.
 collections:
