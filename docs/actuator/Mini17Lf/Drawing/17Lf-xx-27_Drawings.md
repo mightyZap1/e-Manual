@@ -6,7 +6,7 @@ version:
 ---
 # 17Lf-xx-27 Drawings
 ## 17Lf-xx-27 Uint : mm
-![12Lf-xxF-27 Drawing](./data/ENG-17Lf-xxF-27-Sevo-Seriesmm_Rev02_20250523.png)  
+![12Lf-xxF-27 Drawing](/public/image/17Lf/ENG-17Lf-xxF-27-Sevo-Seriesmm_Rev02_20250523.png)  
 **Download** <a href="/downloads/17Lf/ENG-17Lf-xxF-27-Sevo-Seriesmm_Rev02_20250523.pdf" download>PDF</a> <a href="/downloads/17Lf/17Lf-xxxxx-27-Servo-Series_Rev02_20250523.step" download>STEP</a> <a href="/downloads/17Lf/17Lf-xxxxx-27-Servo-Seriesmm_Rev02_20250523.DXF" download>DXF</a>
 ## 17Lf-xx-27 Uint : Inch
 ![12Lf-xxF-27 Drawing](./data/ENG-17Lf-xxF-27-Sevo-Seriesinch_Rev02_20250523.png)  

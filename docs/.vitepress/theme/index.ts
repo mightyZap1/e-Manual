@@ -20,12 +20,15 @@ export default {
   ...DefaultTheme,
   Layout: () => {
     const ClientOnly = resolveComponent('ClientOnly')
+
     return h(DefaultTheme.Layout, null, {
-      // 'doc-before'는 문서 내용이 시작되기 전의 공간을 의미합니다.
-      // 이 슬롯에 PageMetadata 컴포넌트를 렌더링합니다.
-      // 'doc-before': () => h(PageMetadata),
-      'layout-bottom': () => h(KatexRenderer),
-      'doc-before': () => h(DocInfo),
+      // ✅ document를 조작하는 모든 컴포넌트를 ClientOnly로 감싸줍니다.
+      'layout-bottom': () => h(ClientOnly, null, {
+        default: () => h(KatexRenderer) // 예시
+      }),
+      'page-top': () => h(ClientOnly, null, {
+        default: () => h(DocInfo) // 예시
+      })
     })
   },
   // enhanceApp은 전역 컴포넌트 등록 전용으로 사용합니다.
