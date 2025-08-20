@@ -21,6 +21,16 @@
     justify-content: center;
   }
 }
+
+/* #VPSidebarNav > :nth-child(3) .VPSidebarItem { */
+#VPSidebarNav  > :nth-child(2) .text {
+  /* 원하는 폰트 색상으로 변경하세요. */
+  color: #ff5733!important; /* 예: 주황색 */
+
+  /* 원하는 폰트 크기로 변경하세요. */
+  font-size: 18px!important; /* 예: 18px */
+}
+
 .tip {
   background-color: #e2fcfc!important;
 }

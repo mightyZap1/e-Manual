@@ -420,7 +420,7 @@ export default defineConfig({
         // --- 한국어 SIDEBAR ---
         sidebar: {
           '/actuator/Mini12Lf/': [
-            {text:'<p class="sidebar-title">12Lf Series</p>'},
+            {text:'12Lf Series'},
             {
               text: 'Manual',
               collapsed: true,
@@ -470,7 +470,7 @@ export default defineConfig({
             }, 
           ],      
           '/actuator/Mini17Lf/': [    
-            {text:'<p class="sidebar-title">17Lf Series</p>'},            
+            {text:'17Lf Series'},            
             {//
               text: 'Datasheet',
               collapsed: true,
@@ -515,7 +515,7 @@ export default defineConfig({
             }
           ],
           '/actuator/D7D12L12/': [  
-            {text:'<p class="sidebar-title">D7 D12 L12 Series</p>'},              
+            {text:'D7 D12 L12 Series'},              
             {//D7D12
               text: 'Datasheet',
               collapsed: true,
@@ -565,7 +565,7 @@ export default defineConfig({
             },
           ],
           '/actuator/limitSwitch/': [  
-            {text:'<p class="sidebar-title">Switch Series</p>'},    
+            {text:'Switch Series'},    
             {
               text: 'Datasheet',
               collapsed: true,
@@ -584,7 +584,7 @@ export default defineConfig({
             },                      
           ],          
           '/software/TotalManager/': [
-            {text:'<p class="sidebar-title">Total Manager</p>'},  
+            {text:'Total Manager'},  
             {
               text: 'User Manual', 
               collapsed : true,
@@ -594,20 +594,20 @@ export default defineConfig({
             }
           ],
           '/accessories/board/EZController/': [
-            {text:'<p class="sidebar-title">EZ Controller</p>'},             
+            {text:'EZ Controller'},             
             {text: 'User Manual', link: '/accessories/board/EZController/EZ_Controller(CT-01)_Manual' },
             {text: 'drawings', link: '/accessories/board/EZController/EZ_Controller_drawings' }            
           ],'/accessories/board/USBInterface/': [
-            {text:'<p class="sidebar-title">USB Interface</p>'},  
+            {text:'USB Interface'},  
             { text: 'USB-03 Datasheet', link: '/accessories/board/USBInterface/Datasheet/USB-03_datasheet' },            
             { text: 'USB-02 Drawings', link: '/accessories/board/USBInterface/drawings/USB-02_drawing' },   
             { text: 'USB-03 Drawings', link: '/accessories/board/USBInterface/drawings/usb-03_drawing' },   
             { text: 'Driver', link: '/en/accessories/board/USBInterface/drivers/Drivers' },  
           ],'/accessories/board/UartInterfaceboard/': [
-            {text:'<p class="sidebar-title">UART Interface</p>'},
+            {text:'UART Interface'},
             { text: 'Drawing', link: '/accessories/board/UartInterfaceboard/UART01-drawing' }
           ],'/accessories/Mounting/': [
-            {text:'<p class="sidebar-title">Mounting</p>'},
+            {text:'Mounting'},
             {
               text: 'IR-MB02', 
               collapsed : true,
@@ -657,10 +657,10 @@ export default defineConfig({
               ]                            
             }     
           ],'/accessories/wire/': [
-            {text:'<p class="sidebar-title">Wire</p>'},
+            {text:'Wire'},
             { text: 'Wire Connector', link: '/accessories/wire/wire_connector'}
           ],'/accessories/RodendTips/': [
-            {text:'<p class="sidebar-title">Rodend Tips</p>'},
+            {text:'Rodend Tips'},
             {
               text: 'IR-EB01', 
               collapsed : true,
@@ -745,7 +745,7 @@ export default defineConfig({
         // --- 영어 SIDEBAR ---
         sidebar: {
           '/en/actuator/Mini12Lf/': [
-            {text:'<p class="sidebar-title">12Lf Series</p>'},
+            {text:'12Lf Series'},
             {
               text: 'Manual',
               collapsed: true,
@@ -795,7 +795,7 @@ export default defineConfig({
             }, 
           ],      
           '/en/actuator/Mini17Lf/': [    
-            {text:'<p class="sidebar-title">17Lf Series</p>'},            
+            {text:'17Lf Series'},            
             {//
               text: 'Datasheet',
               collapsed: true,
@@ -840,7 +840,7 @@ export default defineConfig({
             }
           ],
           '/en/actuator/D7D12L12/': [  
-            {text:'<p class="sidebar-title">D7 D12 L12 Series</p>'},              
+            {text:'D7 D12 L12 Series'},              
             {//D7D12
               text: 'Datasheet',
               collapsed: true,
@@ -890,7 +890,7 @@ export default defineConfig({
             },
           ],
           '/en/actuator/LimitSwitch/': [  
-            {text:'<p class="sidebar-title">Switch Series</p>'},    
+            {text:'Switch Series'},    
             {
               text: 'Datasheet',
               collapsed: true,
@@ -909,7 +909,7 @@ export default defineConfig({
             },                      
           ],          
           '/en/software/TotalManager/': [
-            {text:'<p class="sidebar-title">Total Manager</p>'},  
+            {text:'Total Manager'},  
             {
               text: 'User Manual', 
               collapsed : true,
