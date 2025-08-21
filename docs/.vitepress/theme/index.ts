@@ -18,14 +18,9 @@ import DocInfo from './DocInfo.vue'
 export default {
   ...DefaultTheme,
   Layout: () => {
-    const { frontmatter, lang } = useData()
     const ClientOnly = resolveComponent('ClientOnly')
 
     return h(DefaultTheme.Layout, null, {
-      // ⬇️ 3. 홈페이지일 때만 HomePage 컴포넌트를 그리도록 이 슬롯을 추가합니다.
-      'doc-before': () => frontmatter.value.isHomePage
-        ? h(lang.value.startsWith('en') ? HomePageEn : HomePage)
-        : null,
       // ✅ document를 조작하는 모든 컴포넌트를 ClientOnly로 감싸줍니다.
       'layout-bottom': () => h(ClientOnly, null, {
         default: () => h(KatexRenderer) // 예시
