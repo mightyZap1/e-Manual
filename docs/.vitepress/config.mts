@@ -297,11 +297,11 @@ function obsidianPdfEmbedWithViewer(md: MarkdownIt) {
 export default defineConfig({
   lastUpdated: true,
   head:[
-    // KaTeX CSS
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js' }],
-    ['script',{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+    // // KaTeX CSS
+    // ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js' }],
+    // ['script',{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
   ],
   title: "e-Manual",
   description: "migntyZAP e-Manual",
