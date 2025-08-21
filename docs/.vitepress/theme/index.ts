@@ -1,8 +1,8 @@
 // .vitepress/theme/index.ts
 import DefaultTheme from 'vitepress/theme'
-import { onMounted, watch, nextTick } from 'vue'
-import { h,resolveComponent  } from 'vue'
-import { useRoute } from 'vitepress'
+// import { onMounted, watch, nextTick } from 'vue'
+// import { h,resolveComponent  } from 'vue'
+// import { useRoute } from 'vitepress'
 
 // 사용자 정의 전역 컴포넌트 import (경로는 실제 위치에 맞게 조정하세요)
 import MyLayout from './MyLayout.vue' // 1. 만든 컴포넌트 import
@@ -13,7 +13,7 @@ import FirmwareSelector17Lf from './components/FirmwareSelector17Lf.vue'
 import HomePage from './HomePage.vue' //
 import HomePageEn from './HomePage_en.vue' //
 import './custom.css' // 커스텀 CSS 파일 import
-import DocInfo from './DocInfo.vue'
+
 
 export default {
   ...DefaultTheme,
