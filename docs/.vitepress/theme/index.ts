@@ -5,7 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 // import { useRoute } from 'vitepress'
 
 // 사용자 정의 전역 컴포넌트 import (경로는 실제 위치에 맞게 조정하세요)
-import MyLayout from './MyLayout.vue' // 1. 만든 컴포넌트 import
+import MyLayout from './myLayout.vue' // 1. 만든 컴포넌트 import
 import FirmwareSelectorDL12 from './components/FirmwareSelectorDL12.vue'
 import FirmwareSelector12Lf from './components/FirmwareSelector.vue'
 import FirmwareSelector17Lf from './components/FirmwareSelector17Lf.vue'

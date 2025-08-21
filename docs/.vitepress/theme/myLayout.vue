@@ -8,7 +8,7 @@ import DocInfo from './DocInfo.vue'
 
 const { Layout } = DefaultTheme
 const { frontmatter, lang } = useData()
-const route = useRoute()
+const route = useRoute()  
 
 // --- KaTeX 렌더링 로직 ---
 
