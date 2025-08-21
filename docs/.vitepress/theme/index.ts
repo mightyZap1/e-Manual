@@ -5,7 +5,7 @@ import { h,resolveComponent  } from 'vue'
 import { useRoute } from 'vitepress'
 
 // 사용자 정의 전역 컴포넌트 import (경로는 실제 위치에 맞게 조정하세요)
-import KatexRenderer from './KatexRenderer.vue' // 1. 만든 컴포넌트 import
+import MyLayout from './MyLayout.vue' // 1. 만든 컴포넌트 import
 import FirmwareSelectorDL12 from './components/FirmwareSelectorDL12.vue'
 import FirmwareSelector12Lf from './components/FirmwareSelector.vue'
 import FirmwareSelector17Lf from './components/FirmwareSelector17Lf.vue'
@@ -17,19 +17,9 @@ import DocInfo from './DocInfo.vue'
 
 export default {
   ...DefaultTheme,
-  Layout: () => {
-    const ClientOnly = resolveComponent('ClientOnly')
-
-    return h(DefaultTheme.Layout, null, {
-      // ✅ document를 조작하는 모든 컴포넌트를 ClientOnly로 감싸줍니다.
-      'layout-bottom': () => h(ClientOnly, null, {
-        default: () => h(KatexRenderer) // 예시
-      }),
-      'page-top': () => h(ClientOnly, null, {
-        default: () => h(DocInfo) // 예시
-      })
-    })
-  },
+  // 3. VitePress가 사용할 기본 레이아웃을 MyLayout으로 지정합니다.
+  // 이 한 줄이 MyLayout.vue를 모든 페이지의 뼈대로 사용하도록 만듭니다.
+  Layout: MyLayout,
   // enhanceApp은 전역 컴포넌트 등록 전용으로 사용합니다.
   enhanceApp({ app }) {
     app.component('FirmwareSelector17Lf', FirmwareSelector17Lf)
