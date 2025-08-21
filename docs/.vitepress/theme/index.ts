@@ -3,18 +3,17 @@ import DefaultTheme from 'vitepress/theme'
 import { onMounted, watch, nextTick } from 'vue'
 import { h,resolveComponent  } from 'vue'
 import { useRoute } from 'vitepress'
-import mediumZoom from 'medium-zoom' // 이미지 확대 라이브러리 import
 
 // 사용자 정의 전역 컴포넌트 import (경로는 실제 위치에 맞게 조정하세요)
 import KatexRenderer from './KatexRenderer.vue' // 1. 만든 컴포넌트 import
 import FirmwareSelectorDL12 from './components/FirmwareSelectorDL12.vue'
 import FirmwareSelector12Lf from './components/FirmwareSelector.vue'
 import FirmwareSelector17Lf from './components/FirmwareSelector17Lf.vue'
-import PageMetadata from './PageMetadata.vue' // 2단계에서 만든 컴포넌트 import
+// import PageMetadata from './PageMetadata.vue' // 2단계에서 만든 컴포넌트 import
 import HomePage from './HomePage.vue' //
 import HomePageEn from './HomePage_en.vue' //
 import './custom.css' // 커스텀 CSS 파일 import
-import DocInfo from './DocInfo.vue'
+// import DocInfo from './DocInfo.vue'
 
 export default {
   ...DefaultTheme,
