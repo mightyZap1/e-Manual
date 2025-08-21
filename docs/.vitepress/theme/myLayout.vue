@@ -26,6 +26,7 @@ const { frontmatter, lang } = useData()
     </template>
 
     <!-- 2. layout-bottom 슬롯에 ClientOnly로 감싸서 KatexRenderer를 추가 -->
+    <!-- 이 컴포넌트는 브라우저에서만 실행되어 서버 렌더링과 충돌하지 않습니다. -->
     <template #layout-bottom>
       <ClientOnly>
         <KatexRenderer />
