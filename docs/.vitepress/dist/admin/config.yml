@@ -2,75 +2,39 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: public/image
-public_folder: /image
+# 이미지 등 미디어 파일을 저장하고 불러올 경로 설정
+media_folder: ''
+public_folder: ''
 
+# collections는 여러 개의 독립된 컬렉션 목록입니다.
 collections:
-  - name: "17Lf"
-    label: "17Lf 시리즈"
-    widget: "rich_text"
-    # ⬇️ 표시할 버튼 목록을 직접 추가합니다.
-    buttons:
-      - "bold"
-      - "italic"
-      - "link"
-      - "heading-one"
-      - "heading-two"
-      - "bulleted-list"
-      - "numbered-list"
-      - "quote"
-      - "table" # <-- 테이블 버튼을 명시적으로 추가
-    files:
-      - name: "datasheet_27"
-        label: "mightyZAP 17Lf 27mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-27.md"
-        fields: # 각 파일에 개별적으로 fields 추가
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
+  # 첫 번째 폴더 컬렉션: 17Lf 시리즈
+  - name: "docs" # 컬렉션 고유 ID (공백 없이)
+    label: "docs" # 관리자 페이지에 표시될 이름
+    folder: "docs/" # 이 폴더 안의 모든 마크다운 파일을 관리
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    nested:
+      depth: 100 # 검사할 하위 폴더의 깊이. 100 정도면 사실상 '전체'를 의미합니다.
+    # ⬇️ 재사용할 필드 구조를 앵커(&)로 정의합니다.
+    summary: "{{title}} ({{slug}})" # 리스트에 제목과 파일명을 표시
+    fields: &manual_fields
+      - { label: "파일명 (URL에 사용, 영문)", name: "slug", widget: "string" }
+      - { label: "매뉴얼 제목", name: "title", widget: "string" }
+      - { label: "버전", name: "version", widget: "string", required: false }
+      - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
+      - { label: "본문", name: "body", widget: "markdown" }
 
-      - name: "datasheet_37"
-        label: "mightyZAP 17Lf 37mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-37.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-
-      - name: "datasheet_50"
-        label: "mightyZAP 17Lf 50mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-50.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-
-      - name: "datasheet_87"
-        label: "mightyZAP 17Lf 87mm datasheet"
-        file: "docs/actuator/Mini17Lf/Datasheet/17Lf-xxf-87.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-          
-      - name: "manual_17lf"
-        label: "mightyZAP 17Lf 사용자 매뉴얼"
-        file: "docs/actuator/Mini17Lf/Manual/mightyZAP 17Lf User Manual_kor.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
-          
-      - name: "17Lf Modbus RTU_kor"
-        label: "17Lf Modbus RTU_kor"
-        file: "docs/actuator/Mini17Lf/Manual/17Lf Modbus RTU_kor.md"
-        fields:
-          - { label: "매뉴얼 제목", name: "title", .widget: "rich_text" }
-          - { label: "버전", name: "version", .widget: "rich_text", required: false }
-          - { label: "최종 수정일", name: "last_updated", widget: "datetime", required: false }
-          - { label: "본문", name: "body", widget: "markdown" }
+  # 두 번째 폴더 컬렉션: 12Lf 시리즈
+  - name: "en"
+    label: "en"
+    folder: "en/"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"    
+    nested:
+      depth: 100 # 검사할 하위 폴더의 깊이. 100 정도면 사실상 '전체'를 의미합니다.
+    # ⬇️ 위에서 정의한 필드 구조를 별칭(*)으로 재사용합니다.
+    summary: "{{title}} ({{slug}})" # 리스트에 제목과 파일명을 표시
+    fields: *manual_fields
