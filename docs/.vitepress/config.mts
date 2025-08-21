@@ -307,11 +307,11 @@ export default defineConfig({
   description: "migntyZAP e-Manual",
   markdown: {
     config: (md) => {
-      md.use(markdownItAttrs);
-      md.use(customAlertsPlugin);
-      md.use(internalLinksPlugin); 
-      md.use(obsidianPdfEmbedWithViewer);
-      md.use(advancedTablePlugin);
+      // md.use(markdownItAttrs);
+      // md.use(customAlertsPlugin);
+      // md.use(internalLinksPlugin); 
+      // md.use(obsidianPdfEmbedWithViewer);
+      // md.use(advancedTablePlugin);
    
     }
   },
