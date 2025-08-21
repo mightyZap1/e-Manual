@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import markdownItAttrs from 'markdown-it-attrs'
-import markdownItMultimdTable from 'markdown-it-multimd-table';
 import type MarkdownIt from 'markdown-it';
 import type Token from 'markdown-it/lib/token';
 import type StateCore from 'markdown-it/lib/rules_core/state_core';
@@ -14,77 +13,56 @@ interface CellData {
   // 셀 내부의 복잡한 마크다운을 렌더링하기 위해 원본 content를 유지
   originalContent: string; 
 }
-// ==================================================================
-// ✨ 올인원 커스텀 플러그인: GitHub 스타일 Alert + 내부 링크 변환
-// ==================================================================
-function customAlertsAndLinksPlugin(md: MarkdownIt) {
-  // --- 내부 링크 변환에 필요한 함수들 ---
-  const slugify = (text: string) => {
-    const normalizedText = text.normalize('NFD'); // NFD 방식으로 정규화
-    return normalizedText
-      .toLowerCase().trim()
-      .replace(/[\s.]+/g, '-')
-      .replace(/[^\w\p{L}\-]/gu, '');
-  };
+// --- 유틸리티 함수: 한 곳에서 관리 ---
+const slugify = (text: string) => {
+  const normalizedText = text.normalize('NFD');
+  return normalizedText
+    .toLowerCase().trim()
+    .replace(/[\s.]+/g, '-')
+    .replace(/[^\w\p{L}\-]/gu, '');
+};
 
-  const convertInternalLinks = (text: string) => {
-    const pattern = /\[\[#([^\]]+)\]\]/g; // 모든 링크를 찾기 위해 g 플래그 추가
-    return text.replace(pattern, (match, content) => {
-      const headingText = content.trim();
-      const headingId = slugify(headingText);
-      return `<a href="#_${headingId}">${headingText}</a>`;
-    });
-  };
+// --- 마크다운 플러그인 정의 ---
 
-  // --- 블록 규칙 정의 ---
+/**
+ * GitHub 스타일 Alert 블록을 처리하는 플러그인
+ * > [!NOTE] Title
+ * > Content
+ */
+function customAlertsPlugin(md: MarkdownIt) {
   const rule = (state, startLine, endLine, silent) => {
     const pos = state.bMarks[startLine] + state.tShift[startLine];
     const max = state.eMarks[startLine];
     const line = state.src.slice(pos, max);
 
-    // '> [!type] Title' 형태인지 확인
     const alertRegex = /^>\s*\[!(\w+)\]\s*(.*)$/;
     const match = line.match(alertRegex);
 
-    if (!match) {
-      return false;
-    }
-
-    if (silent) {
-      return true;
-    }
+    if (!match) return false;
+    if (silent) return true;
 
     const type = match[1].toLowerCase();
     const title = match[2].trim();
     const contentLines = [];
     let nextLine = startLine + 1;
 
-    // 블록이 끝날 때까지 내용 수집
     for (; nextLine < endLine; nextLine++) {
       const linePos = state.bMarks[nextLine] + state.tShift[nextLine];
       const lineMax = state.eMarks[nextLine];
       let lineText = state.src.slice(linePos, lineMax);
 
-      if (lineText.trim() === '') {
-        // 빈 줄이면 블록 끝으로 간주
-        break;
-      }
+      if (lineText.trim() === '') break;
       
-      // 인용문 표시(>) 제거
       if (lineText.startsWith('>')) {
         lineText = lineText.slice(1).trim();
       }
       contentLines.push(lineText);
     }
 
-    // 수집된 내용에서 [[#...]] 링크 변환
-    let content = contentLines.join('\n');
-    content = convertInternalLinks(content);
-    
-    // 변환된 내용을 다시 마크다운으로 렌더링
+    const content = contentLines.join('\n');
+    // md.render를 사용하면 internalLinksPlugin 등 다른 플러그인이 자동으로 적용됩니다.
     const renderedContent = md.render(content);
 
-    // 최종 HTML 토큰 생성
     const token = state.push('html_block', '', 0);
     token.content =
       `<div class="custom-block ${type}">\n` +
@@ -96,35 +74,21 @@ function customAlertsAndLinksPlugin(md: MarkdownIt) {
     return true;
   };
 
-  // 기존 blockquote 규칙보다 먼저 이 규칙을 실행하도록 등록
   md.block.ruler.before('blockquote', 'custom_alerts', rule);
 }
-// ==================================================================
-// ✨ [[#...]] 내부 링크를 처리하는 수정된 커스텀 플러그인
-// ==================================================================
-function internalLinksPlugin(md) {
-  const slugify = (text) => {
-    // ⬇️ 이 부분이 핵심입니다. 문자열을 NFD 형식으로 강제 정규화합니다.
-    const normalizedText = text.normalize('NFD');
 
-    return normalizedText
-      .toLowerCase()
-      .trim()
-      .replace(/[\s.]+/g, '-') // 공백과 마침표를 하이픈으로
-      .replace(/[^\w\p{L}\-]/gu, ''); // 단어, 모든 언어 문자, 하이픈 외 제거
-  };
-
+/**
+ * [[#...]] 형태의 내부 링크를 처리하는 플러그인
+ */
+function internalLinksPlugin(md: MarkdownIt) {
   function wikilinkReplacer(state, silent) {
     const src = state.src;
     const pos = state.pos;
 
-    if (src.substring(pos, pos + 3) !== '[[#') {
-      return false;
-    }
+    if (src.substring(pos, pos + 3) !== '[[#') return false;
+    
     const endPos = src.indexOf(']]', pos);
-    if (endPos === -1) {
-      return false;
-    }
+    if (endPos === -1) return false;
 
     const content = src.substring(pos + 3, endPos);
 
@@ -302,34 +266,23 @@ const advancedTablePlugin = (md: MarkdownIt) => {
   });
 };
 /**
- * Obsidian의 PDF 임베드 문법 ![[file.pdf]]를
- * PDF.js 뷰어를 사용하는 <iframe>으로 변환하는 markdown-it 플러그인
+ * Obsidian의 PDF 임베드 문법 ![[file.pdf]]를 처리하는 플러그인
  */
-function obsidianPdfEmbedWithViewer(md) {
+function obsidianPdfEmbedWithViewer(md: MarkdownIt) {
   const rule = (state, startLine, endLine, silent) => {
     const pos = state.bMarks[startLine] + state.tShift[startLine];
     const max = state.eMarks[startLine];
     const line = state.src.slice(pos, max).trim();
 
-    // 정규식: ![[파일명.pdf]] 형태를 찾음
     const regex = /^!\[\[([^|\]]+\.pdf)\]\]$/;
     const match = line.match(regex);
 
-    if (!match) {
-      return false;
-    }
-
-    if (silent) {
-      return true;
-    }
+    if (!match) return false;
+    if (silent) return true;
 
     const pdfPath = match[1];
-
-    // PDF.js 뷰어의 경로를 생성
-    // viewer.html에 'file' 파라미터로 PDF 파일의 절대 경로를 전달
     const viewerPath = `/pdfjs/web/viewer.html?file=/${pdfPath}`;
 
-    // 토큰을 생성하여 HTML 블록(<iframe>)으로 교체
     const token = state.push('html_block', '', 0);
     token.content = `<iframe src="${viewerPath}" width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>\n`;
 
@@ -339,6 +292,7 @@ function obsidianPdfEmbedWithViewer(md) {
 
   md.block.ruler.before('paragraph', 'obsidian_pdf_embed_viewer', rule);
 }
+
 
 export default defineConfig({
   lastUpdated: true,
@@ -354,11 +308,9 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(markdownItAttrs);
-      md.use(customAlertsAndLinksPlugin);
-      // 위에서 만든 커스텀 플러그인을 사용하도록 등록
+      md.use(customAlertsPlugin);
       md.use(internalLinksPlugin); 
       md.use(obsidianPdfEmbedWithViewer);
-      // md.use(markdownItMultimdTable, { rowspan: true });
       md.use(advancedTablePlugin);
    
     }
